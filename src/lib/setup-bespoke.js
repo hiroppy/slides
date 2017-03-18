@@ -21,9 +21,9 @@ const setup = (theme, opts = []) => {
   ];
 
   return bespoke.from('article', [
+    theme(),
     ...common,
-    ...opts.map((opt) => opt()),
-    theme()
+    ...opts.map((opt) => opt())
   ]);
 };
 

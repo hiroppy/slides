@@ -17,3 +17,33 @@
 .bespoke-backdrop.profile {
   background: var(--main-color);
 }
+
+.bespoke-backdrop.js {
+  background: var(--js-color);
+}
+
+.bespoke-backdrop.node {
+  background: var(--node-color);
+}
+
+.card {
+  display: flex;
+  &-text {
+    border-left: 3px solid #777;
+    text-align: left;
+    & > .title {
+      border: none;
+      color: var(--main-color);
+      display: block;
+      font-size: 1.7rem;
+      padding-left: 20px;
+      text-decoration: none;
+    }
+    & > .description {
+      font-size: 1.2rem;
+    }
+  }
+  & > img {
+    padding: 0 20px;
+  }
+}

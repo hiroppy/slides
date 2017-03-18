@@ -4,8 +4,9 @@
   "description": "My slides using bespoke",
   "main": "",
   "scripts": {
-    "start": "npm run start:hello",
+    "start": "npm run start:node-whatwg-url",
     "start:hello": "webpack-dev-server --env.name hello",
+    "start:node-whatwg-url": "webpack-dev-server --env.name node-whatwg-url",
     "build": "NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src",

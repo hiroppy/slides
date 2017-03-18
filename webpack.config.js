@@ -11,7 +11,8 @@ const config = process.env.NODE_ENV !== 'production' ?
   require('./webpack.prod.config');
 
 let slides = [
-  'hello'
+  'hello',
+  'node-whatwg-url'
 ];
 
 module.exports = (env) => {
