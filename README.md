@@ -3,4 +3,4 @@
 My slides using bespoke.
 
 ## slides
-- [Sample]()
+- [Sample](https://abouthiroppy.github.io/slides/hello/)
