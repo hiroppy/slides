@@ -1,3 +1,6 @@
 {
-  "extends": "stylelint-config-sky"
+  "extends": "stylelint-config-sky",
+  "rules": {
+    "selector-no-id": null
+  }
 }

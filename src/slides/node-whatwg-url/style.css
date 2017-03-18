@@ -1,0 +1,79 @@
+@import "../../common/style/variable";
+@import "../../common/style/mixins";
+
+strong {
+  color: var(--orange-color);
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+pre {
+  font-size: 1rem;
+}
+
+.define {
+  color: var(--orange-color);
+  font-weight: bold;
+}
+
+.bespoke-backdrop.danger {
+  background: #c44444;
+}
+
+.bespoke-backdrop.title {
+  background: #ff0;
+}
+
+.bespoke-backdrop.whatwg {
+  background: #3c790a;
+}
+
+.bespoke-backdrop.info {
+  background: var(--orange-color);
+}
+
+.bespoke-backdrop.end {
+  background: var(--main-color);
+}
+
+li:before {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.active-collaborators-team {
+  margin: 10px 0;
+}
+
+.active-collaborators {
+  & a {
+    border: none;
+    padding-left: 0;
+    text-decoration: none;
+  }
+  & img {
+    height: 100px;
+    margin: 10px;
+    width: 100px;
+  }
+}
+
+.list {
+  display: flex;
+  margin-top: 50px;
+  & p {
+    font-size: 1.7rem;
+  }
+  & > div {
+    margin: 0 100px;
+    text-align: left;
+  }
+}
+
+.card {
+  margin: 0 50px 20px;
+}
+
+#table + pre {
+  font-size: .9rem;
+}

@@ -2,9 +2,9 @@
 
 ## 😋 me 😙
 
-#### Yuta Hiroto
 <div class="profile">
   <img src="../images/profile.png" alt="profile" class="profile-icon">
+  <h4>Yuta Hiroto</h4>
   <div class="profile-info">
     <div>
       <h4>accounts</h4>
