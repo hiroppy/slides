@@ -1,0 +1,37 @@
+@import "../../common/style/variable";
+@import "../../common/style/mixins";
+
+strong {
+  color: var(--orange-color);
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.bespoke-backdrop.danger {
+  background: #c44444;
+}
+
+.bespoke-backdrop.title {
+  background: #ff0;
+}
+
+.bespoke-backdrop.sample-background {
+  background: url("./images/magic.gif");
+}
+
+.bespoke-backdrop.webpack {
+  background: #14aaf3;
+}
+
+.bespoke-backdrop.postcss {
+  background: #dd3a0a;
+}
+
+.bespoke-backdrop.end {
+  background: var(--main-color);
+}
+
+li:before {
+  color: var(--main-color);
+  margin-right: 10px;
+}
