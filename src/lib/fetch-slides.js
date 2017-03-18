@@ -19,4 +19,14 @@ const fetchSlides = (dir) => {
   return fetchAll(require.context('../slides', true, /(md|html)$/));
 };
 
+export const fetchCommon = () => {
+  const context = require.context('../common/slide', true, /(md|html)$/);
+
+  return context.keys().reduce((prev, current) => {
+    prev[current.split('./')[1]] = context(current);
+
+    return prev;
+  }, {});
+};
+
 export default fetchSlides;

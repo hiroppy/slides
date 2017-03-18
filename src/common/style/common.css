@@ -1,0 +1,19 @@
+@import "./variable";
+
+:root {
+  --icon-size: 150px;
+}
+
+.profile {
+  &-icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
+  }
+  &-info {
+    display: flex;
+  }
+}
+
+.bespoke-backdrop.profile {
+  background: var(--main-color);
+}
