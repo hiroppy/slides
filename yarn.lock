@@ -817,9 +817,21 @@ bespoke-backdrop@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/bespoke-backdrop/-/bespoke-backdrop-1.0.0.tgz#bc61d44f8023d49ab92abcb0085f10c1d3ae232d"
 
+bespoke-convenient@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bespoke-convenient/-/bespoke-convenient-1.0.0.tgz#f4dea5b0d1c03b25ab2483c3d4953849b2513a72"
+
+bespoke-fullscreen@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bespoke-fullscreen/-/bespoke-fullscreen-1.0.0.tgz#57aecac08a3444bc0329c9e288075c856277f64b"
+
 bespoke-hash@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/bespoke-hash/-/bespoke-hash-1.0.2.tgz#37671ca0001bac03a3a0419a5def3bac7c844e77"
+
+bespoke-jumpy@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/bespoke-jumpy/-/bespoke-jumpy-1.0.1.tgz#7ef40bb2139588623170c56ca058605e157462eb"
 
 bespoke-keys@^1.1.0:
   version "1.1.0"

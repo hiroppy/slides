@@ -53,7 +53,10 @@
   "dependencies": {
     "bespoke": "^1.1.0",
     "bespoke-backdrop": "^1.0.0",
+    "bespoke-convenient": "^1.0.0",
+    "bespoke-fullscreen": "^1.0.0",
     "bespoke-hash": "^1.0.2",
+    "bespoke-jumpy": "^1.0.1",
     "bespoke-keys": "^1.1.0",
     "bespoke-progress": "^1.0.0",
     "bespoke-scale": "^1.0.1",

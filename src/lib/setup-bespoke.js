@@ -3,17 +3,21 @@ import hash from 'bespoke-hash';
 import keys from 'bespoke-keys';
 import touch from 'bespoke-touch';
 import scale from 'bespoke-scale';
+import jumpy from 'bespoke-jumpy';
 import progress from 'bespoke-progress';
 import backdrop from 'bespoke-backdrop';
+import fullscreen from 'bespoke-fullscreen';
 
 const setup = (theme, opts = []) => {
   const common = [
     keys(),
     hash(),
-    scale(),
     touch(),
+    scale(),
+    jumpy(),
     progress(),
-    backdrop()
+    backdrop(),
+    fullscreen()
   ];
 
   return bespoke.from('article', [
