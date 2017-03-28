@@ -1,22 +1,23 @@
-# slides
+# Slides
+[![Build Status](https://travis-ci.org/abouthiroppy/slides.svg?branch=master)](https://travis-ci.org/abouthiroppy/slides)
 
 My slides using bespoke.
 
-## slides
+## My Slides
 - [Sample](https://abouthiroppy.github.io/slides/hello/)
 
-## development
+## Development
 ```sh
 $ yarn install or npm install
 $ npm start
 ```
 
-## production build
+## Production Build
 ```sh
 $ npm run build
 ```
 
-## publish
+## Publish
 ```sh
 $ npm run deploy
 ```
