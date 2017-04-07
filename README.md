@@ -7,6 +7,9 @@ My slides using bespoke.
 - [Sample](https://abouthiroppy.github.io/slides/hello/)
 - [node-whatwg-url](https://abouthiroppy.github.io/slides/node-whatwg-url/)
 
+speakerdeck: https://speakerdeck.com/abouthiroppy  
+slideshare: https://www.slideshare.net/about_hiroppy  
+ECMAScript on niconare: http://niconare.nicovideo.jp/watch/kn1937
 ## Development
 ```sh
 $ yarn install or npm install

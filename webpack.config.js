@@ -12,6 +12,7 @@ const config = process.env.NODE_ENV !== 'production' ?
 
 let slides = [
   'hello',
+  'node8',
   'node-whatwg-url'
 ];
 
