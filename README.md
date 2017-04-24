@@ -6,6 +6,7 @@ My slides using bespoke.
 ## My Slides
 - [Sample](https://abouthiroppy.github.io/slides/hello/)
 - [node-whatwg-url](https://abouthiroppy.github.io/slides/node-whatwg-url/)
+- [node@8.0.0](http://abouthiroppy.github.io/slides/node8/)(Japanese)
 
 speakerdeck: https://speakerdeck.com/abouthiroppy  
 slideshare: https://www.slideshare.net/about_hiroppy  
