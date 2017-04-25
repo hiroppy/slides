@@ -10,26 +10,45 @@ const config = process.env.NODE_ENV !== 'production' ?
   require('./webpack.dev.config') :
   require('./webpack.prod.config');
 
+const urlPrefix = 'https://abouthiroppy.github.io/slides/';
+
 let slides = [
-  'hello',
-  'node8',
-  'node-whatwg-url'
+  {
+    title: 'hello',
+    image: '',
+    description: ''
+  },
+  {
+    title: 'node8',
+    image: 'https://avatars1.githubusercontent.com/u/9950313?v=3&s=200',
+    description: 'Node@8.0.0の紹介スライド'
+  },
+  {
+    title: 'node-whatwg-url',
+    image: '',
+    description: 'whatwg-url in Node'
+  }
 ];
 
 module.exports = (env) => {
   if (process.env.NODE_ENV !== 'production') {
-    slides.includes(env.name) ? slides = [env.name] : slides = ['hello'];
+    slides.some((slide, i) => {
+      if (slide.title === env.name) {
+        slides = [slides[1]];
+        return true;
+      }
+    });
   }
 
   return slides.map((slide) => {
     const common = {
-      name: slide,
+      name: slide.title,
       entry: [
         'babel-polyfill',
-        path.resolve(__dirname, 'src', 'slides', slide, 'main.js')
+        path.resolve(__dirname, 'src', 'slides', slide.title, 'main.js')
       ],
       output: {
-        path: path.resolve(__dirname, 'dist', slide),
+        path: path.resolve(__dirname, 'dist', slide.title),
         filename: '[hash].js'
       },
       module: {
@@ -67,7 +86,11 @@ module.exports = (env) => {
       plugins: [
         new HtmlWebpackPlugin({
           filename: 'index.html',
-          title: `abouthiroppy/${slide}`
+          title: `abouthiroppy/${slide.title}`,
+          template: './template.ejs',
+          url: `${urlPrefix}${slide.title}`,
+          image: slide.image,
+          description: slide.description
         })
       ]
     };
