@@ -2,59 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import nebula from 'bespoke-theme-nebula';
 import createRoot from '../../lib/create-root';
+import insertSlide from '../../lib/insert-slide';
+import AppContainer from '../../lib/AppContainer';
 import fetchSlides, { fetchCommon } from '../../lib/fetch-slides';
 import setupBespoke from '../../lib/setup-bespoke';
-import setupHljs from '../../lib/setup-hljs';
+import '../../lib/setup-hljs';
 import './style.css';
 import '../../common/style/common.css';
 import 'highlight.js/styles/github.css';
 
-const root = createRoot();
-let slidesInfo = fetchSlides('node8');
-
+const slidesInfo = fetchSlides('node8');
 const profile = fetchCommon()['self-introduction.md'];
 
-const selectBackground = (content) => {
-  if (content === undefined) return 'default';
-  const arr = content.match(/<!-- background: (.+) -->/);
-
-  return arr ? arr[1] : 'default';
-};
-
 const App = () => {
-  const slides = slidesInfo.slides.slice();
-  slides.splice(1, 0, profile);
+  const slides = insertSlide(slidesInfo.slides, profile, 1);
 
   return (
-    <div>
-      { /* fix */ }
+    <AppContainer slides={slides}>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css"
       />
-      <article>
-        {
-          slides.map((slide, i) => (
-            <section
-              data-bespoke-backdrop={selectBackground(slide)}
-              dangerouslySetInnerHTML={{ __html: slide }}
-              key={i /* fix */}
-            />
-          ))
-        }
-      </article>
-    </div>
+    </AppContainer>
   );
 };
 
-
-ReactDOM.render(<App />, root);
+ReactDOM.render(<App />, createRoot());
 
 setupBespoke(nebula);
-
-if (module.hot) {
-  module.hot.accept(slidesInfo.id, () => {
-    slidesInfo = fetchSlides('Test');
-    ReactDOM.render(<App />, root);
-  });
-}

@@ -34,7 +34,7 @@ module.exports = (env) => {
   if (process.env.NODE_ENV !== 'production') {
     slides.some((slide, i) => {
       if (slide.title === env.name) {
-        slides = [slides[1]];
+        slides = [slides[i]];
         return true;
       }
     });

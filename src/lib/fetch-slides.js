@@ -12,7 +12,6 @@ const fetchSlides = (dir) => {
         .sort()
         .filter((e) => e.includes(dir))
         .map((e) => context(e))
-
     };
   }
 
