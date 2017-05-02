@@ -64,7 +64,7 @@ module.exports = (env) => {
             test: /\.css$/,
             use: [
               'style-loader',
-              'css-loader',
+              'css-loader', // dont't use css-modules
               'postcss-loader'
             ]
           },
