@@ -4940,9 +4940,9 @@ stylehacks@^2.3.0:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint-config-sky@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-sky/-/stylelint-config-sky-0.1.0.tgz#46b3f5d9b24c4c54ab5cc58e33d2ebeee7adcf1c"
+stylelint-config-sky@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-sky/-/stylelint-config-sky-1.0.0.tgz#63e726b59f7992307f9ba8d971c344673d0acd6d"
 
 stylelint@^7.9.0:
   version "7.9.0"

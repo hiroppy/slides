@@ -51,6 +51,7 @@ li:before {
     padding-left: 0;
     text-decoration: none;
   }
+
   & img {
     height: 100px;
     margin: 10px;
@@ -61,9 +62,11 @@ li:before {
 .list {
   display: flex;
   margin-top: 50px;
+
   & p {
     font-size: 1.7rem;
   }
+
   & > div {
     margin: 0 100px;
     text-align: left;
