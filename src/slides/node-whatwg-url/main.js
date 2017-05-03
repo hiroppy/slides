@@ -13,10 +13,17 @@ import '../../common/style/common.css';
 import 'highlight.js/styles/github.css';
 
 const slidesInfo = fetchSlides('node-whatwg-url');
-const profile = fetchCommon()['self-introduction.md'];
+
+const common = fetchCommon();
+const profile = common['self-introduction.md'];
+const community = common['node-community.md'];
+const end = common['node-end.md'];
 
 const App = () => {
-  const slides = insertSlide(slidesInfo.slides, profile, 1);
+  let slides = insertSlide(slidesInfo.slides, profile, 1);
+  slides = insertSlide(slides, community, slides.length);
+  slides = insertSlide(slides, end, slides.length);
+
   slides[0] = addSocialButtons(slides[0]);
 
   return (
