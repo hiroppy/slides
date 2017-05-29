@@ -4,10 +4,11 @@
   "description": "My slides using bespoke",
   "main": "",
   "scripts": {
-    "start": "npm run start:node8",
+    "start": "npm run start:nicohako",
     "start:hello": "webpack-dev-server --env.name hello",
     "start:node-whatwg-url": "webpack-dev-server --env.name node-whatwg-url",
     "start:node8": "webpack-dev-server --env.name node8",
+    "start:nicohako": "webpack-dev-server --env.name nicohako",
     "build": "NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src",

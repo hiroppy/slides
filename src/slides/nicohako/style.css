@@ -1,0 +1,112 @@
+@import "../../common/style/variable";
+@import "../../common/style/mixins";
+
+.bespoke-parent {
+  font-family: futura, "Sawarabi Gothic", helvetica, arial, arial, sans-serif;
+}
+
+strong {
+  color: var(--orange-color);
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+pre {
+  font-size: 1rem;
+}
+
+.bespoke-backdrop.title {
+  background: #ea4230;
+}
+
+.bespoke-backdrop.sky {
+  background: var(--main-color);
+}
+
+.bespoke-backdrop.maintainers {
+  background: #444;
+}
+
+.bespoke-backdrop.end {
+  background: var(--main-color);
+}
+
+li:before {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.list {
+  display: flex;
+  margin-top: 50px;
+
+  & p {
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+  }
+
+  & > div {
+    margin: 0 100px;
+    text-align: left;
+  }
+}
+
+.schedule-table + table {
+  & > thead {
+    border-bottom: 2px solid var(--main-color);
+  }
+
+  & th {
+    padding: 0 10px;
+  }
+
+  & strong {
+    font-size: inherit;
+  }
+}
+
+#n-api- + table {
+  & > thead {
+    border-bottom: 2px solid var(--main-color);
+  }
+
+  & th {
+    padding-right: 30px;
+  }
+
+  & td {
+    padding-right: 20px;
+  }
+}
+
+#es2017-v5-7-v5-8- + table {
+  & > thead {
+    border-bottom: 2px solid var(--main-color);
+  }
+
+  & tr {
+    padding: 10px 0;
+
+    & > td:first-child {
+      padding: 5px 15px 0 0;
+    }
+
+    & > td:not(:first-child) {
+      padding: 5px 10px 0 0;
+    }
+  }
+}
+
+.flow {
+  display: flex;
+  justify-content: space-around;
+
+  & > img {
+    height: 46%;
+    width: 46%;
+  }
+}
+
+.card {
+  margin: 50px;
+}

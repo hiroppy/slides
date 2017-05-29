@@ -27,6 +27,11 @@ let slides = [
     title: 'node-whatwg-url',
     image: '',
     description: 'whatwg-url in Node'
+  },
+  {
+    title: 'nicohako',
+    image: '',
+    description: 'NicoHakoというNicoBoxのPC版アプリを作った'
   }
 ];
 
