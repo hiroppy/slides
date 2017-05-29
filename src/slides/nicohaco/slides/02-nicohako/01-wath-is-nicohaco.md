@@ -1,4 +1,4 @@
-## nicohakoとは？
+## nicohacoとは？
 
 <img src="../../images/nicohaho-logo.png" width="200" height="200">
 
@@ -8,4 +8,4 @@ NicoBoxというニコ動の音楽アプリのPC版(Electron製)
 _まだαの段階です_
 
 <br>
-**https://github.com/abouthiroppy/nicohako**
+**https://github.com/abouthiroppy/nicohaco**

@@ -12,7 +12,7 @@ import './style.css';
 import '../../common/style/common.css';
 import 'highlight.js/styles/github.css';
 
-const slidesInfo = fetchSlides('nicohako');
+const slidesInfo = fetchSlides('nicohaco');
 
 const common = fetchCommon();
 const profile = common['self-introduction.md'];

@@ -1,6 +1,6 @@
 <!-- background: title -->
 
-# nicohakoを作った
+# nicohacoを作った
 <br />
 5/29 エンジニアLT  
 repo: https://github.com/abouthiroppy/slides
