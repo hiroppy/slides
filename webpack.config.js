@@ -32,6 +32,11 @@ let slides = [
     title: 'nicohaco',
     image: '',
     description: 'NicoHacoというNicoBoxのPC版アプリを作った'
+  },
+  {
+    title: 'The World of JavaScript and Future',
+    image: 'https://avatars1.githubusercontent.com/u/1725583?v=4&s=200',
+    description: 'Explain how specifications are determined and how it will be in the future.'
   }
 ];
 
@@ -61,9 +66,7 @@ module.exports = (env) => {
           {
             test: /\.js$/,
             include: path.resolve(__dirname, 'src'),
-            use: [
-              'babel-loader'
-            ]
+            use: 'babel-loader'
           },
           {
             test: /\.css$/,
@@ -82,15 +85,11 @@ module.exports = (env) => {
           },
           {
             test: /\.(png|jpg|gif|svg|ttf|woff2?)$/,
-            use: [
-              'url-loader'
-            ]
+            use: 'url-loader'
           },
           {
             test: /\.eot$/,
-            use: [
-              'file-loader'
-            ]
+            use: 'file-loader'
           }
         ]
       },
