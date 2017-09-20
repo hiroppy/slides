@@ -5,6 +5,7 @@
 <div class="profile">
   <img src="../images/profile.png" alt="profile" class="profile-icon">
   <h4>Yuta Hiroto</h4>
+  <a href="http://about-hiroppy.com" target="_blank">details</a>
   <div class="profile-info">
     <div>
       <h4>accounts</h4>
