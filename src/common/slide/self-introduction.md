@@ -3,19 +3,26 @@
 ## 😋 me 😙
 
 <div class="profile">
-  <img src="../images/profile.png" alt="profile" class="profile-icon">
-  <h4>Yuta Hiroto</h4>
-  <a href="http://about-hiroppy.com" target="_blank">details</a>
+  <img src="../images/profile.png" alt="profile" class="profile-avatar">
+  <h4 class="profile-name">Yuta Hiroto</h4>
   <div class="profile-info">
-    <div>
-      <h4>accounts</h4>
-        <p>github: [abouthiroppy](https://github.com/abouthiroppy)</p>
-        <p>twitter: [about_hiroppy](https://twitter.com/about_hiroppy)</p>
+    <div class="profile-left">
+      <p>Node.js Japan User Group</p>
+      <div>
+      <a href="http://about-hiroppy.com" target="_blank">
+        <i class="fa fa-fw fa-home"></i>
+      </a>
+      <a href="https://github.com/abouthiroppy" target="_blank">
+        <i class="fa fa-fw fa-github"></i>
+      </a>
+      <a href="https://twitter.com/about_hiroppy" target="_blank">
+        <i class="fa fa-fw fa-twitter"></i>
+      </a>
+      </div>
     </div>
-    <div>
-      <h4>oss</h4>
-        <p>Node.js Core Collaborator</p>
-        <p>Babel, webpack Member</p>
+    <div class="profile-right">
+      <p>Node.js Core Member</p>
+      <p>Babel, webpack Member</p>
     </div>
   </div>
 </div>

@@ -48,6 +48,7 @@
     "style-loader": "^0.14.1",
     "stylelint": "^7.9.0",
     "stylelint-config-sky": "^1.0.0",
+    "url-loader": "^0.5.9",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2",
     "webpack-merge": "^4.1.0"
@@ -64,6 +65,7 @@
     "bespoke-scale": "^1.0.1",
     "bespoke-theme-nebula": "^1.0.1",
     "bespoke-touch": "^1.0.0",
+    "font-awesome": "^4.7.0",
     "highlight.js": "^9.10.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"

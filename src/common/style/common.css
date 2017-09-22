@@ -5,13 +5,24 @@
 }
 
 .profile {
-  &-icon {
+  &-avatar {
     height: var(--icon-size);
+    margin: 20px 0;
     width: var(--icon-size);
+  }
+
+  &-name {
+    margin: 0;
   }
 
   &-info {
     display: flex;
+    margin: 20px 0;
+    text-align: left;
+
+    & a {
+      border: none;
+    }
   }
 }
 

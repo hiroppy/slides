@@ -8,9 +8,11 @@ import fetchSlides, { fetchCommon } from '../../lib/fetch-slides';
 import setupBespoke from '../../lib/setup-bespoke';
 import addSocialButtons from '../../lib/add-social-buttons';
 import '../../lib/setup-hljs';
+
+import 'highlight.js/styles/github.css';
+import 'font-awesome/css/font-awesome.css';
 import './style.css';
 import '../../common/style/common.css';
-import 'highlight.js/styles/github.css';
 
 const slidesInfo = fetchSlides('nicohaco');
 
