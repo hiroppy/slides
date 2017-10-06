@@ -1,0 +1,128 @@
+@import "../../common/style/variable";
+@import "../../common/style/mixins";
+
+:root {
+  --color-white: #f5f5f5;
+  --color-gray: #b7b8b7;
+}
+
+@font-face {
+  font-family: Stratum;
+  src: url("../../common/fonts/StratumNo1 Medium.ttf");
+}
+
+.bespoke-parent {
+
+ /* stylelint-disable */
+  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", Arial, sans-serif;
+  /* stylelint-enable */
+}
+
+h2 {
+  color: var(--js-color);
+}
+
+strong {
+  color: var(--orange-color);
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.bespoke-backdrop {
+  background: var(--color-gray);
+}
+
+.bespoke-backdrop.hyper-drive {
+  background: url("./images/source.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bespoke-backdrop.javascript {
+  background: var(--js-color);
+}
+
+pre {
+  border-radius: 10px;
+  font-size: 1.1rem;
+
+  & code {
+    background: var(--color-white) !important;
+    padding: 20px !important;
+  }
+}
+
+.big {
+  font-size: 3rem;
+}
+
+.tc39 {
+  @mixin icon "./images/tc39.png";
+}
+
+.timeline {
+  border-left: 2px solid #888;
+  padding: 10px;
+  text-align: left;
+
+  & thead {
+    border-bottom: 1px solid #888;
+  }
+
+  & th {
+    padding: 5px 20px;
+  }
+}
+
+.stages-list {
+  font-size: .9rem;
+  text-align: left;
+
+  & th {
+    padding: 10px;
+
+    &:first-child {
+      padding-left: 50px;
+      width: 100px;
+    }
+  }
+
+  & strong {
+    font-size: 1.7rem;
+  }
+}
+
+.champion {
+  font-size: .6rem;
+}
+
+.proposal-updates-table {
+  font-size: .8rem;
+
+  & tbody {
+    & th {
+      padding: 2px 10px;
+    }
+  }
+}
+
+.node-fest {
+  width: 70%;
+}
+
+img {
+  width: 90%;
+}
+
+pre {
+  font-size: .9rem;
+}
+
+.ref-link:hover {
+  color: var(--js-color);
+}
+
+.required {
+  color: var(--js-color);
+  margin-right: 5px;
+}
