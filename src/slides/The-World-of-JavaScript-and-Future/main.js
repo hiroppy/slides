@@ -12,7 +12,7 @@ import './style.css';
 import '../../common/style/common.css';
 import 'highlight.js/styles/github.css';
 
-const slidesInfo = fetchSlides('javascript-specification');
+const slidesInfo = fetchSlides('The-World-of-JavaScript-and-Future');
 
 const common = fetchCommon();
 const profile = common['self-introduction.md'];
