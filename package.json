@@ -9,7 +9,7 @@
     "start:node-whatwg-url": "webpack-dev-server --env.name node-whatwg-url",
     "start:node8": "webpack-dev-server --env.name node8",
     "start:nicohaco": "webpack-dev-server --env.name nicohaco",
-    "start:javascript-specification": "webpack-dev-server --env.name 'The World of JavaScript and Future'",
+    "start:javascript-specification": "webpack-dev-server --env.name 'the present and future of JavaScript'",
     "build": "NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src",

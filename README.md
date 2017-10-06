@@ -8,7 +8,7 @@ My slides using bespoke.
 - [node-whatwg-url](https://abouthiroppy.github.io/slides/node-whatwg-url/)
 - [node@8.0.0](http://abouthiroppy.github.io/slides/node8/)(Japanese)
 - [nicohaco](https://abouthiroppy.github.io/slides/nicohaco/)(Japanese)
-- [The World of JavaScript and Future](https://abouthiroppy.github.io/slides/The-World-of-JavaScript-and-Future/)
+- [the present and future of JavaScript](https://abouthiroppy.github.io/slides/the-present-and-future-of-JavaScript/)
 
 speakerdeck: https://speakerdeck.com/abouthiroppy  
 slideshare: https://www.slideshare.net/about_hiroppy  

@@ -4,6 +4,10 @@
   --icon-size: 150px;
 }
 
+a {
+  padding-left: 0;
+}
+
 .profile {
   &-avatar {
     height: var(--icon-size);

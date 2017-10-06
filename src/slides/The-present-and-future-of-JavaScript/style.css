@@ -3,7 +3,6 @@
 
 :root {
   --color-white: #f5f5f5;
-  --color-js: #f5da55;
   --color-gray: #b7b8b7;
 }
 
@@ -20,7 +19,7 @@
 }
 
 h2 {
-  color: var(--color-js);
+  color: var(--js-color);
 }
 
 strong {
@@ -40,7 +39,7 @@ strong {
 }
 
 .bespoke-backdrop.javascript {
-  background: var(--color-js);
+  background: var(--js-color);
 }
 
 pre {
@@ -62,12 +61,12 @@ pre {
 }
 
 .timeline {
-  border-left: 2px solid #777;
+  border-left: 2px solid #888;
   padding: 10px;
   text-align: left;
 
   & thead {
-    border-bottom: 1px solid #777;
+    border-bottom: 1px solid #888;
   }
 
   & th {
@@ -76,6 +75,7 @@ pre {
 }
 
 .stages-list {
+  font-size: .9rem;
   text-align: left;
 
   & th {
@@ -90,6 +90,10 @@ pre {
   & strong {
     font-size: 1.7rem;
   }
+}
+
+.champion {
+  font-size: .6rem;
 }
 
 .proposal-updates-table {
@@ -110,6 +114,15 @@ img {
   width: 90%;
 }
 
+pre {
+  font-size: .9rem;
+}
+
 .ref-link:hover {
-  color: var(--color-js);
+  color: var(--js-color);
+}
+
+.required {
+  color: var(--js-color);
+  margin-right: 5px;
 }

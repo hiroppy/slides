@@ -1,8 +1,8 @@
 <!-- background: hyper-drive -->
 
-# the world of javascript and future
+# the present and future of JavaScript
 
-2017/10/8
+2017/10/08
 
 <a class="ref-link" target="_blank" href="https://github.com/abouthiroppy/slides">
   https://github.com/abouthiroppy/slides

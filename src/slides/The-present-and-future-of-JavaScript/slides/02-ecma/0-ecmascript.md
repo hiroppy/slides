@@ -10,6 +10,7 @@ Specification of JavaScript by Ecma International.
 So... what is JavaScript?🤔
 
 <br>
+<br>
 
 <div class="left-box">
 **ECMAScript** - JavaScript's specification(standardization)

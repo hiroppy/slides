@@ -5,7 +5,7 @@ It is called stage-X.(0 - 4)
 
 <br>
 
-TC39's meetings are held every two months and this stages will change.
+TC39's meeting is held every two months and this stages will change.
 
 <br>
 
