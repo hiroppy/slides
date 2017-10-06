@@ -1,7 +1,8 @@
 'use strict';
 
-const path = require('path');
-const merge = require('webpack-merge');
+const path              = require('path');
+const webpack           = require('webpack');
+const merge             = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = process.env.NODE_ENV !== 'production' ?
@@ -93,6 +94,9 @@ module.exports = (env) => {
         ]
       },
       plugins: [
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }),
         new HtmlWebpackPlugin({
           filename: 'index.html',
           title: slide.title,

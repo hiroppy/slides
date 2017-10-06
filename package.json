@@ -10,11 +10,12 @@
     "start:node8": "webpack-dev-server --env.name node8",
     "start:nicohaco": "webpack-dev-server --env.name nicohaco",
     "start:javascript-specification": "webpack-dev-server --env.name 'the present and future of JavaScript'",
-    "build": "NODE_ENV=production webpack",
+    "build": "npm run clean && NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src",
     "lint:css": "stylelint src/**/*.css",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "clean": "rimraf ./dist"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "postcss-mixins": "^5.4.1",
     "postcss-reporter": "^3.0.0",
     "postcss-smart-import": "^0.6.10",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.14.1",
     "stylelint": "^7.9.0",
     "stylelint-config-sky": "^1.0.0",
@@ -67,6 +69,7 @@
     "bespoke-touch": "^1.0.0",
     "font-awesome": "^4.7.0",
     "highlight.js": "^9.10.0",
+    "offline-plugin": "^4.8.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }

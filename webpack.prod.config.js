@@ -1,9 +1,11 @@
 'use strict';
 
-const webpack = require('webpack');
+const webpack       = require('webpack');
+const OfflinePlugin = require('offline-plugin');
 
 module.exports = {
   plugins: [
+    new OfflinePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       output   : {comments: false},
       compress : {warnings: false},

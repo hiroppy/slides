@@ -44,7 +44,7 @@ strong {
 
 pre {
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: .9rem;
 
   & code {
     background: var(--color-white) !important;
@@ -112,10 +112,6 @@ pre {
 
 img {
   width: 90%;
-}
-
-pre {
-  font-size: .9rem;
 }
 
 .ref-link:hover {
