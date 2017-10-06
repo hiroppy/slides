@@ -4,8 +4,6 @@ const path = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-require('babel-polyfill');
-
 const config = process.env.NODE_ENV !== 'production' ?
   require('./webpack.dev.config') :
   require('./webpack.prod.config');
@@ -40,6 +38,8 @@ let slides = [
   }
 ];
 
+const convertPath = (title) => title.replace(/ /g, '-');
+
 module.exports = (env) => {
   if (process.env.NODE_ENV !== 'production') {
     slides.some((slide, i) => {
@@ -54,11 +54,10 @@ module.exports = (env) => {
     const common = {
       name: slide.title,
       entry: [
-        'babel-polyfill',
-        path.resolve(__dirname, 'src', 'slides', slide.title, 'main.js')
+        path.resolve(__dirname, 'src', 'slides', convertPath(slide.title), 'main.js')
       ],
       output: {
-        path: path.resolve(__dirname, 'dist', slide.title),
+        path: path.resolve(__dirname, 'dist', convertPath(slide.title)),
         filename: '[hash].js'
       },
       module: {
@@ -96,9 +95,9 @@ module.exports = (env) => {
       plugins: [
         new HtmlWebpackPlugin({
           filename: 'index.html',
-          title: `abouthiroppy/${slide.title}`,
+          title: slide.title,
           template: './template.ejs',
-          url: `${urlPrefix}${slide.title}`,
+          url: `${urlPrefix}${convertPath(slide.title)}`,
           image: slide.image,
           description: slide.description
         })
