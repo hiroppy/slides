@@ -6,7 +6,7 @@ stage-1
 function add(x, y) { return x + y; }
 
 // before
-const addOne = add.bind(null, 1); // this, the left(x), the right
+const addOne = add.bind(null, 1); // this, the left(x = 1), the right(y = undefined)
 addOne(2); // 3
 
 // after

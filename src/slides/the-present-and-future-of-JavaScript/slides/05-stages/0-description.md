@@ -19,6 +19,11 @@ TC39's meeting is held every two months and this stages will change.
   </thead>
   <tbody>
     <tr>
+      <th>2017-01-24 to 2017-01-26</th>
+      <th>San Jose, CA</th>
+      <th>PayPal</th>
+    </tr>
+    <tr>
       <th>2017-03-21 to 2017-03-23</th>
       <th>Portland, OR</th>
       <th>Mozilla</th>

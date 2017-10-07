@@ -19,7 +19,7 @@ function boundScore (min, max, score) { return Math.max(min, Math.min(max, score
 
 // boundScore(0, 100, add(7, double(person.score)));
 let newScore = 25
-  |> double      // the argument is 25
+  |> double                      // the argument is 25
   |> _ => add(7, _)              // `_` is the return value of `double`
   |> _ => boundScore(0, 100, _); // 57 // `_` is the return value of `add`
 ```

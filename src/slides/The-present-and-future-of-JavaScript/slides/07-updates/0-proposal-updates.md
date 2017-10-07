@@ -1,6 +1,6 @@
-## Proposal updates(wip)
+## Proposal updates
 the 60th meeting on 26-28 September 2017 (about 2 weeks ago!!)
-https://github.com/tc39/proposals/commits/master
+
 <table class="common-table proposal-updates-table">
   <thead>
     <tr>
@@ -12,37 +12,64 @@ https://github.com/tc39/proposals/commits/master
   <tbody>
     <tr>
       <th>
-        <a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">ArrayBuffer.transfer</a>
+        [import.meta](https://github.com/tc39/proposal-import-meta)
       </th>
-      <th>N/A → 0</th>
+      <th>2 → 3</th>
     </tr>
     <tr>
-      <th>Builtin.is and Builtin.typeOf</th>
-      <th>N/A → 0</th>
+      <th>export ns from 'mod';</th>
+      <th>2 → N/A</th>
+      <th>
+        it moved to https://github.com/tc39/ecma262/pull/1005
+      </th>
     </tr>
     <tr>
-      <th>Object Shorthand Improvements</th>
-      <th>N/A → 0</th>
+      <th>
+        [Array.prototype.flat{Map,ten}](https://github.com/tc39/proposal-flatMap)
+      </th>
+      <th>1 → 2</th>
     </tr>
     <tr>
-      <th>Extensible numeric literals</th>
+      <th>
+        [throw Expressions](https://github.com/tc39/proposal-throw-expressions)
+      </th>
+      <th>1 → 2</th>
+    </tr>
+    <tr>
+      <th>
+        [String.prototype.matchAll](https://github.com/tc39/proposal-string-matchall)
+      </th>
+      <th>1 → 2</th>
+    </tr>
+    <tr>
+      <th>
+        [Extensible numeric literals](https://github.com/littledan/proposal-extensible-numeric-literals)
+      </th>
       <th>0 → 1</th>
     </tr>
     <tr>
-      <th>First-Class Protocols</th>
+      <th>
+        [First-Class Protocols](https://github.com/michaelficarra/proposal-first-class-protocols)
+      </th>
       <th>0 → 1</th>
       <th>it was called `Interfaces` in stage-0</th>
     </tr>
     <tr>
-      <th>Subsume JSON</th>
+      <th>
+        [JSON superset](https://github.com/tc39/proposal-json-superset)
+      </th>
       <th>0 → 1</th>
     </tr>
     <tr>
-      <th>Null Coalescing</th>
+      <th>
+        [nullary coalescing](https://github.com/gisenberg/proposal-nullary-coalescing)
+      </th>
       <th>0 → 1</th>
     </tr>
     <tr>
-      <th>Partial Application Syntax</th>
+      <th>
+        [Partial application](https://github.com/rbuckton/proposal-partial-application)
+      </th>
       <th>0 → 1</th>
     </tr>
     <tr>
@@ -52,23 +79,22 @@ https://github.com/tc39/proposals/commits/master
       <th>0 → 1</th>
     </tr>
     <tr>
-      <th>Array.prototype.flat{Map,ten}</th>
-      <th>1 → 2</th>
+      <th>
+        [ArrayBuffer.transfer](https://gist.github.com/lukewagner/2735af7eea411e18cf20)
+      </th>
+      <th>N/A → 0</th>
     </tr>
     <tr>
-      <th>throw Expressions</th>
-      <th>1 → 2</th>
+      <th>
+        [Builtins.typeOf() and Builtins.is()](https://github.com/jasnell/proposal-istypes)
+      </th>
+      <th>N/A → 0</th>
     </tr>
     <tr>
-      <th>String.prototype.matchAll</th>
-      <th>1 → 2</th>
-    </tr>
-    <tr>
-      <th>import.meta</th>
-      <th>2 → 3</th>
-    </tr>
-    <tr>
-      <th>export ns from</th>
+      <th>
+        [Object Shorthand Improvements](https://github.com/rbuckton/proposal-shorthand-improvements)
+      </th>
+      <th>N/A → 0</th>
     </tr>
   </tbody>
 </table>

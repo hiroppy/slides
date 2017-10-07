@@ -47,6 +47,10 @@ a {
   background: var(--node-color);
 }
 
+.bespoke-backdrop.black {
+  background: #000;
+}
+
 .card {
   display: flex;
 
@@ -125,4 +129,14 @@ a {
 
 li {
   margin: 0;
+}
+
+pre {
+  border-radius: 10px;
+  font-size: .9rem;
+
+  & code {
+    background: var(--white-color) !important;
+    padding: 20px !important;
+  }
 }

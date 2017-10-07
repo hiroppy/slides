@@ -2,7 +2,6 @@
 @import "../../common/style/mixins";
 
 :root {
-  --color-white: #f5f5f5;
   --color-gray: #b7b8b7;
 }
 
@@ -40,16 +39,6 @@ strong {
 
 .bespoke-backdrop.javascript {
   background: var(--js-color);
-}
-
-pre {
-  border-radius: 10px;
-  font-size: .9rem;
-
-  & code {
-    background: var(--color-white) !important;
-    padding: 20px !important;
-  }
 }
 
 .big {
