@@ -6,7 +6,6 @@ import insertSlide from '../../lib/insert-slide';
 import AppContainer from '../../lib/AppContainer';
 import fetchSlides, { fetchCommon } from '../../lib/fetch-slides';
 import setupBespoke from '../../lib/setup-bespoke';
-import addSocialButtons from '../../lib/add-social-buttons';
 import '../../lib/setup-hljs';
 import './style.css';
 import '../../common/style/common.css';
@@ -19,8 +18,6 @@ const profile = common['self-introduction.md'];
 
 const App = () => {
   const slides = insertSlide(slidesInfo.slides, profile, 1);
-
-  slides[0] = addSocialButtons(slides[0]);
 
   return (
     <AppContainer slides={slides} />
