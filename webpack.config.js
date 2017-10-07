@@ -85,7 +85,7 @@ module.exports = (env) => {
           },
           {
             test: /\.(png|jpg|gif|svg|ttf|woff2?)$/,
-            use: 'url-loader'
+            use: 'file-loader'
           },
           {
             test: /\.eot$/,

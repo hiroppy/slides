@@ -7,8 +7,6 @@ module.exports = {
   plugins: [
     new OfflinePlugin(),
     new webpack.optimize.UglifyJsPlugin({
-      output   : {comments: false},
-      compress : {warnings: false},
       sourceMap: false
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
