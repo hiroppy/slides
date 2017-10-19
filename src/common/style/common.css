@@ -10,6 +10,7 @@ a {
 
 .profile {
   &-avatar {
+    border-radius: 50%;
     height: var(--icon-size);
     margin: 20px 0;
     width: var(--icon-size);

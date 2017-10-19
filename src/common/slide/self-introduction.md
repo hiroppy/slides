@@ -3,7 +3,7 @@
 ## 😋 me 😙
 
 <div class="profile">
-  <img src="../images/profile.png" alt="profile" class="profile-avatar">
+  <img src="../images/profile.jpg" alt="profile" class="profile-avatar">
   <h4 class="profile-name">Yuta Hiroto</h4>
   <div class="profile-sns">
     <a href="http://about-hiroppy.com" target="_blank">
