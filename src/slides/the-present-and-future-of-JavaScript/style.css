@@ -18,11 +18,11 @@
 }
 
 h2 {
-  color: var(--js-color);
+  color: var(--color-js);
 }
 
 strong {
-  color: var(--orange-color);
+  color: var(--color-orange);
   font-size: 2.1rem;
   font-weight: bold;
 }
@@ -35,10 +35,6 @@ strong {
   background: url("./images/source.gif");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bespoke-backdrop.javascript {
-  background: var(--js-color);
 }
 
 .big {
@@ -104,10 +100,10 @@ img {
 }
 
 .ref-link:hover {
-  color: var(--js-color);
+  color: var(--color-js);
 }
 
 .required {
-  color: var(--js-color);
+  color: var(--color-js);
   margin-right: 5px;
 }

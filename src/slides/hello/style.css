@@ -2,7 +2,7 @@
 @import "../../common/style/mixins";
 
 strong {
-  color: var(--orange-color);
+  color: var(--color-orange);
   font-size: 2.1rem;
   font-weight: bold;
 }
@@ -28,10 +28,10 @@ strong {
 }
 
 .bespoke-backdrop.end {
-  background: var(--main-color);
+  background: var(--color-main);
 }
 
 li:before {
-  color: var(--main-color);
+  color: var(--color-main);
   margin-right: 10px;
 }

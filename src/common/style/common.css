@@ -37,19 +37,19 @@ a {
 }
 
 .bespoke-backdrop.profile {
-  background: var(--main-color);
+  background: var(--color-main);
 }
 
 .bespoke-backdrop.js {
-  background: var(--js-color);
+  background: var(--color-js);
 }
 
 .bespoke-backdrop.node {
-  background: var(--node-color);
+  background: var(--color-node);
 }
 
 .bespoke-backdrop.black {
-  background: #000;
+  background: var(--color-black);
 }
 
 .card {
@@ -63,7 +63,7 @@ a {
 
     & > .title {
       border: none;
-      color: var(--main-color);
+      color: var(--color-main);
       display: block;
       font-size: 1.7rem;
       text-decoration: none;
@@ -116,7 +116,7 @@ a {
   text-align: left;
 
   & > thead {
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--color-main);
   }
 
   & th {
@@ -137,7 +137,7 @@ pre {
   font-size: .9rem;
 
   & code {
-    background: var(--white-color) !important;
+    background: var(--color-white) !important;
     padding: 20px !important;
   }
 }

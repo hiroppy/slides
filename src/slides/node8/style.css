@@ -6,7 +6,7 @@
 }
 
 strong {
-  color: var(--orange-color);
+  color: var(--color-orange);
   font-size: 2.1rem;
   font-weight: bold;
 }
@@ -32,11 +32,11 @@ pre {
 }
 
 .bespoke-backdrop.end {
-  background: var(--main-color);
+  background: var(--color-main);
 }
 
 li:before {
-  color: var(--main-color);
+  color: var(--color-main);
   margin-right: 10px;
 }
 
@@ -57,7 +57,7 @@ li:before {
 
 .schedule-table + table {
   & > thead {
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--color-main);
   }
 
   & th {
@@ -71,7 +71,7 @@ li:before {
 
 #n-api- + table {
   & > thead {
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--color-main);
   }
 
   & th {
@@ -85,7 +85,7 @@ li:before {
 
 #es2017-v5-7-v5-8- + table {
   & > thead {
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--color-main);
   }
 
   & tr {

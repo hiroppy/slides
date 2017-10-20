@@ -1,4 +1,4 @@
-<!-- background: javascript -->
+<!-- background: js -->
 
 # THE END
 
