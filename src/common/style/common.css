@@ -60,6 +60,10 @@ pre {
   }
 }
 
+.bespoke-backdrop.main {
+  background: var(--color-main);
+}
+
 .bespoke-backdrop.profile {
   background: var(--color-main);
 }
@@ -106,7 +110,9 @@ pre {
   }
 
   & > img {
+    height: 100px;
     padding: 0 20px;
+    width: 100px;
   }
 }
 

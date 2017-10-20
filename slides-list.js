@@ -28,6 +28,11 @@ const slides = [
     title      : 'how to build a slide',
     image      : '',
     description: 'yay!😌'
+  },
+  {
+    title      : 'how to manage the document of Node.js',
+    image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
+    description: ''
   }
 ];
 

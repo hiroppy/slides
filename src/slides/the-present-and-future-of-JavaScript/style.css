@@ -37,10 +37,6 @@ strong {
   background-size: cover;
 }
 
-.bespoke-backdrop.javascript {
-  background: var(--color-js);
-}
-
 .big {
   font-size: 3rem;
 }
