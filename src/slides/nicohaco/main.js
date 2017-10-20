@@ -13,8 +13,7 @@ import 'highlight.js/styles/github.css';
 import './style.css';
 import '../../common/style/common.css';
 
-const slidesInfo = fetchSlides('nicohaco');
-
+const slidesInfo = fetchSlides(require.context('./slides'));
 const common = fetchCommon();
 const profile = common['self-introduction.md'];
 

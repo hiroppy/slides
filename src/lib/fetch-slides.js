@@ -10,12 +10,11 @@ const fetchSlides = (dir) => {
       slides: context
         .keys()
         .sort()
-        .filter((e) => e.includes(dir))
         .map((e) => context(e))
     };
   }
 
-  return fetchAll(require.context('../slides', true, /(md|html)$/));
+  return fetchAll(dir, true, /(md|html)$/);
 };
 
 export const fetchCommon = () => {

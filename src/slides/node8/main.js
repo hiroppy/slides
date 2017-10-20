@@ -12,8 +12,7 @@ import './style.css';
 import '../../common/style/common.css';
 import 'highlight.js/styles/github.css';
 
-const slidesInfo = fetchSlides('node8');
-
+const slidesInfo = fetchSlides(require.context('./slides'));
 const common = fetchCommon();
 const profile = common['self-introduction.md'];
 const end = common['node-end.md'];

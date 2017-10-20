@@ -9,7 +9,7 @@ import '../../lib/setup-hljs';
 import './style.css';
 import 'highlight.js/styles/github.css';
 
-const slidesInfo = fetchSlides('hello');
+const slidesInfo = fetchSlides(require.context('./slides'));
 
 ReactDOM.render(<AppContainer slides={slidesInfo.slides} />, createRoot());
 

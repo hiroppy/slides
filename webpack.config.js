@@ -54,9 +54,7 @@ module.exports = (env) => {
   return slides.map((slide) => {
     const common = {
       name: slide.title,
-      entry: [
-        path.resolve(__dirname, 'src', 'slides', convertPath(slide.title), 'main.js')
-      ],
+      entry: path.resolve(__dirname, 'src', 'slides', convertPath(slide.title), 'main.js'),
       output: {
         path: path.resolve(__dirname, 'dist', convertPath(slide.title)),
         filename: '[hash].js'

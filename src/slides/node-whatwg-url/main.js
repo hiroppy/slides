@@ -12,8 +12,7 @@ import './style.css';
 import '../../common/style/common.css';
 import 'highlight.js/styles/github.css';
 
-const slidesInfo = fetchSlides('node-whatwg-url');
-
+const slidesInfo = fetchSlides(require.context('./slides'));
 const common = fetchCommon();
 const profile = common['self-introduction.md'];
 const community = common['node-community.md'];
