@@ -1,7 +1,10 @@
 {
   presets: [
     ["env", {
-      "modules": false
+      "modules": false,
+      "targets": {
+        "browsers": "last 1 version"
+      }
     }],
     "react"
   ]
