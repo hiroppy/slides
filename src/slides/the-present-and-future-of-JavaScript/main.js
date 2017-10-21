@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import nebula from 'bespoke-theme-nebula';
+import Loader from '../../lib/Loader';
 import createRoot from '../../lib/create-root';
 import insertSlide from '../../lib/insert-slide';
 import AppContainer from '../../lib/AppContainer';
@@ -18,9 +19,10 @@ const profile = common['self-introduction.md'];
 const App = () => {
   const slides = insertSlide(slidesInfo.slides, profile, 1);
 
-  return (
+  return [
+    <Loader />,
     <AppContainer slides={slides} />
-  );
+  ];
 };
 
 ReactDOM.render(<App />, createRoot());
