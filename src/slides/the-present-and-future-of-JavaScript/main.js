@@ -1,30 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import nebula from 'bespoke-theme-nebula';
-import Loader from '../../lib/Loader';
-import createRoot from '../../lib/create-root';
+import createBody from '../../lib/create-body';
 import insertSlide from '../../lib/insert-slide';
-import AppContainer from '../../lib/AppContainer';
 import fetchSlides, { fetchCommon } from '../../lib/fetch-slides';
 import setupBespoke from '../../lib/setup-bespoke';
-import '../../lib/setup-hljs';
+import '../../lib/setup-default';
 import './style.css';
-import '../../common/style/common.css';
-import 'highlight.js/styles/github.css';
 
+const common     = fetchCommon();
+const profile    = common['self-introduction.md'];
 const slidesInfo = fetchSlides(require.context('./slides'));
-const common = fetchCommon();
-const profile = common['self-introduction.md'];
+const slides     = insertSlide(slidesInfo.slides, profile, 1);
 
-const App = () => {
-  const slides = insertSlide(slidesInfo.slides, profile, 1);
-
-  return [
-    <Loader />,
-    <AppContainer slides={slides} />
-  ];
-};
-
-ReactDOM.render(<App />, createRoot());
-
+createBody(slides);
 setupBespoke(nebula);

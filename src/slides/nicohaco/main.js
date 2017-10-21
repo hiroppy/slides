@@ -1,37 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import nebula from 'bespoke-theme-nebula';
-import createRoot from '../../lib/create-root';
+import createBody from '../../lib/create-body';
 import insertSlide from '../../lib/insert-slide';
-import AppContainer from '../../lib/AppContainer';
 import fetchSlides, { fetchCommon } from '../../lib/fetch-slides';
 import setupBespoke from '../../lib/setup-bespoke';
 import addSocialButtons from '../../lib/add-social-buttons';
-import '../../lib/setup-hljs';
-
-import 'highlight.js/styles/github.css';
+import '../../lib/setup-default';
 import './style.css';
-import '../../common/style/common.css';
 
+const common     = fetchCommon();
+const profile    = common['self-introduction.md'];
 const slidesInfo = fetchSlides(require.context('./slides'));
-const common = fetchCommon();
-const profile = common['self-introduction.md'];
+const slides     = insertSlide(slidesInfo.slides, profile, 1);
 
-const App = () => {
-  const slides = insertSlide(slidesInfo.slides, profile, 1);
+slides[0] = addSocialButtons(slides[0]);
 
-  slides[0] = addSocialButtons(slides[0]);
-
-  return (
-    <AppContainer slides={slides}>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css"
-      />
-    </AppContainer>
-  );
-};
-
-ReactDOM.render(<App />, createRoot());
-
+createBody(slides);
 setupBespoke(nebula);
