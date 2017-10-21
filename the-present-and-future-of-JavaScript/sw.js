@@ -17,7 +17,7 @@ var __wpo = {
       "./87ff48ec393013df3f96010630dd18b7.png",
       "./862ad2d8c02ca650c45203c0a47eb2a2.png",
       "./c4a6072cffa1efa64c610c0b28b097db.png",
-      "./e29c4993bb6e61fc27e1.js",
+      "./90f556b0991865c63a1c.js",
       "./"
     ],
     "additional": [],
@@ -41,12 +41,12 @@ var __wpo = {
     "29903268fb4bfc1c12de0b72c9f34301372b9852": "./87ff48ec393013df3f96010630dd18b7.png",
     "df7269a9a2f655152b076484aba51191885850e4": "./862ad2d8c02ca650c45203c0a47eb2a2.png",
     "378a11ffa1cc54f8129ce36c692a1447bf08a57b": "./c4a6072cffa1efa64c610c0b28b097db.png",
-    "a97e65198e68c90de6dc3286f3c865c184fcf4ec": "./e29c4993bb6e61fc27e1.js",
-    "4329ccae6c8242e52743af4eb0a9b3628bad3b3c": "./"
+    "b1514e8f836df1aa322298477e5911d463a78725": "./90f556b0991865c63a1c.js",
+    "18c32d474d62b9f4b53a75111c937a31831128f5": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2017-10-21 08:27:15",
+  "version": "2017-10-21 10:41:46",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
