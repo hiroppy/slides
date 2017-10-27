@@ -36,6 +36,11 @@ let slides = [
     title: 'the present and future of JavaScript',
     image: 'https://avatars1.githubusercontent.com/u/1725583?v=4&s=200',
     description: 'Explain how specifications are determined and how it will be in the future.'
+  },
+  {
+    title: 'how to build a slide',
+    image: '',
+    description: ''
   }
 ];
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from 'react-sidebar';
+import screenfull from 'screenfull';
 
 const styles = {
   sidebar: {
@@ -37,6 +38,12 @@ const Inner = (props) => ([
       onClick={() => props.goTo(props.slideInfo.total - 1)}
       className="fa fa-fast-forward"
     />
+  </div>,
+  <div>
+    <a
+      onClick={() => screenfull.enabled ? screenfull.toggle() : null}
+      className="fa fa-arrows-alt"
+    />
   </div>
 ]);
 
@@ -44,7 +51,7 @@ const SidebarComponent = (props) => (
   <Sidebar
     sidebar={Inner(props)}
     shadow={false}
-    open={props.opened}
+    open={!props.opened}
     styles={styles}
     sidebarClassName="sidebar"
     onSetOpen={props.onSetOpen}

@@ -1,12 +1,29 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 
-const selectBackground = (content) => {
-  if (content === undefined) return 'default';
-  const arr = content.match(/<!-- background: (.+) -->/);
+function parseAttrs(content) {
+  const res = {
+    background: 'default',
+    className: ''
+  };
 
-  return arr ? arr[1] : 'default';
-};
+  if (content === undefined) return res;
+
+  // background
+  {
+    const arr = content.match(/<!-- background: (.+) -->/);
+
+    res.background =  arr ? arr[1] : 'default';
+  }
+
+  // section-title
+  if (content.match(/<!-- sectionTitle -->/)) {
+    res.background = 'section-title';
+    res.className = 'section-title';
+  }
+
+  return res;
+}
 
 class AppContainer extends React.Component {
   constructor() {
@@ -63,13 +80,18 @@ class AppContainer extends React.Component {
       >
         <article>
           {
-            slides.map((slide, i) => (
-              <section
-                data-bespoke-backdrop={selectBackground(slide)}
-                dangerouslySetInnerHTML={{ __html: slide }}
-                key={i /* fix */}
-              />
-            ))
+            slides.map((slide, i) => {
+              const meta = parseAttrs(slide);
+
+              return (
+                <section
+                  key={i /* fix */}
+                  className={meta.className}
+                  data-bespoke-backdrop={meta.background}
+                  dangerouslySetInnerHTML={{ __html: slide }}
+                />
+              );
+            })
           }
         </article>
         <i
