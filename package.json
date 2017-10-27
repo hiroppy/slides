@@ -4,12 +4,13 @@
   "description": "My slides using bespoke",
   "main": "",
   "scripts": {
-    "start": "npm run start:javascript-specification",
+    "start": "npm run start:how-to-build-a-slide",
     "start:hello": "webpack-dev-server --env.name hello",
     "start:node-whatwg-url": "webpack-dev-server --env.name node-whatwg-url",
     "start:node8": "webpack-dev-server --env.name node8",
     "start:nicohaco": "webpack-dev-server --env.name nicohaco",
     "start:javascript-specification": "webpack-dev-server --env.name 'the present and future of JavaScript'",
+    "start:how-to-build-a-slide": "webpack-dev-server --env.name 'how to build a slide'",
     "build": "npm run clean && NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint src",
@@ -76,6 +77,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-loading": "^1.0.0",
-    "react-sidebar": "^2.3.2"
+    "react-sidebar": "^2.3.2",
+    "screenfull": "^3.3.2"
   }
 }
