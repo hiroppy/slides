@@ -6,6 +6,6 @@
         "browsers": "last 1 version"
       }
     }],
-    "react"
+    "react", "stage-1"
   ]
 }

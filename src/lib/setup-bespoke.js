@@ -8,9 +8,6 @@ import progress from 'bespoke-progress';
 import backdrop from 'bespoke-backdrop';
 import fullscreen from 'bespoke-fullscreen';
 
-import './offline';
-import 'font-awesome/css/font-awesome.css';
-
 const setup = (theme, opts = []) => {
   const common = [
     keys(),

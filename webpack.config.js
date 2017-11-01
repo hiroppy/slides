@@ -52,6 +52,8 @@ module.exports = (env) => {
   }
 
   return slides.map((slide) => {
+    const url = `${urlPrefix}${convertPath(slide.title)}`;
+
     const common = {
       name: slide.title,
       entry: path.resolve(__dirname, 'src', 'slides', convertPath(slide.title), 'main.js'),
@@ -82,24 +84,26 @@ module.exports = (env) => {
             ]
           },
           {
-            test: /\.(png|jpg|gif|svg|ttf|woff2?)$/,
+            test: /\.(png|jpg|gif|svg?)$/,
             use: 'file-loader'
           },
           {
-            test: /\.eot$/,
-            use: 'file-loader'
+            test: /\.(eot|ttf|woff2?)$/,
+            use: 'url-loader'
           }
         ]
       },
       plugins: [
         new webpack.DefinePlugin({
+          'process.env.URL': JSON.stringify(url),
+          'process.env.TITLE': JSON.stringify(slide.title),
           'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         }),
         new HtmlWebpackPlugin({
+          url,
           filename: 'index.html',
           title: slide.title,
           template: './template.ejs',
-          url: `${urlPrefix}${convertPath(slide.title)}`,
           image: slide.image,
           description: slide.description
         })
