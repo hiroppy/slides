@@ -2,14 +2,10 @@ var __wpo = {
   "assets": {
     "main": [
       "./0bb5a13766f78872f1bba300ed2a329d.jpg",
-      "./674f50d287a8c48dc19ba404d20fe713.eot",
-      "./af7ae505a9eed503f8b8e6982036873e.woff2",
-      "./fee66e712a8a08eef5805a46892932ad.woff",
-      "./b06871f281fee6b241d60582ae9369b9.ttf",
       "./912ec66d7572ff821749319396470bde.svg",
       "./2b24a50e92f109146a2033372c936a07.gif",
       "./883f2cab21f2f06bcc7c6ef88a5a1dac.jpg",
-      "./617aa4a9700336c452e8.js",
+      "./168963d240c5586eab87.js",
       "./"
     ],
     "additional": [],
@@ -18,19 +14,15 @@ var __wpo = {
   "externals": [],
   "hashesMap": {
     "897a45933249941236ad3a0f2db63e7ec9910388": "./0bb5a13766f78872f1bba300ed2a329d.jpg",
-    "d980c2ce873dc43af460d4d572d441304499f400": "./674f50d287a8c48dc19ba404d20fe713.eot",
-    "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c": "./af7ae505a9eed503f8b8e6982036873e.woff2",
-    "28b782240b3e76db824e12c02754a9731a167527": "./fee66e712a8a08eef5805a46892932ad.woff",
-    "13b1eab65a983c7a73bc7997c479d66943f7c6cb": "./b06871f281fee6b241d60582ae9369b9.ttf",
     "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed": "./912ec66d7572ff821749319396470bde.svg",
     "b39fa0f624ea2b0e09290b228794780911e3166b": "./2b24a50e92f109146a2033372c936a07.gif",
     "dfabaed86492b84eb93fda5822f9e33e90ecfda0": "./883f2cab21f2f06bcc7c6ef88a5a1dac.jpg",
-    "6274c9cefdf7bdfaf11cbe54c4271ebabbfec772": "./617aa4a9700336c452e8.js",
-    "58f09232b189685417c161a2179bd202390d606d": "./"
+    "087765bac1a915ea40383907ea34d1e68568d909": "./168963d240c5586eab87.js",
+    "259253a3d59fbe6c1c0008bf8bde3b91df3e1212": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2017-10-22 01:47:19",
+  "version": "2017-11-02 05:16:04",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true

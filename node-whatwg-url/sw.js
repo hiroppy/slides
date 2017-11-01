@@ -2,16 +2,12 @@ var __wpo = {
   "assets": {
     "main": [
       "./0bb5a13766f78872f1bba300ed2a329d.jpg",
-      "./674f50d287a8c48dc19ba404d20fe713.eot",
-      "./af7ae505a9eed503f8b8e6982036873e.woff2",
-      "./fee66e712a8a08eef5805a46892932ad.woff",
-      "./b06871f281fee6b241d60582ae9369b9.ttf",
       "./912ec66d7572ff821749319396470bde.svg",
       "./b8d7b0b3f094aa69a9f28963a5244647.svg",
       "./576581b34afc39eda9846b13e9ddd1c0.svg",
       "./30383fd4880de586df390a8cff9ac20c.png",
       "./92a71a8eb7c25c706996e430ee03f6a7.png",
-      "./7592890d073a60490ac4.js",
+      "./9071252f43f9e87d81a0.js",
       "./"
     ],
     "additional": [],
@@ -20,21 +16,17 @@ var __wpo = {
   "externals": [],
   "hashesMap": {
     "897a45933249941236ad3a0f2db63e7ec9910388": "./0bb5a13766f78872f1bba300ed2a329d.jpg",
-    "d980c2ce873dc43af460d4d572d441304499f400": "./674f50d287a8c48dc19ba404d20fe713.eot",
-    "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c": "./af7ae505a9eed503f8b8e6982036873e.woff2",
-    "28b782240b3e76db824e12c02754a9731a167527": "./fee66e712a8a08eef5805a46892932ad.woff",
-    "13b1eab65a983c7a73bc7997c479d66943f7c6cb": "./b06871f281fee6b241d60582ae9369b9.ttf",
     "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed": "./912ec66d7572ff821749319396470bde.svg",
     "6fb61ae0f5f68441848abb2b1aec973b4e1ca0b3": "./b8d7b0b3f094aa69a9f28963a5244647.svg",
     "4be927cea87abd43c4e8bcaadc0b35408a66f065": "./576581b34afc39eda9846b13e9ddd1c0.svg",
     "3ba5cb4782262bc165b1ab46a2e8ad7f44429746": "./30383fd4880de586df390a8cff9ac20c.png",
     "d81074f871d9f6f1ce0da078e2ce9369326a4b37": "./92a71a8eb7c25c706996e430ee03f6a7.png",
-    "37a203cb01c9412d6cdca237e6a6c4f9cf700310": "./7592890d073a60490ac4.js",
-    "163af1544f0a8a7829cdcc740e26faaf312828fd": "./"
+    "daa0878e63a81b6280e3cc298a6f685f7877fac4": "./9071252f43f9e87d81a0.js",
+    "3d7338ec1555378b1553734a579d0a0c9dc4aaed": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2017-10-22 01:46:19",
+  "version": "2017-11-02 05:15:41",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
