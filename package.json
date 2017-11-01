@@ -41,6 +41,7 @@
     "gh-pages": "^1.0.0",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.4.2",
     "markdown-loader": "^2.0.1",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-cssnext": "^3.0.2",
