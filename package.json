@@ -33,6 +33,7 @@
     "babel-minify-webpack-plugin": "^0.2.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.9.0",
     "eslint-config-sky": "^1.4.3",
@@ -73,6 +74,7 @@
     "offline-plugin": "^4.8.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-loading": "^1.0.0"
+    "react-loading": "^1.0.0",
+    "react-sidebar": "^2.3.2"
   }
 }
