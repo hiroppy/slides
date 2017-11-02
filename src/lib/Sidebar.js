@@ -41,8 +41,15 @@ const Inner = (props) => ([
   </div>,
   <div>
     <a
-      onClick={() => screenfull.enabled ? screenfull.toggle() : null}
+      onClick={() => screenfull.enabled ? screenfull.toggle() : undefined}
       className="fa fa-arrows-alt"
+    />
+    <a
+      onClick={() => {
+        window.location.href = '?presenter=host';
+        window.open('?presenter=view', '_blank', 'width=800,height=600');
+      }}
+      className="fa fa-rocket"
     />
   </div>
 ]);
