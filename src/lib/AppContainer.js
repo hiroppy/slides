@@ -23,15 +23,22 @@ class AppContainer extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
+      this.setState({
+        slideInfo: {
+          total  : `${this.props.slides.length}`.padStart(2, '0'),
+          current: `${window.slide.bespoke.slide() + 1}`.padStart(2, '0')
+        }
+      });
+
       window.slide.bespoke.on('activate', () => {
         this.setState({
           slideInfo: {
-            total  : `${this.props.slides.length}`.padStart(2, '0'),
+            ...this.state.slideInfo,
             current: `${window.slide.bespoke.slide() + 1}`.padStart(2, '0')
           }
         });
       });
-    }, 0);
+    }, 5000);
   }
 
   goTo = (num) => { // eslint-disable-line react/sort-comp
