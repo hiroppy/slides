@@ -83,4 +83,4 @@ This sentence can be seen when using Presenter Mode.
 
 
 ## Presenter Mode
-Click the rocket icon from the bottom right menu and then slides for presentation will be opened as a new window, and an already open window will be windows for presenters.
+Click the rocket(:rocket:) icon from the bottom right menu and then slides for presentation will be opened as a new window, and an already open window will be windows for presenters.
