@@ -13,18 +13,74 @@ My slides using bespoke.
 speakerdeck: https://speakerdeck.com/abouthiroppy  
 slideshare: https://www.slideshare.net/about_hiroppy  
 ECMAScript on niconare: http://niconare.nicovideo.jp/watch/kn1937
-## Development
+
+## Tasks
+### Development
 ```sh
 $ yarn install or npm install
 $ npm start
 ```
 
-## Production Build
+### Production Build
 ```sh
 $ npm run build
 ```
 
-## Publish
+### Publish
 ```sh
 $ npm run deploy
 ```
+
+## Slide Syntax
+All slides are written in HTML or markdown.  
+
+### Background
+Change the slide's background.
+
+#### Slide
+```md
+<!-- background: xxx -->
+
+## title
+```
+
+#### CSS
+```css
+.bespoke-backdrop.xxx {
+  background: red;
+}
+```
+
+### Section Title
+This is the common setting of the slide for the title of the section.
+#### Slide
+```md
+<!-- sectionTitle -->
+
+## title
+```
+#### CSS
+```css
+.bespoke-backdrop.section-title {
+  background: red;
+}
+
+.section-title h2 {
+  color: var(--color-js);
+}
+```
+
+### Presenter Note
+#### Slide
+```md
+## title
+
+<!-- note
+This is the presenter note.
+This sentence can be seen when using Presenter Mode.
+-->
+```
+
+
+## Presenter Mode
+Click the rocket icon from the bottom right menu and then slides for presentation will be opened as a new window, and an already open window will be windows for presenters.
