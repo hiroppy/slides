@@ -58,7 +58,7 @@ const SidebarComponent = (props) => (
   <Sidebar
     sidebar={Inner(props)}
     shadow={false}
-    open={!props.opened}
+    open={props.opened}
     styles={styles}
     sidebarClassName="sidebar"
     onSetOpen={props.onSetOpen}
