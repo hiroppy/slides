@@ -51,6 +51,12 @@ const Inner = (props) => ([
       }}
       className="fa fa-rocket"
     />
+    <a
+      rel="noopener noreferrer"
+      href="https://github.com/abouthiroppy/slides"
+      target="_blank"
+      className="fa fa-github"
+    />
   </div>
 ]);
 
