@@ -1,15 +1,23 @@
 # Slides
 [![Build Status](https://travis-ci.org/abouthiroppy/slides.svg?branch=master)](https://travis-ci.org/abouthiroppy/slides)
 
-My slides using bespoke.
+My slides using bespoke.  
+All slides can be written in Markdown or HTML.
 
 ## My Slides
 - [Sample](https://abouthiroppy.github.io/slides/hello/)
 - [node-whatwg-url](https://abouthiroppy.github.io/slides/node-whatwg-url/)
+  - 2017/03/31: Node Academy 24th period
+  - 2017/04/03: LT in Dwango
 - [node@8.0.0](http://abouthiroppy.github.io/slides/node8/)(Japanese)
+  - 2017/04/24: Node Academy 25th period
 - [nicohaco](https://abouthiroppy.github.io/slides/nicohaco/)(Japanese)
+  - 2017/05/29: LT in Dwango
 - [the present and future of JavaScript](https://abouthiroppy.github.io/slides/the-present-and-future-of-JavaScript/)
+  - 2017/10/08: 情報科学若手の会 by 一般社団法人 情報処理学会 プログラミングシンポジウム委員会
+     - http://abouthiroppy.hatenablog.jp/entry/the-present-and-future-of-JavaScript
 
+### Other Accounts
 speakerdeck: https://speakerdeck.com/abouthiroppy  
 slideshare: https://www.slideshare.net/about_hiroppy  
 ECMAScript on niconare: http://niconare.nicovideo.jp/watch/kn1937
@@ -17,7 +25,7 @@ ECMAScript on niconare: http://niconare.nicovideo.jp/watch/kn1937
 ## Tasks
 ### Development
 ```sh
-$ yarn install or npm install
+$ npm install
 $ npm start
 ```
 
@@ -85,5 +93,5 @@ This sentence can be seen when using Presenter Mode.
 ## Presenter Mode
 Click the rocket(:rocket:) icon from the bottom right menu(三) and then slides for presentation will be opened as a new window, and an already open window will be windows for presenters.
 
-Host: ?presenter=host  
-View: ?presenter=view
+Host: `?presenter=host`  
+View: `?presenter=view`
