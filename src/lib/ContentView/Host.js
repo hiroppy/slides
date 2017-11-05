@@ -44,20 +44,35 @@ class Host extends React.Component {
   }
 
   render() {
+    const index = window.slide ?
+      window.slide.bespoke.slide() - 1 < 0 ?
+        0 :
+        window.slide.bespoke.slide() - 1 :
+      0;
+
     return (
       <div className="host-container">
         <div className="host-note">
           {
-            window.slide && window.slide.bespoke.slide() - 1 >= 0 ? (
+            window.slide ? (
               <pre>
                 {
-                  this.slides[window.slide.bespoke.slide() - 1].meta.note
+                  this.slides[index].meta.note
                 }
               </pre>
             ) : null
           }
         </div>
         <div className="host-info">
+          { /* TODO: currently, this view is displayed none
+            window.slide ? (
+              <div className="host-slides">
+                <span>
+                  {window.slide.bespoke.slide() + 1} / {this.slides.length}
+                </span>
+              </div>
+            ) : null
+          */ }
           <h2>next</h2>
           <article className="host-next-slide">
             {

@@ -80,7 +80,10 @@ This is the presenter note.
 This sentence can be seen when using Presenter Mode.
 -->
 ```
-
+![](./images/presenter-host.png)
 
 ## Presenter Mode
-Click the rocket(:rocket:) icon from the bottom right menu and then slides for presentation will be opened as a new window, and an already open window will be windows for presenters.
+Click the rocket(:rocket:) icon from the bottom right menu(三) and then slides for presentation will be opened as a new window, and an already open window will be windows for presenters.
+
+Host: ?presenter=host  
+View: ?presenter=view

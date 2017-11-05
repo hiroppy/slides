@@ -1,5 +1,5 @@
 /*
- * view for Presentation mode
+ * View for Presentation mode
  */
 
 import React from 'react';
