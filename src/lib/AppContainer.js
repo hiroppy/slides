@@ -54,6 +54,7 @@ class AppContainer extends React.Component {
   componentDidMount() {
     if (router() === 'common') {
       this.setupBespoke();
+      import('./setup-hljs'); // other types(presenter mode: host, view) require lazy loading
     }
 
     setTimeout(() => {

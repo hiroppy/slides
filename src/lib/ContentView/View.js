@@ -16,6 +16,10 @@ class View extends React.Component {
     });
   }
 
+  componentDidMount() {
+    import('../setup-hljs');
+  }
+
   render() {
     return (
       <Base slides={this.props.slides} />

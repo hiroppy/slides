@@ -1,5 +1,5 @@
 /**
- * host for Presentation mode
+ * Host for Presentation mode
  */
 
 import React from 'react';
@@ -11,7 +11,7 @@ class Host extends React.Component {
 
     this.slides = props.slides; // TODO: separate from current reference
 
-    const lastPage = { // TODO: display text
+    const lastPage = {
       meta: {
         note      : '',
         className : '',
@@ -22,6 +22,10 @@ class Host extends React.Component {
 
     this.slides.shift(); // delete the first page
     this.slides = [...this.slides, lastPage];
+  }
+
+  componentDidMount() {
+    import('../setup-hljs');
   }
 
   componentWillReceiveProps(p) {
