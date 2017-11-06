@@ -7,15 +7,15 @@ All slides can be written in Markdown or HTML.
 ## My Slides
 - [Sample](https://abouthiroppy.github.io/slides/hello/)
 - [node-whatwg-url](https://abouthiroppy.github.io/slides/node-whatwg-url/)
-  - 2017/03/31: Node Academy 24th period
+  - 2017/03/31: [Node Academy 24th period](https://nodejs.connpass.com/event/53534/)
   - 2017/04/03: LT in Dwango
 - [node@8.0.0](http://abouthiroppy.github.io/slides/node8/)(Japanese)
-  - 2017/04/24: Node Academy 25th period
+  - 2017/04/24: [Node Academy 25th period](https://nodejs.connpass.com/event/54749/)
 - [nicohaco](https://abouthiroppy.github.io/slides/nicohaco/)(Japanese)
   - 2017/05/29: LT in Dwango
 - [the present and future of JavaScript](https://abouthiroppy.github.io/slides/the-present-and-future-of-JavaScript/)
-  - 2017/10/08: 情報科学若手の会 by 一般社団法人 情報処理学会 プログラミングシンポジウム委員会
-     - http://abouthiroppy.hatenablog.jp/entry/the-present-and-future-of-JavaScript
+  - 2017/10/08: [情報科学若手の会 by 一般社団法人 情報処理学会 プログラミングシンポジウム委員会](http://wakate.org/2017/07/20/50th-general/) 
+  - see: http://abouthiroppy.hatenablog.jp/entry/the-present-and-future-of-JavaScript
 
 ### Other Accounts
 speakerdeck: https://speakerdeck.com/abouthiroppy  
