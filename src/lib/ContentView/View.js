@@ -17,7 +17,7 @@ class View extends React.Component {
   }
 
   componentDidMount() {
-    import('../setup-hljs');
+    import('../setup-prism');
   }
 
   render() {

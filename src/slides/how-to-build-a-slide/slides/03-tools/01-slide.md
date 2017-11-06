@@ -10,7 +10,3 @@
   </div>
     <img class="bespoke">
 </div>
-
-<br>
-
-bespoke.js has many plugins.🛠

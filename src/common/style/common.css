@@ -1,7 +1,7 @@
 @import "./variable";
 @import "./loader";
 @import "./sidebar";
-@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed'); /* for highlight.js */
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro"); /* for highlight.js */
 
 :root {
   --icon-size: 150px;
@@ -16,14 +16,13 @@ li {
 }
 
 pre {
+  background: var(--color-white) !important;
   border-radius: 10px;
   font-size: .7rem;
   min-width: 50%;
 
   & code {
-    background: var(--color-white) !important;
-    font-family: 'Saira Semi Condensed', sans-serif !important;
-    padding: 20px !important;
+    font-family: "Source Code Pro", monospace !important;
   }
 }
 
@@ -132,7 +131,7 @@ pre {
 .ref-link {
   bottom: 10px;
   font-size: 1rem;
-  position: absolute;
+  position: fixed;
   right: 20px;
 }
 

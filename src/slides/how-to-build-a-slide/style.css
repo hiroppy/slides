@@ -1,10 +1,6 @@
 @import "../../common/style/variable";
 @import "../../common/style/mixins";
 
-:root {
-  --color-gray: #b7b8b7;
-}
-
 @font-face {
   font-family: Stratum;
   src: url("../../common/fonts/StratumNo1 Medium.ttf");
@@ -22,14 +18,22 @@
 }
 
 .bespoke-backdrop.title {
-  background: red;
+  background: var(--color-node);
 }
 
 .bespoke-backdrop.section-title {
-  background: red;
+  background: var(--color-main);
+}
+
+.bespoke-backdrop.end {
+  background: var(--color-js);
 }
 
 .section-title h2 {
+  color: var(--color-js);
+}
+
+h2 {
   color: var(--color-js);
 }
 
@@ -45,4 +49,43 @@ img {
 
 .bespoke {
   @mixin icon "./images/bespoke.png";
+}
+
+.flow-line {
+  font-size: 2.2rem;
+}
+
+.presenter-host-image {
+  width: 50%;
+}
+
+.lib-list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  & > div {
+    margin: 0 10px;
+  }
+
+  & .react {
+    @mixin icon "./images/react.png", 150px, 150px;
+  }
+
+  & .babel {
+    @mixin icon "./images/babel.png", 150px, 150px;
+  }
+
+  & .webpack {
+    @mixin icon "./images/webpack.png", 100px, 100px;
+  }
+
+  & .postcss {
+    @mixin icon "./images/postcss.png", 80px, 80px;
+  }
+
+  & .cssnext {
+    @mixin icon "./images/cssnext.svg", 80px, 80px;
+  }
 }

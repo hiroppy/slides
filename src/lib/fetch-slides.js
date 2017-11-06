@@ -14,7 +14,7 @@ const fetchSlides = (dir) => {
     };
   }
 
-  return fetchAll(dir, true, /(md|html)$/);
+  return fetchAll(dir);
 };
 
 export const fetchCommon = () => {
