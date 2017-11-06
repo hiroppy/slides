@@ -6,6 +6,8 @@ All slides can be written in Markdown or HTML.
 
 ## My Slides
 - [sample](https://abouthiroppy.github.io/slides/hello/)
+- [how to build a slide](https://abouthiroppy.github.io/slides/how-to-build-a-slide/)
+  - 2017/11/11: [A(izu)LT#09](https://atnd.org/events/91189)
 - [node-whatwg-url](https://abouthiroppy.github.io/slides/node-whatwg-url/)
   - 2017/03/31: [Node Academy 24th period](https://nodejs.connpass.com/event/53534/)
   - 2017/04/03: LT in Dwango

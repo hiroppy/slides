@@ -54,7 +54,7 @@ class AppContainer extends React.Component {
   componentDidMount() {
     if (router() === 'common') {
       this.setupBespoke();
-      import('./setup-hljs'); // other types(presenter mode: host, view) require lazy loading
+      import('./setup-prism'); // other types(presenter mode: host, view) require lazy loading
     }
 
     setTimeout(() => {
@@ -126,6 +126,7 @@ class AppContainer extends React.Component {
             ) /* for common */
         }
         <i
+          style={{ width: 50 }}
           className="btn-sidebar fa fa-bars"
           onClick={() => this.onSetSidebarOpen(true)}
         />

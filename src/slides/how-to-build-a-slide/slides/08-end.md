@@ -1,6 +1,6 @@
-<!-- background: title -->
+<!-- background: end -->
 
-# how to build a slide
+# the end
 
 <br>
 

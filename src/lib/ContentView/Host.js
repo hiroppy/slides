@@ -25,7 +25,7 @@ class Host extends React.Component {
   }
 
   componentDidMount() {
-    import('../setup-hljs');
+    import('../setup-prism');
   }
 
   componentWillReceiveProps(p) {
