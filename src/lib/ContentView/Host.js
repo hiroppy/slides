@@ -58,7 +58,7 @@ class Host extends React.Component {
               <pre>
                 {
                   !!location.hash && ~~location.hash.match(/#(.*)/)[1] !== 1 ? // for 0 page
-                    this.slides[index].meta.note :
+              this.slides[index].meta.note :
                     ''
                 }
               </pre>
