@@ -38,11 +38,11 @@ var __wpo = {
     "81a40c4e2a31f4954ec4e66f25ca40abce8bda22": "./1.0436d432d6deffa75490.js",
     "4f101566d6b84041a4b07de057db173c57ccb92b": "./2.0436d432d6deffa75490.js",
     "21b7a64f589c4b32a7590920cab06c25fef996d3": "./0436d432d6deffa75490.js",
-    "866e58f58377ac5b076fa0a53eb963a91c0986b8": "./"
+    "0b1e77c49087d036ee0e80649c62ed5502e3eedb": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2017-11-11 14:50:02",
+  "version": "2017-11-11 16:01:53",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
