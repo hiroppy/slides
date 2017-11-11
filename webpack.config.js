@@ -40,7 +40,7 @@ let slides = [
   {
     title: 'how to build a slide',
     image: '',
-    description: ''
+    description: 'yay!😌'
   }
 ];
 
