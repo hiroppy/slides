@@ -1,10 +1,28 @@
 const parseAttrs = (content) => {
   const res = {
     note      : '',
+    contents  : [],
     className : '',
     background: 'default'
   };
   if (content === undefined) return res;
+
+  // contents
+  {
+    const arr = content.match(/<!-- contents -->/);
+
+    if (arr) {
+      const regex = /<a href="(.*?)"\>(.*?)</g;
+      let matches;
+
+      while (matches = regex.exec(arr.input)) { // eslint-disable-line no-cond-assign
+        res.contents.push({
+          href: matches[1],
+          text: matches[2]
+        });
+      }
+    }
+  }
 
   // background
   {
