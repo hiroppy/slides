@@ -20,11 +20,22 @@ class AppContainer extends React.Component {
       }
     };
 
+    this.slides = [];
+    this.contents = [];
     this.setupBespokeFlag = false; // for lazy load
-    this.slides = props.slides.map((slide) => ({
-      meta   : parseAttrs(slide),
-      context: slide
-    }));
+
+    props.slides.forEach((slide) => {
+      const meta = parseAttrs(slide);
+
+      this.slides.push({
+        meta,
+        context: slide
+      });
+
+      if (meta.contents.length !== 0) {
+        this.contents = meta.contents;
+      }
+    });
 
     const mode = router();
 
@@ -110,6 +121,7 @@ class AppContainer extends React.Component {
       <Sidebar
         goTo={this.goTo}
         opened={this.state.opened}
+        contents={this.contents}
         onSetOpen={this.onSetSidebarOpen}
         slideInfo={this.state.slideInfo}
       >

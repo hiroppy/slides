@@ -29,6 +29,7 @@
     align-items: center;
     display: flex;
     justify-content: space-around;
+    width: 150px;
   }
 
   & .sidebar-social {
@@ -41,5 +42,12 @@
     & span {
       font-size: 1rem;
     }
+  }
+
+  & .sidebar-contents {
+    align-items: left;
+    flex-direction: column;
+    margin: 30px 15px;
+    width: auto;
   }
 }

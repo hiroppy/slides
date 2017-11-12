@@ -4,8 +4,8 @@ import screenfull from 'screenfull';
 
 const styles = {
   sidebar: {
-    width : 150,
-    zIndex: 1001
+    minWidth: 150,
+    zIndex  : 1001
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, .5)',
@@ -57,6 +57,13 @@ const Inner = (props) => ([
       target="_blank"
       className="fa fa-github"
     />
+  </div>,
+  <div className="sidebar-contents">
+    {
+      props.contents.map((content) => (
+        <a href={content.href}>- {content.text}</a>
+      ))
+    }
   </div>
 ]);
 

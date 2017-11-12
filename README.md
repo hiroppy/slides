@@ -44,6 +44,16 @@ $ npm run deploy
 ## Slide Syntax
 All slides are written in HTML or markdown.  
 
+### Contents
+Get the content of the slide and display it as a list in the sidebar.
+
+#### Slide
+```md
+<!-- contents -->
+
+## Contents
+```
+
 ### Background
 Change the slide's background.
 
