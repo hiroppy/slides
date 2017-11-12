@@ -8,9 +8,9 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    hot: true,
-    port: 8080,
-    inline: true,
+    hot        : true,
+    port       : 8080,
+    inline     : true,
     contentBase: '.'
   }
 };
