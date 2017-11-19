@@ -1,4 +1,6 @@
 const slides = [
+
+  // 2017
   {
     title      : 'hello',
     image      : '',
