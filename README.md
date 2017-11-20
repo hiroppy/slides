@@ -18,6 +18,8 @@ All slides can be written in Markdown or HTML.
 - [the present and future of JavaScript](https://abouthiroppy.github.io/slides/the-present-and-future-of-JavaScript/)
   - 2017/10/08: [情報科学若手の会 by 一般社団法人 情報処理学会 プログラミングシンポジウム委員会](http://wakate.org/2017/07/20/50th-general/) 
     - http://abouthiroppy.hatenablog.jp/entry/the-present-and-future-of-JavaScript
+- [how to manage the document of Node.js](https://abouthiroppy.github.io/slides/how-to-manage-the-document-of-Node.js)
+  - 2017/11/18: [OSSドキュメンテーション勉強会](https://kbkz.connpass.com/event/5150/)
 
 ### Other Accounts
 speakerdeck: https://speakerdeck.com/abouthiroppy  
