@@ -24,7 +24,9 @@ module.exports = {
     new OfflinePlugin(),
     new MinifyPlugin(),
     new ExtractTextPlugin('[contenthash].css'),
-    new webpack.LoaderOptionsPlugin({ minimize: true }),
+
+    // slide's background can not be displayed when minimize is enabled
+    // new webpack.LoaderOptionsPlugin({ minimize: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
   ]
