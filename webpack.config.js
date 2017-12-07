@@ -64,7 +64,7 @@ module.exports = (env) => {
           },
           {
             test: /\.(eot|ttf|woff2?)$/,
-            use : 'url-loader'
+            use : 'file-loader'
           }
         ]
       },
