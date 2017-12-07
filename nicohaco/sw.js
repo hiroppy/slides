@@ -1,14 +1,15 @@
 var __wpo = {
   "assets": {
     "main": [
+      "./677433a0892aaed7b7d2628c313c9775.svg",
       "./fe8d04b1f0a6f93767a2f57618eb5eee.png",
       "./376f5905f3a7df570bb7afff4c696a62.jpg",
-      "./677433a0892aaed7b7d2628c313c9775.svg",
       "./cf7a1db4bcc431a80e3d91b1e1f37529.png",
-      "./0.09f3184baf58421f9889.js",
-      "./1.09f3184baf58421f9889.js",
-      "./2.09f3184baf58421f9889.js",
-      "./09f3184baf58421f9889.js",
+      "./0.cff92e9c32a700f1b017.js",
+      "./1.cff92e9c32a700f1b017.js",
+      "./2.cff92e9c32a700f1b017.js",
+      "./cff92e9c32a700f1b017.js",
+      "./0e16bb28a2a3a74b61caa78f349fc2a5.css",
       "./"
     ],
     "additional": [],
@@ -16,19 +17,20 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
+    "1c3ba3b813e1080e9721846f23a21c09e5c3fd27": "./677433a0892aaed7b7d2628c313c9775.svg",
     "40f94a2f970dbc3e6f08a85d82ebe34a7172ebcf": "./fe8d04b1f0a6f93767a2f57618eb5eee.png",
     "f77fbd7c63b2e32106b6f5623e04204800de2d80": "./376f5905f3a7df570bb7afff4c696a62.jpg",
-    "1c3ba3b813e1080e9721846f23a21c09e5c3fd27": "./677433a0892aaed7b7d2628c313c9775.svg",
     "608e5d3889a759e56788800a142012647ed87b2a": "./cf7a1db4bcc431a80e3d91b1e1f37529.png",
-    "b5a5f41eab4c8023b44f3512b4848db5eca1d262": "./0.09f3184baf58421f9889.js",
-    "12d24524db6a9bec4bc568e2128908780dac76ef": "./1.09f3184baf58421f9889.js",
-    "c02164ffb298b1753ee29502ad33cca60eb2414d": "./2.09f3184baf58421f9889.js",
-    "91b7ca63efcc271e4753b6353019ce6a2d941970": "./09f3184baf58421f9889.js",
-    "fcceae7a866b50860db8f42b499cd4f2a392ad63": "./"
+    "d4110ec7b4b1fe51d913d973b1ed336c8f1b1309": "./0.cff92e9c32a700f1b017.js",
+    "b86829618bc73d0f775e8aa8e87e0b38535ece24": "./1.cff92e9c32a700f1b017.js",
+    "96929bf1d6314866f433759525692c6fe280dc8b": "./2.cff92e9c32a700f1b017.js",
+    "3c89e797ac59c599d1d4e2d97384456cf7af4ce0": "./cff92e9c32a700f1b017.js",
+    "8a8a393a34672b31f38fa6e5c56aa20e15d8dcc9": "./0e16bb28a2a3a74b61caa78f349fc2a5.css",
+    "29b43d07d489b292c99384d87dbc18a0178d451b": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2017-11-20 23:24:22",
+  "version": "2017-12-7 17:09:02",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
