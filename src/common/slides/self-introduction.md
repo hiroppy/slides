@@ -18,17 +18,18 @@
   </div>
   <div class="profile-info">
     <div class="profile-left">
-      <p>A JavaScript Engineer</p>
+      <p>Dwango, Inc</p>
       <p>Node.js Japan User Group</p>
     </div>
     <div class="profile-right">
-      <p>Mercari, Inc</p>
       <p>Node.js Core Collaborator</p>
+      <p>Babel, webpack, maintainers</p>
     </div>
   </div>
 </div>
 
 <!-- note
 Dwango: 2015/04 - 2017/05
-Mercari: 2017/06 -
+Mercari: 2017/06 - 2017/12/15
+Dwango: 2017/12/16 =
 -->
