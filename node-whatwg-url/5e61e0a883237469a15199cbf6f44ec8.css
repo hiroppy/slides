@@ -113,8 +113,6 @@
   min-width: 50%
 }pre code {
   font-family: "Source Code Pro", monospace !important;
-}code {
-  font-family: none !important;
 }.fa-hatena:before {
   content: "B!";
   font-family: Verdana;
@@ -2545,116 +2543,70 @@
 /* stylelint-disable */
 /* @define-mixin */
 /* stylelint-disable */
-@font-face {
-  font-family: Stratum;
-  src: url("06a6ac1709970857f419dc78aca05353.ttf");
-}
-.bespoke-parent {
-
- /* stylelint-disable */
-  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "\30E1\30A4\30EA\30AA", Arial, sans-serif;
-  /* stylelint-enable */
-}
-.bespoke-backdrop {
-  background: #b7b8b7;
-}
-.bespoke-backdrop.title {
-  background: #43853d;
-}
-.bespoke-backdrop.section-title {
-  background: #3498db;
-}
-.bespoke-backdrop.end {
-  background: #f5da55;
-}
-.section-title h2 {
-  color: #f5da55;
-}
-h2 {
-  color: #f5da55;
-}
 strong {
   color: #ff874d;
   font-size: 33.6px;
   font-size: 2.1rem;
   font-weight: bold;
 }
-img {
-  width: 90%;
+pre {
+  font-size: 16px;
+  font-size: 1rem;
 }
-.bespoke {
-  background: url(01ae50b06d5b815031b92e34236ccf45.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 120px;
-  text-align: center;
-  width: 120px;
+.define {
+  color: #ff874d;
+  font-weight: bold;
 }
-.flow-line {
-  font-size: 35.2px;
-  font-size: 2.2rem;
+.bespoke-backdrop.danger {
+  background: #c44444;
 }
-.presenter-host-image {
-  width: 50%;
+.bespoke-backdrop.title {
+  background: #ff0;
 }
-.lib-list {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.bespoke-backdrop.whatwg {
+  background: #3c790a;
+}
+.bespoke-backdrop.info {
+  background: #ff874d;
+}
+.bespoke-backdrop.end {
+  background: #3498db;
+}
+li:before {
+  color: #3498db;
+  margin-right: 10px;
+}
+.active-collaborators-team {
+  margin: 10px 0;
+}
+.active-collaborators a {
+  border: none;
+  padding-left: 0;
+  text-decoration: none;
+}
+.active-collaborators img {
+  height: 100px;
+  margin: 10px;
+  width: 100px;
+}
+.list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 20px
+  margin-top: 50px
 }
-.lib-list > div {
-  margin: 0 10px;
+.list p {
+  font-size: 27.2px;
+  font-size: 1.7rem;
 }
-.lib-list .react {
-  background: url(0cfa9be72d65678ab1644060a246d4a5.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 150px;
-  text-align: center;
-  width: 150px;
+.list > div {
+  margin: 0 100px;
+  text-align: left;
 }
-.lib-list .babel {
-  background: url(0da93b248f719a026f693cf417098bc3.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 150px;
-  text-align: center;
-  width: 150px;
+.card {
+  margin: 0 50px 20px;
 }
-.lib-list .webpack {
-  background: url(3039d825ebe1db02f057021b1774917c.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100px;
-  text-align: center;
-  width: 100px;
-}
-.lib-list .postcss {
-  background: url(b00f8495d913122af1c5a2174c761a5d.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 80px;
-  text-align: center;
-  width: 80px;
-}
-.lib-list .cssnext {
-  background: url(b1fc039358b4c2bea483c5404d366075.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 80px;
-  text-align: center;
-  width: 80px;
+#table + pre {
+  font-size: 14.4px;
+  font-size: .9rem;
 }

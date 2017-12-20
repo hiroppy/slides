@@ -113,8 +113,6 @@
   min-width: 50%
 }pre code {
   font-family: "Source Code Pro", monospace !important;
-}code {
-  font-family: none !important;
 }.fa-hatena:before {
   content: "B!";
   font-family: Verdana;
@@ -2545,8 +2543,24 @@
 /* stylelint-disable */
 /* @define-mixin */
 /* stylelint-disable */
+@font-face {
+  font-family: Stratum;
+  src: url("06a6ac1709970857f419dc78aca05353.ttf");
+}
 .bespoke-parent {
-  font-family: futura, "Sawarabi Gothic", helvetica, arial, arial, sans-serif;
+
+ /* stylelint-disable */
+  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "\30E1\30A4\30EA\30AA", Arial, sans-serif;
+  /* stylelint-enable */
+}
+.bespoke-backdrop {
+  background: #b7b8b7;
+}
+.bespoke-backdrop.section-title {
+  background: #43853d;
+}
+h2 {
+  color: #f5da55;
 }
 strong {
   color: #ff874d;
@@ -2554,82 +2568,10 @@ strong {
   font-size: 2.1rem;
   font-weight: bold;
 }
-pre {
-  font-size: 16px;
-  font-size: 1rem;
+img {
+  width: 70%;
 }
-.bespoke-backdrop.title {
-  background: #ff0;
-}
-.bespoke-backdrop.whatwg {
-  background: #3c790a;
-}
-.bespoke-backdrop.v8 {
-  background: #3af;
-}
-.bespoke-backdrop.TF-I {
-  background: #ff3735;
-}
-.bespoke-backdrop.end {
-  background: #3498db;
-}
-li:before {
-  color: #3498db;
-  margin-right: 10px;
-}
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 50px
-}
-.list p {
-  font-size: 27.2px;
-  font-size: 1.7rem;
-  margin-bottom: 5px;
-}
-.list > div {
-  margin: 0 100px;
-  text-align: left;
-}
-.schedule-table + table > thead {
-  border-bottom: 2px solid #3498db;
-}
-.schedule-table + table th {
-  padding: 0 10px;
-}
-.schedule-table + table strong {
-  font-size: inherit;
-}
-#n-api- + table > thead {
-  border-bottom: 2px solid #3498db;
-}
-#n-api- + table th {
-  padding-right: 30px;
-}
-#n-api- + table td {
-  padding-right: 20px;
-}
-#es2017-v5-7-v5-8- + table > thead {
-  border-bottom: 2px solid #3498db;
-}
-#es2017-v5-7-v5-8- + table tr {
-  padding: 10px 0;
-}
-#es2017-v5-7-v5-8- + table tr > td:first-child {
-  padding: 5px 15px 0 0;
-}
-#es2017-v5-7-v5-8- + table tr > td:not(:first-child) {
-  padding: 5px 10px 0 0;
-}
-.flow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around
-}
-.flow > img {
-  height: 46%;
-  width: 46%;
+.lang-list {
+  font-size: 19.2px;
+  font-size: 1.2rem;
 }
