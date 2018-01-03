@@ -2,17 +2,13 @@
   "name": "slides",
   "version": "1.0.0",
   "description": "My slides using bespoke",
-  "main": "",
+  "config": {
+    "name": "nicohaco"
+  },
   "scripts": {
-    "start": "npm run start:node-document",
-    "start:hello": "webpack-dev-server --env.name hello",
-    "start:node-whatwg-url": "webpack-dev-server --env.name node-whatwg-url",
-    "start:node8": "webpack-dev-server --env.name node8",
-    "start:nicohaco": "webpack-dev-server --env.name nicohaco",
-    "start:javascript-specification": "webpack-dev-server --env.name 'the present and future of JavaScript'",
-    "start:how-to-build-a-slide": "webpack-dev-server --env.name 'how to build a slide'",
-    "start:node-document": "webpack-dev-server --env.name 'how to manage the document of Node.js'",
-    "build": "npm run clean && NODE_ENV=production webpack",
+    "start": "webpack-dev-server --env.name $npm_package_config_name",
+    "build": "NODE_ENV=production webpack --env.name $npm_package_config_name",
+    "build:all": "npm run clean && npm run build",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
     "lint:css": "stylelint src/**/*.css",
