@@ -44,19 +44,19 @@ pre {
     margin: 0;
   }
 
-  & > .profile-sns {
-    display: flex;
-    justify-content: center;
-
-    & > a {
-      border: none;
-    }
-  }
-
   & > .profile-info {
     display: flex;
     margin: 20px 0;
     text-align: left;
+  }
+}
+
+.sns-list {
+  display: flex;
+  justify-content: center;
+
+  & > a {
+    border: none;
   }
 }
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using bespoke",
   "config": {
-    "name": "nicohaco"
+    "name": "node-core-utils"
   },
   "scripts": {
     "start": "webpack-dev-server --env.name $npm_package_config_name",

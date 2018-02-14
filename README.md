@@ -8,6 +8,8 @@ All slides can be written in Markdown or HTML.
 - [sample](https://abouthiroppy.github.io/slides/hello/)
 
 ### 2018
+- [node-core-utils](https://abouthiroppy.github.io/slides/node-core-utils/)
+  - 03/06: [SRE-SET Automation Night #2](https://mercari.connpass.com/event/79046/)
 
 ### 2017
 - [how to build a slide](https://abouthiroppy.github.io/slides/how-to-build-a-slide/)
@@ -23,7 +25,7 @@ All slides can be written in Markdown or HTML.
   - 10/08: [情報科学若手の会 by 一般社団法人 情報処理学会 プログラミングシンポジウム委員会](http://wakate.org/2017/07/20/50th-general/) 
     - http://abouthiroppy.hatenablog.jp/entry/the-present-and-future-of-JavaScript
 - [how to manage the document of Node.js](https://abouthiroppy.github.io/slides/how-to-manage-the-document-of-Node.js)
-  - 2017/11/18: [OSSドキュメンテーション勉強会](https://kbkz.connpass.com/event/5150/)
+  - 11/18: [OSSドキュメンテーション勉強会](https://kbkz.connpass.com/event/5150/)
 
 ### Other Accounts
 speakerdeck: https://speakerdeck.com/abouthiroppy  

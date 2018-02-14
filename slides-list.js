@@ -1,5 +1,12 @@
 const slides = [
 
+  // 2018
+  {
+    title      : 'node-core-utils',
+    image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
+    description: 'introduce node-core-utils'
+  },
+
   // 2017
   {
     title      : 'hello',
