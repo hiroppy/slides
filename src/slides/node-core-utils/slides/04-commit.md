@@ -20,6 +20,6 @@
 PR-URL: <pr id>
 REFS: <ref id>
 ISSUES: <issue id>
-Reviewed-By: <name>:<email address>
-Reviewed-By: <name>:<email address>
+REVIEWED-BY: <name>:<email address>
+REVIEWED-BY: <name>:<email address>
 ```
