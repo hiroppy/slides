@@ -9,11 +9,11 @@ var __wpo = {
       "./fe8d04b1f0a6f93767a2f57618eb5eee.png",
       "./376f5905f3a7df570bb7afff4c696a62.jpg",
       "./cf7a1db4bcc431a80e3d91b1e1f37529.png",
-      "./0.9b93a6f4dcde8f783774.js",
-      "./1.9b93a6f4dcde8f783774.js",
-      "./2.9b93a6f4dcde8f783774.js",
-      "./9b93a6f4dcde8f783774.js",
-      "./f78e70e7dd36d9af392ee15c4bf1e663.css",
+      "./0.263b05464376f94bed92.js",
+      "./1.263b05464376f94bed92.js",
+      "./2.263b05464376f94bed92.js",
+      "./263b05464376f94bed92.js",
+      "./c26ba78ab8abd1db9620c214052cbc3b.css",
       "./"
     ],
     "additional": [],
@@ -29,18 +29,18 @@ var __wpo = {
     "40f94a2f970dbc3e6f08a85d82ebe34a7172ebcf": "./fe8d04b1f0a6f93767a2f57618eb5eee.png",
     "f77fbd7c63b2e32106b6f5623e04204800de2d80": "./376f5905f3a7df570bb7afff4c696a62.jpg",
     "608e5d3889a759e56788800a142012647ed87b2a": "./cf7a1db4bcc431a80e3d91b1e1f37529.png",
-    "1e6ad3e0c402fcfd4b16224ed9685f8ad6bec1db": "./0.9b93a6f4dcde8f783774.js",
-    "8a528fe1652dfdeda7734bc393fd14f56e564f3f": "./1.9b93a6f4dcde8f783774.js",
-    "96929bf1d6314866f433759525692c6fe280dc8b": "./2.9b93a6f4dcde8f783774.js",
-    "4eeda5f94baa669348e20e7c36f66fbe02daf5bd": "./9b93a6f4dcde8f783774.js",
-    "6620ee5755b358e4ca3f21ea8f44efa97cd0430b": "./f78e70e7dd36d9af392ee15c4bf1e663.css",
-    "707a1290869eda007e34b6f98cb1a15e173e60e7": "./"
+    "98223ebf55217574334591d2b7d5df76f681b85e": "./0.263b05464376f94bed92.js",
+    "8a528fe1652dfdeda7734bc393fd14f56e564f3f": "./1.263b05464376f94bed92.js",
+    "1310c83c867f5bafe60fff35b255f89dbd5d04a5": "./2.263b05464376f94bed92.js",
+    "766c31b16960b9d6323dd9bd108752d5d782c0e8": "./263b05464376f94bed92.js",
+    "1d3451e7ce9ed901d16743cd325f5b415cccfdad": "./c26ba78ab8abd1db9620c214052cbc3b.css",
+    "21cac7db3d5f7888dc3d10f1259bda4e7f2a127b": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2018-3-6 09:55:25",
+  "version": "2018-1-3 23:38:45",
   "name": "webpack-offline",
-  "pluginVersion": "4.8.4",
+  "pluginVersion": "4.9.0",
   "relativePaths": true
 };
 
@@ -165,8 +165,12 @@ if (typeof DEBUG === 'undefined') {
 function WebpackServiceWorker(params, helpers) {
   var loaders = helpers.loaders;
   var cacheMaps = helpers.cacheMaps;
+  // navigationPreload: true, { map: (URL) => URL, test: (URL) => boolean }
+  var navigationPreload = helpers.navigationPreload;
 
+  // (update)strategy: changed, all
   var strategy = params.strategy;
+  // responseStrategy: cache-first, network-first
   var responseStrategy = params.responseStrategy;
 
   var assets = params.assets;
@@ -175,22 +179,21 @@ function WebpackServiceWorker(params, helpers) {
   var hashesMap = params.hashesMap;
   var externals = params.externals;
 
-  // Not used yet
-  // const alwaysRevalidate = params.alwaysRevalidate;
-  // const ignoreSearch = params.ignoreSearch;
-  // const preferOnline = params.preferOnline;
-
   var CACHE_PREFIX = params.name;
   var CACHE_TAG = params.version;
   var CACHE_NAME = CACHE_PREFIX + ':' + CACHE_TAG;
 
+  var PRELOAD_CACHE_NAME = CACHE_PREFIX + '$preload';
   var STORED_DATA_KEY = '__offline_webpack__data';
 
   mapAssets();
 
   var allAssets = [].concat(assets.main, assets.additional, assets.optional);
+
+  // Deprecated {
   var navigateFallbackURL = params.navigateFallbackURL;
   var navigateFallbackForRedirects = params.navigateFallbackForRedirects;
+  // }
 
   self.addEventListener('install', function (event) {
     console.log('[SW]:', 'Install event');
@@ -220,6 +223,10 @@ function WebpackServiceWorker(params, helpers) {
         return self.clients.claim();
       }
     });
+
+    if (navigationPreload && self.registration.navigationPreload) {
+      activation = Promise.all([activation, self.registration.navigationPreload.enable()]);
+    }
 
     event.waitUntil(activation);
   });
@@ -422,12 +429,34 @@ function WebpackServiceWorker(params, helpers) {
 
     if (!assetMatches && isGET) {
       // If isn't a cached asset and is a navigation request,
-      // fallback to navigateFallbackURL if available
+      // perform network request and fallback to navigateFallbackURL if available.
+      //
+      // Requesting with fetchWithPreload().
+      // Preload is used only if navigationPreload is enabled and
+      // navigationPreload mapping is not used.
       if (navigateFallbackURL && isNavigateRequest(event.request)) {
-        event.respondWith(handleNavigateFallback(fetch(event.request)));
+        event.respondWith(handleNavigateFallback(fetchWithPreload(event)));
 
         return;
       }
+
+      if (navigationPreload === true) {
+        event.respondWith(fetchWithPreload(event));
+        return;
+      }
+
+      // Something else, positive, but not `true`
+      if (navigationPreload) {
+        var preloadedResponse = retrivePreloadedResponse(event);
+
+        if (preloadedResponse) {
+          event.respondWith(preloadedResponse);
+          return;
+        }
+      }
+
+      // Logic exists here if no cache match, or no preload
+      return;
     }
 
     if (!assetMatches || !isGET) {
@@ -436,18 +465,18 @@ function WebpackServiceWorker(params, helpers) {
         event.respondWith(fetch(event.request));
       }
 
+      // Logic exists here if no cache match
       return;
     }
 
-    // Logic of caching / fetching is here
-    // * urlString -- url to match from the CACHE_NAME
-    // * event.request -- original Request to perform fetch() if necessary
+    // Cache handling/storing/fetching starts here
+
     var resource = undefined;
 
     if (responseStrategy === 'network-first') {
       resource = networkFirstResponse(event, urlString, cacheUrl);
     }
-    // 'cache-first'
+    // 'cache-first' otherwise
     // (responseStrategy has been validated before)
     else {
         resource = cacheFirstResponse(event, urlString, cacheUrl);
@@ -473,6 +502,8 @@ function WebpackServiceWorker(params, helpers) {
   });
 
   function cacheFirstResponse(event, urlString, cacheUrl) {
+    handleNavigationPreload(event);
+
     return cachesMatch(cacheUrl, CACHE_NAME).then(function (response) {
       if (response) {
         if (DEBUG) {
@@ -517,7 +548,7 @@ function WebpackServiceWorker(params, helpers) {
   }
 
   function networkFirstResponse(event, urlString, cacheUrl) {
-    return fetch(event.request).then(function (response) {
+    return fetchWithPreload(event).then(function (response) {
       if (response.ok) {
         if (DEBUG) {
           console.log('[SW]:', 'URL [' + urlString + '] from network');
@@ -537,6 +568,116 @@ function WebpackServiceWorker(params, helpers) {
       }
 
       return cachesMatch(cacheUrl, CACHE_NAME);
+    });
+  }
+
+  function handleNavigationPreload(event) {
+    if (navigationPreload && typeof navigationPreload.map === 'function' &&
+    // Use request.mode === 'navigate' instead of isNavigateRequest
+    // because everything what supports navigationPreload supports
+    // 'navigate' request.mode
+    event.preloadResponse && event.request.mode === 'navigate') {
+      var mapped = navigationPreload.map(new URL(event.request.url), event.request);
+
+      if (mapped) {
+        storePreloadedResponse(mapped, event);
+      }
+    }
+  }
+
+  // Temporary in-memory store for faster access
+  var navigationPreloadStore = new Map();
+
+  function storePreloadedResponse(_url, event) {
+    var url = new URL(_url, location);
+    var preloadResponsePromise = event.preloadResponse;
+
+    navigationPreloadStore.set(preloadResponsePromise, {
+      url: url,
+      response: preloadResponsePromise
+    });
+
+    var isSamePreload = function isSamePreload() {
+      return navigationPreloadStore.has(preloadResponsePromise);
+    };
+
+    var storing = preloadResponsePromise.then(function (res) {
+      // Return if preload isn't enabled or hasn't happened
+      if (!res) return;
+
+      // If navigationPreloadStore already consumed
+      // or navigationPreloadStore already contains another preload,
+      // then do not store anything and return
+      if (!isSamePreload()) {
+        return;
+      }
+
+      var clone = res.clone();
+
+      // Storing the preload response for later consume (hasn't yet been consumed)
+      return caches.open(PRELOAD_CACHE_NAME).then(function (cache) {
+        if (!isSamePreload()) return;
+
+        return cache.put(url, clone).then(function () {
+          if (!isSamePreload()) {
+            return caches.open(PRELOAD_CACHE_NAME).then(function (cache) {
+              return cache['delete'](url);
+            });
+          }
+        });
+      });
+    });
+
+    event.waitUntil(storing);
+  }
+
+  function retriveInMemoryPreloadedResponse(url) {
+    if (!navigationPreloadStore) {
+      return;
+    }
+
+    var foundResponse = undefined;
+    var foundKey = undefined;
+
+    navigationPreloadStore.forEach(function (store, key) {
+      if (store.url.href === url.href) {
+        foundResponse = store.response;
+        foundKey = key;
+      }
+    });
+
+    if (foundResponse) {
+      navigationPreloadStore['delete'](foundKey);
+      return foundResponse;
+    }
+  }
+
+  function retrivePreloadedResponse(event) {
+    var url = new URL(event.request.url);
+
+    if (self.registration.navigationPreload && navigationPreload && navigationPreload.test && navigationPreload.test(url, event.request)) {} else {
+      return;
+    }
+
+    var fromMemory = retriveInMemoryPreloadedResponse(url);
+    var request = event.request;
+
+    if (fromMemory) {
+      event.waitUntil(caches.open(PRELOAD_CACHE_NAME).then(function (cache) {
+        return cache['delete'](request);
+      }));
+
+      return fromMemory;
+    }
+
+    return cachesMatch(request, PRELOAD_CACHE_NAME).then(function (response) {
+      if (response) {
+        event.waitUntil(caches.open(PRELOAD_CACHE_NAME).then(function (cache) {
+          return cache['delete'](request);
+        }));
+      }
+
+      return response || fetch(event.request);
     });
   }
 
@@ -680,7 +821,7 @@ function WebpackServiceWorker(params, helpers) {
 
     var requestType = undefined;
 
-    if (request.mode === 'navigate') {
+    if (isNavigateRequest(request)) {
       requestType = 'navigate';
     } else if (url.origin === location.origin) {
       requestType = 'same-origin';
@@ -709,6 +850,16 @@ function WebpackServiceWorker(params, helpers) {
       }
     }
   }
+
+  function fetchWithPreload(event) {
+    if (!event.preloadResponse || navigationPreload !== true) {
+      return fetch(event.request);
+    }
+
+    return event.preloadResponse.then(function (response) {
+      return response || fetch(event.request);
+    });
+  }
 }
 
 function cachesMatch(request, cacheName) {
@@ -735,33 +886,6 @@ function cachesMatch(request, cacheName) {
 function applyCacheBust(asset, key) {
   var hasQuery = asset.indexOf('?') !== -1;
   return asset + (hasQuery ? '&' : '?') + '__uncache=' + encodeURIComponent(key);
-}
-
-function getClientsURLs() {
-  if (!self.clients) {
-    return Promise.resolve([]);
-  }
-
-  return self.clients.matchAll({
-    includeUncontrolled: true
-  }).then(function (clients) {
-    if (!clients.length) return [];
-
-    var result = [];
-
-    clients.forEach(function (client) {
-      var url = new URL(client.url);
-      url.search = '';
-      url.hash = '';
-      var urlString = url.toString();
-
-      if (!result.length || result.indexOf(urlString) === -1) {
-        result.push(urlString);
-      }
-    });
-
-    return result;
-  });
 }
 
 function isNavigateRequest(request) {
@@ -807,6 +931,7 @@ function logGroup(title, assets) {
         WebpackServiceWorker(__wpo, {
 loaders: {},
 cacheMaps: [],
+navigationPreload: false,
 });
         module.exports = __webpack_require__(1)
       
