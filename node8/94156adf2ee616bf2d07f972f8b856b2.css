@@ -124,21 +124,21 @@
   width: 150px;
 }.profile > .profile-name {
   margin: 0;
-}.profile > .profile-sns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}.profile > .profile-sns > a {
-  border: none;
 }.profile > .profile-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 20px 0;
   text-align: left;
+}.sns-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center
+}.sns-list > a {
+  border: none;
 }.bespoke-backdrop.main {
   background: #3498db;
 }.bespoke-backdrop.profile {

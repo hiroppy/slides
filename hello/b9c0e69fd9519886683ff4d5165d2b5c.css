@@ -124,21 +124,21 @@
   width: 150px;
 }.profile > .profile-name {
   margin: 0;
-}.profile > .profile-sns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}.profile > .profile-sns > a {
-  border: none;
 }.profile > .profile-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 20px 0;
   text-align: left;
+}.sns-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center
+}.sns-list > a {
+  border: none;
 }.bespoke-backdrop.main {
   background: #3498db;
 }.bespoke-backdrop.profile {
@@ -2543,27 +2543,26 @@
 /* stylelint-disable */
 /* @define-mixin */
 /* stylelint-disable */
-.bespoke-parent {
-  font-family: futura, "Sawarabi Gothic", helvetica, arial, arial, sans-serif;
-}
 strong {
   color: #ff874d;
   font-size: 33.6px;
   font-size: 2.1rem;
   font-weight: bold;
 }
-pre {
-  font-size: 16px;
-  font-size: 1rem;
+.bespoke-backdrop.danger {
+  background: #c44444;
 }
 .bespoke-backdrop.title {
-  background: #ea4230;
+  background: #ff0;
 }
-.bespoke-backdrop.sky {
-  background: #3498db;
+.bespoke-backdrop.sample-background {
+  background: url(36c875e24faa90172ae9d13b153c6348.gif);
 }
-.bespoke-backdrop.maintainers {
-  background: #444;
+.bespoke-backdrop.webpack {
+  background: #14aaf3;
+}
+.bespoke-backdrop.postcss {
+  background: #dd3a0a;
 }
 .bespoke-backdrop.end {
   background: #3498db;
@@ -2571,63 +2570,4 @@ pre {
 li:before {
   color: #3498db;
   margin-right: 10px;
-}
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 50px
-}
-.list p {
-  font-size: 27.2px;
-  font-size: 1.7rem;
-  margin-bottom: 5px;
-}
-.list > div {
-  margin: 0 100px;
-  text-align: left;
-}
-.schedule-table + table > thead {
-  border-bottom: 2px solid #3498db;
-}
-.schedule-table + table th {
-  padding: 0 10px;
-}
-.schedule-table + table strong {
-  font-size: inherit;
-}
-#n-api- + table > thead {
-  border-bottom: 2px solid #3498db;
-}
-#n-api- + table th {
-  padding-right: 30px;
-}
-#n-api- + table td {
-  padding-right: 20px;
-}
-#es2017-v5-7-v5-8- + table > thead {
-  border-bottom: 2px solid #3498db;
-}
-#es2017-v5-7-v5-8- + table tr {
-  padding: 10px 0;
-}
-#es2017-v5-7-v5-8- + table tr > td:first-child {
-  padding: 5px 15px 0 0;
-}
-#es2017-v5-7-v5-8- + table tr > td:not(:first-child) {
-  padding: 5px 10px 0 0;
-}
-.flow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around
-}
-.flow > img {
-  height: 46%;
-  width: 46%;
-}
-.card {
-  margin: 50px;
 }
