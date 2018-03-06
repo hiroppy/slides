@@ -13,6 +13,7 @@
     "lint:js": "eslint .",
     "lint:css": "stylelint src/**/*.css",
     "deploy": "npm run build && gh-pages -d dist",
+    "deploy:all": "npm run clean && npm run build:all && gh-pages -d dist",
     "clean": "rimraf ./dist"
   },
   "repository": {
