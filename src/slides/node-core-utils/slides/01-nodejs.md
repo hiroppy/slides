@@ -19,3 +19,6 @@
 
 Node.js is managed by Node.js Foundation.  
 Node.js Foundation has 137 teams.
+
+<br />
+<img src="../images/team.png" />
