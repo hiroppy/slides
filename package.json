@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --env.name $npm_package_config_name",
     "build": "NODE_ENV=production webpack --env.name $npm_package_config_name",
-    "build:all": "npm run clean && npm run build",
+    "build:all": "npm run clean && NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
     "lint:css": "stylelint src/**/*.css",

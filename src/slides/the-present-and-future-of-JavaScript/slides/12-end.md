@@ -4,4 +4,4 @@
 
 #### ENJOY YOUR JAVASCRIPT LIFE 😎
 
-repo: https://github.com/abouthiroppy/slides
+repo: https://github.com/hiroppy/slides

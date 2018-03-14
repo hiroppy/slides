@@ -53,7 +53,7 @@ const Inner = (props) => ([
     />
     <a
       rel="noopener noreferrer"
-      href="https://github.com/abouthiroppy/slides"
+      href="https://github.com/hiroppy/slides"
       target="_blank"
       className="fa fa-github"
     />

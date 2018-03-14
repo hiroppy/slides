@@ -14,7 +14,7 @@ const urlPrefix = 'https://abouthiroppy.github.io/slides/';
 const convertPath = (title) => title.replace(/ /g, '-');
 
 module.exports = (env) => {
-  if (typeof env.name === 'string' && env.name !== '') {
+  if (env && typeof env.name === 'string' && env.name !== '') {
     slides.some((slide, i) => {
       if (slide.title === env.name) {
         slides = [slides[i]];
