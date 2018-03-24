@@ -6,13 +6,13 @@ const slides = [
     image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
     description: 'introduce node-core-utils'
   },
+  {
+    title      : 'performance timing api with node.js',
+    image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
+    description: 'introduce performance timing api of Node.js'
+  },
 
   // 2017
-  {
-    title      : 'hello',
-    image      : '',
-    description: ''
-  },
   {
     title      : 'node8',
     image      : 'https://avatars1.githubusercontent.com/u/9950313?v=3&s=200',
@@ -41,6 +41,13 @@ const slides = [
   {
     title      : 'how to manage the document of Node.js',
     image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
+    description: ''
+  },
+
+  // sample
+  {
+    title      : 'hello',
+    image      : '',
     description: ''
   }
 ];
