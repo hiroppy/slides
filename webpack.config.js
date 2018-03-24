@@ -4,7 +4,7 @@ const path              = require('path');
 const webpack           = require('webpack');
 const merge             = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-let slides = require('./slides-list');
+let slides              = require('./slides-list');
 
 const config = process.env.NODE_ENV !== 'production' ?
   require('./webpack.dev.config') :
@@ -16,7 +16,7 @@ const convertPath = (title) => title.replace(/ /g, '-');
 module.exports = (env) => {
   if (env && typeof env.name === 'string' && env.name !== '') {
     slides.some((slide, i) => {
-      if (slide.title === env.name) {
+      if (convertPath(slide.title) === env.name) {
         slides = [slides[i]];
         return true;
       }
