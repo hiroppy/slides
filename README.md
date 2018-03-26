@@ -1,5 +1,5 @@
 # Slides
-[![Build Status](https://travis-ci.org/abouthiroppy/slides.svg?branch=master)](https://travis-ci.org/abouthiroppy/slides)
+[![Build Status](https://travis-ci.org/hiroppy/slides.svg?branch=master)](https://travis-ci.org/hiroppy/slides)
 
 My slides using bespoke.  
 All slides can be written in Markdown or HTML.
@@ -25,7 +25,7 @@ All slides can be written in Markdown or HTML.
   - 05/29: LT in Dwango
 - [the present and future of JavaScript](http://slides.hiroppy.me/the-present-and-future-of-JavaScript/)
   - 10/08: [情報科学若手の会 by 一般社団法人 情報処理学会 プログラミングシンポジウム委員会](http://wakate.org/2017/07/20/50th-general/) 
-    - http://abouthiroppy.hatenablog.jp/entry/the-present-and-future-of-JavaScript
+    - http://blog.hiroppy.me/entry/the-present-and-future-of-JavaScript
 - [how to manage the document of Node.js](http://slides.hiroppy.me/how-to-manage-the-document-of-Node.js)
   - 11/18: [OSSドキュメンテーション勉強会](https://kbkz.connpass.com/event/5150/)
 
