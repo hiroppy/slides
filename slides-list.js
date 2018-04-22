@@ -11,6 +11,11 @@ const slides = [
     image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
     description: 'introduce performance timing api of Node.js'
   },
+  {
+    title      : 'util.types',
+    image      : 'https://avatars3.githubusercontent.com/u/9950313?s=200&v=4',
+    description: 'introduce util.types'
+  },
 
   // 2017
   {
