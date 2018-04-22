@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
   - 03/24: [Kyoto.js](https://kyotojs.connpass.com/event/80019/)
 - [node-core-utils](http://slides.hiroppy.me/node-core-utils/)
   - 03/06: [SRE-SET Automation Night #2](https://mercari.connpass.com/event/79046/)
+- [util.types](http://slides.hiroppy.me/util.types)
+  - 04/24: [Roppongi.js #2](https://roppongi-js.connpass.com/event/82998/)
 
 ### 2017
 - [how to build a slide](http://slides.hiroppy.me/how-to-build-a-slide/)
