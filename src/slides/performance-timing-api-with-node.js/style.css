@@ -1,26 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
 @import "../../common/style/variable";
-@import "../../common/style/mixins";
-
-@font-face {
-  font-family: Stratum;
-  src: url("../../common/fonts/StratumNo1 Medium.ttf");
-}
-
-.bespoke-parent {
-
- /* stylelint-disable */
-  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", Arial, sans-serif;
-  /* stylelint-enable */
-}
-
-.bespoke-backdrop {
-  background: var(--color-gray);
-}
-
-.bespoke-backdrop.title {
-  background: var(--color-node);
-}
 
 .section-title h2 {
   color: var(--color-orange);
@@ -28,27 +6,4 @@
 
 .bespoke-backdrop.section-title {
   background: var(--color-main);
-}
-
-.bespoke-backdrop.end {
-  background: var(--color-js);
-}
-
-/* TODO: move to common */
-h2 {
-  color: var(--color-js);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 800;
-  letter-spacing: .25rem;
-  text-transform: none;
-}
-
-strong {
-  color: var(--color-orange);
-  font-size: 2.1rem;
-  font-weight: bold;
-}
-
-img {
-  width: 90%;
 }

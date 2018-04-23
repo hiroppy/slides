@@ -3,11 +3,12 @@ import createBody from '../../lib/create-body';
 import insertSlide from '../../lib/insert-slide';
 import fetchSlides, { fetchCommon } from '../../lib/fetch-slides';
 import '../../lib/setup-default';
+import '../../common/style/themes/javascript.css';
 import './style.css';
 
-const common     = fetchCommon();
-const profile    = common['self-introduction.md'];
+const common = fetchCommon();
+const profile = common['self-introduction.md'];
 const slidesInfo = fetchSlides(require.context('./slides'));
-const slides     = insertSlide(slidesInfo.slides, profile, 1);
+const slides = insertSlide(slidesInfo.slides, profile, 1);
 
 createBody(slides, nebula);
