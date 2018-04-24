@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: Stratum;
-  src: url("../../fonts/StratumNo1 Medium.ttf");
+  src: url("../../common/fonts/StratumNo1 Medium.ttf");
 }
 
 .bespoke-parent {
-
- /* stylelint-disable */
-  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", Arial, sans-serif;
+  /* stylelint-disable */
+  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN",
+    "メイリオ", Arial, sans-serif;
   /* stylelint-enable */
 }
 
@@ -30,12 +30,21 @@ h2 {
   color: var(--color-js);
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 800;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   text-transform: none;
+}
+
+h3 {
+  font-family: inherit;
+  font-style: normal;
 }
 
 strong {
   color: var(--color-orange);
   font-size: 2.1rem;
   font-weight: bold;
+}
+
+img {
+  width: 90%;
 }

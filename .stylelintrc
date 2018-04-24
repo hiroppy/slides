@@ -3,6 +3,7 @@
   "rules": {
     "declaration-no-important": null,
     "selector-max-compound-selectors": null,
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "number-leading-zero": null
   }
 }
