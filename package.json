@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/nicohaco"
+    "name": "slides/node-core-utils"
   },
   "scripts": {
     "start": "fusuma start -d $npm_package_config_name",
