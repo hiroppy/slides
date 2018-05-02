@@ -1,5 +1,5 @@
-@import "../../common/style/variable";
-@import "../../common/style/mixins";
+@import "fusuma/src/frontend/assets/style/variable";
+@import "fusuma/src/frontend/assets/style/mixins";
 
 strong {
   color: var(--color-orange);
@@ -78,5 +78,5 @@ li:before {
 }
 
 #table + pre {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
