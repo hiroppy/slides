@@ -1,18 +1,8 @@
-@import "../../common/style/variable";
-@import "../../common/style/mixins";
+@import "fusuma/src/frontend/assets/style/variable";
+@import "fusuma/src/frontend/assets/style/mixins";
 
 .bespoke-parent {
   font-family: futura, "Sawarabi Gothic", helvetica, arial, arial, sans-serif;
-}
-
-strong {
-  color: var(--color-orange);
-  font-size: 2.1rem;
-  font-weight: bold;
-}
-
-pre {
-  font-size: 1rem;
 }
 
 .bespoke-backdrop.title {
