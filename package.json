@@ -29,7 +29,7 @@
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-sky": "^1.4.3",
-    "fusuma": "0.0.3",
+    "fusuma": "^0.1.0",
     "stylelint": "^8.2.0",
     "stylelint-config-sky": "^1.1.0"
   },
