@@ -1,4 +1,4 @@
-@import "../../common/style/variable";
+@import "fusuma/src/frontend/assets/style/variable";
 
 .section-title h2 {
   color: var(--color-orange);
