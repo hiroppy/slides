@@ -1,15 +1,16 @@
-const base = require("../../.fusumarc");
+const base = require('../../.fusumarc');
 
 module.exports = {
   meta: {
     ...base.meta,
-    description: "",
-    thumbnail: ""
+    name: '',
+    description: '',
+    thumbnail: ''
   },
   slide: {
-    theme: "js"
+    theme: 'js'
   },
   extends: {
-    css: "style.css"
+    css: 'style.css'
   }
 };
