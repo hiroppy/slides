@@ -1,10 +1,11 @@
 <!-- background: profile -->
 
-## 😋 me 😙
+## 😋 ME 😙
 
 <div class="profile">
-  <img src="../images/profile.jpg" alt="profile" class="profile-avatar">
+  <img src="../../../common/images/profile.jpg" alt="profile" class="profile-avatar">
   <h4 class="profile-name">Yuta Hiroto</h4>
+  <br />
   <div class="sns-list">
     <a href="https://twitter.com/about_hiroppy" target="_blank">
       <i class="fa fa-fw fa-twitter"></i>
@@ -16,6 +17,7 @@
       <i class="fa fa-fw fa-home"></i>
     </a>
   </div>
+  <p>npx hiroppy</p>
   <div class="profile-info">
     <div class="profile-left">
       <p>A JS engineer and Architect</p>
