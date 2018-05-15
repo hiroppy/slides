@@ -17,10 +17,10 @@
 
 <br />
 
-- git-node
-  - supporting commitment to Node.js core
-- ncu-team
-  - listing members of a team
+* git-node
+  * supporting commitment to Node.js core
+* ncu-team
+  * listing members of a team
 
 <br />
 The main task is used when committing to the master.

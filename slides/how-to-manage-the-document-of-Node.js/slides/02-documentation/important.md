@@ -2,7 +2,7 @@
 
 ![](../../images/document.png)
 
-Documentation is mega-important.💃  
+Documentation is mega-important.💃
 
 <br>
 

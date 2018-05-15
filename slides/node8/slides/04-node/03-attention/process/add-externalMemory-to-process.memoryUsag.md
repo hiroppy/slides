@@ -2,8 +2,8 @@
 
 **semver-minor** since 7.2.0
 
-v8で管理されるJSオブジェクトにバインドされた  
-C++オブジェクトのメモリ使用量を返します。  
+v8 で管理される JS オブジェクトにバインドされた  
+C++オブジェクトのメモリ使用量を返します。
 
 ```js
 > console.log(util.inspect(process.memoryUsage()));

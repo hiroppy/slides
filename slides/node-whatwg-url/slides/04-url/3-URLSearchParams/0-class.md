@@ -14,6 +14,7 @@ for (const [name, value] of params) {
 // foo bar
 // foo baz
 ```
+
 The `querystring` module is similar purpose,  
 but this API is designed purely for URL query strings.  
-Returns an ES6 Iterator over each of the name-value pairs in the query string. 
+Returns an ES6 Iterator over each of the name-value pairs in the query string.

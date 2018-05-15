@@ -2,4 +2,4 @@
 
 # The end
 
-PRやIssueお待ちしております😎
+PR や Issue お待ちしております 😎

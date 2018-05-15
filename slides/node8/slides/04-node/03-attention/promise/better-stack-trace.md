@@ -1,8 +1,8 @@
 ## スタックトレースの改善
 
-`--trace-warnings`時のpromiseスタックトレースの改善  
+`--trace-warnings`時の promise スタックトレースの改善  
 `UnhandledPromiseRejectionWarning`と  
-`UnhandledPromiseRejectionWarning`が改善されました。  
+`UnhandledPromiseRejectionWarning`が改善されました。
 
 ```js
 $ node --trace-warnings

@@ -9,7 +9,7 @@ if (cluster.isMaster) {
     setTimeout(() => {
       const w = worker.disconnect();
       console.log(w); // undefined
-                      // Worker // 7.3.0 ~
+      // Worker // 7.3.0 ~
     }, 1000);
   });
   cluster.on('exit', (worker, code, signal) => {

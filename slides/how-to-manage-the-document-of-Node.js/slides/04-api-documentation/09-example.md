@@ -1,5 +1,6 @@
 ```md
 ## module
+
 <!-- YAML
 added: v0.10.0
 -->
@@ -9,6 +10,7 @@ added: v0.10.0
 description and examples.
 
 ### module.someFunction(x, y, [z=100])
+
 <!-- YAML
 added: v0.10.0
 -->

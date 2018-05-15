@@ -2,9 +2,9 @@
 
 **semver-minor** since ???
 
-4/24(現在)開かれていて一番盛り上がっているPR  
-[Support awaiting values through `util.awaitable`](https://github.com/nodejs/CTC/issues/12)で話されています。   
-名前の通りPromiseにします。  
+4/24(現在)開かれていて一番盛り上がっている PR  
+[Support awaiting values through `util.awaitable`](https://github.com/nodejs/CTC/issues/12)で話されています。  
+名前の通り Promise にします。
 
 ```js
 const util = require('util');

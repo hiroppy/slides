@@ -18,8 +18,8 @@ const obj = {
   }
 };
 
-obj?.foo?.bar?.baz;   // 42
-obj?.qux?.baz;        // undefined
+obj?.foo?.bar?.baz; // 42
+obj?.qux?.baz; // undefined
 obj?.foo.bar.qux?.(); // undefined
 ```
 

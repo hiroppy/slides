@@ -22,4 +22,4 @@
 
 <br />
 
-Max entries is 150 by default. 
+Max entries is 150 by default.

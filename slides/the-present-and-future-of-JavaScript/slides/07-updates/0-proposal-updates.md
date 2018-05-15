@@ -1,4 +1,5 @@
 ## Proposal updates
+
 the 60th meeting on 26-28 September 2017 (about 2 weeks ago!!)
 
 <table class="common-table proposal-updates-table">

@@ -2,7 +2,7 @@
 
 **semver-major**
 
-ネストされた配列に対して、`[Array]`と表記されるように変更されました。 
+ネストされた配列に対して、`[Array]`と表記されるように変更されました。
 
 ```js
 > const obj = util.inspect({'a': {'b': ['c']}}, false, 1)

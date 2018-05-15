@@ -1,4 +1,5 @@
 ## has, sort, toString
+
 ## keys, values, entries, forEach
 
 ```js

@@ -2,7 +2,7 @@
 
 <br>
 
-Nodefest2017 will be held next week!   
+Nodefest2017 will be held next week!  
 Also Nodefest2017 has Code and Learn.🎉
 
 <br>

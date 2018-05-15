@@ -1,7 +1,9 @@
 ## url
 
-Align [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) with contemporary implementations and obsolete them in the process. 
+Align [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt) with contemporary implementations and obsolete them in the process.
+
 ### library
+
 <div class="card">
   <div class="card-text">
     <a class="title" href="https://github.com/jsdom/whatwg-url">whatwg-url</a>

@@ -12,4 +12,5 @@ To start debugging, open the following URL in Chrome:
     chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229 ...
 Debugger attached.
 ```
+
 [inspector: add --inspect-brk flag](https://github.com/nodejs/node/pull/8979)

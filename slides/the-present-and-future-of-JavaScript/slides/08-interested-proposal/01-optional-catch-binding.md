@@ -1,4 +1,5 @@
 ## Optional Catch Binding
+
 stage-3
 
 ```javascript
@@ -6,7 +7,8 @@ let data;
 
 try {
   data = JSON.parse(str);
-} catch { //  you don't need the binding `()`
+} catch {
+  //  you don't need the binding `()`
   data = 'default';
 }
 ```

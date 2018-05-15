@@ -20,4 +20,5 @@ new URL('https://user:pass@hname:8080/path?a=b#hash');
 //   hash: #hash
 // }
 ```
+
 '日本語' is converted to ASCII by Punycode algorithm.

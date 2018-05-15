@@ -1,4 +1,4 @@
-## formatにwhatwg-urlのサポート
+## format に whatwg-url のサポート
 
 **semver-minor** since 7.6.0
 

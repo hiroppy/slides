@@ -1,6 +1,6 @@
 <!-- background: maintainers -->
 
-## maintainersに参加しました🙃
+## maintainers に参加しました 🙃
 
 <section class="card">
   <div class="card-text">
@@ -19,8 +19,8 @@
   >
 </section>
 
-GitHubで働く人たちと協力して  
-GitHubを良くしていくことが主な目的となっています。  
+GitHub で働く人たちと協力して  
+GitHub を良くしていくことが主な目的となっています。  
 主に、問題点の提示、解決や  
 プレリリースの機能のフィードバックを行ったりします。
 

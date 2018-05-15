@@ -1,11 +1,11 @@
-## nicohacoとは？
+## nicohaco とは？
 
 <img src="../../images/nicohaho-logo.png" width="200" height="200">
 
-2017/05/15ぐらいから開発し始めた個人プロダクト  
-NicoBoxというニコ動の音楽アプリのPC版(Electron製)
+2017/05/15 ぐらいから開発し始めた個人プロダクト  
+NicoBox というニコ動の音楽アプリの PC 版(Electron 製)
 
-_まだαの段階です_
+_まだ α の段階です_
 
 <br>
 **https://github.com/abouthiroppy/nicohaco**

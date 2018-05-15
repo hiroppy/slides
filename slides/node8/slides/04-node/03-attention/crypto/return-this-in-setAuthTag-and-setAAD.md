@@ -1,4 +1,4 @@
-## `setAuthTag`と`setAAD`でthisを返す
+## `setAuthTag`と`setAAD`で this を返す
 
 **semver-minor** since 7.2.0
 

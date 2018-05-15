@@ -2,7 +2,7 @@
 
 <br />
 
-`PerformanceObserver` objects provide notifications   
+`PerformanceObserver` objects provide notifications  
 when new `PerformanceEntry` instances  
 have been added to the Performance Timeline.
 
