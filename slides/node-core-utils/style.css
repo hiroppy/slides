@@ -1,5 +1,4 @@
-@import "fusuma/src/frontend/assets/style/variable";
-@import "fusuma/src/frontend/assets/style/mixins";
+@import "../../common/styles/themes/javascript";
 
 .bespoke-backdrop.title {
   background: var(--color-node);

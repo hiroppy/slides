@@ -1,4 +1,4 @@
-@import "fusuma/src/frontend/assets/style/variable";
+@import "../../common/styles/themes/javascript";
 
 .bespoke-backdrop {
   background: var(--color-gray);

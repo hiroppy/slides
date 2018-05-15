@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/performance-timing-api-with-node.js"
+    "name": "slides/util.types"
   },
   "scripts": {
     "pdf": "fusuma pdf -i https://slides.hiroppy.me/$npm_package_config/name -o $npm_package_config/slide.pdf",

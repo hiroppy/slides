@@ -1,4 +1,4 @@
-@import "fusuma/src/frontend/assets/style/variable";
+@import "../../common/styles/themes/javascript";
 
 .bespoke-parent {
   font-family: futura, "Sawarabi Gothic", helvetica, arial, arial, sans-serif;

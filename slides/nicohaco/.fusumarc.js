@@ -7,7 +7,7 @@ module.exports = {
     thumbnail: ""
   },
   slide: {
-    theme: "js"
+    theme: "nebula"
   },
   extends: {
     css: "style.css"
