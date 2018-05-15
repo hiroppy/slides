@@ -6,17 +6,17 @@
     "name": "slides/util.types"
   },
   "scripts": {
-    "pdf": "fusuma pdf -i https://slides.hiroppy.me/$npm_package_config/name -o $npm_package_config/slide.pdf",
+    "pdf":
+      "fusuma pdf -i https://slides.hiroppy.me/$npm_package_config/name -o $npm_package_config/slide.pdf",
     "init": "node init.js $npm_package_config_name",
     "start": "fusuma start -d $npm_package_config_name",
     "build": "NODE_ENV=production fusuma build -d $npm_package_config_name",
     "build:all": "npm run clean && NODE_ENV=production webpack",
-    "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint .",
-    "lint:css": "stylelint src/**/*.css",
     "deploy": "npm run build && gh-pages -d dist -a",
     "deploy:all": "npm run clean && npm run build:all && gh-pages -d dist",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "fmt": "prettier --write **/*.{js,json,css,md}",
+    "precommit": "pretty-quick --staged"
   },
   "repository": {
     "type": "git",
@@ -29,11 +29,10 @@
   },
   "homepage": "https://github.com/abouthiroppy/slides#readme",
   "devDependencies": {
-    "eslint": "^4.9.0",
-    "eslint-config-sky": "^1.4.3",
     "fusuma": "^0.1.3",
-    "stylelint": "^8.2.0",
-    "stylelint-config-sky": "^1.1.0"
+    "husky": "^0.14.3",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
   },
   "dependencies": {
     "fs-extra": "^6.0.1"

@@ -6,6 +6,7 @@
     <span class="description">A fully pluggable tool for identifying and reporting on patterns in JavaScript.</span>
 
     <a href="https://github.com/eslint/eslint">https://github.com/eslint/eslint</a>
+
   </div>
   ![](../../images/eslint.png)
 </div>

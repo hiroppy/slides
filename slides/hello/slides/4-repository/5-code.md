@@ -13,4 +13,4 @@ path.format({
 ```
 
 Use [highlight.js](https://github.com/isagalaev/highlight.js/) and current theme is GitHub theme😌  
-see: [setup-hljs.js](https://github.com/abouthiroppy/slides/blob/master/src/lib/setup-hljs.js)  
+see: [setup-hljs.js](https://github.com/abouthiroppy/slides/blob/master/src/lib/setup-hljs.js)

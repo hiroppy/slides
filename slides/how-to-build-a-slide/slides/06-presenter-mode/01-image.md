@@ -9,5 +9,5 @@ Presenter Mode is very simple, it has only a next slide view and note.
 <!-- note
 test!
 
-Created Presenter Mode because I need presenter notes when speaking in English.😂    
+Created Presenter Mode because I need presenter notes when speaking in English.😂
 -->

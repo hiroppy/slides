@@ -1,4 +1,5 @@
 ## append, delete,
+
 ## set, get, getAll
 
 ```js

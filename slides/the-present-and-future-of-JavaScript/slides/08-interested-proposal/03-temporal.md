@@ -9,7 +9,7 @@ let year = civilDate.year;
 let month = civilDate.month;
 let day = civilDate.day;
 
-new CivilTime(hour, minute[[[, second], millisecond], nanosecond]);
+new CivilTime(hour, minute[([[, second], millisecond], nanosecond)]);
 let hour = civilTime.hour;
 let minute = civilTime.minute;
 let second = civilTime.second;
@@ -17,7 +17,7 @@ let millisecond = civilTime.millisecond;
 let nanosecond = civilTime.nanosecond;
 
 let myCivilDate = new CivilDate(2016, 2, 29);
-let newCivilDate = myCivilDate.plus({years: 1, months: 2});
+let newCivilDate = myCivilDate.plus({ years: 1, months: 2 });
 //results in civil date with value 2017-4-28
 ```
 

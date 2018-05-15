@@ -18,4 +18,4 @@ wrapped();
 
 <br />
 
-An observer will catch a `function` entry when `wrapped` is called.  
+An observer will catch a `function` entry when `wrapped` is called.

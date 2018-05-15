@@ -2,8 +2,9 @@
 
 <br />
 
-This is recorded by default on startup.   
+This is recorded by default on startup.  
 This will be useful if you want to know the startup performance of Node.
+
 ```js
 { name: 'node',
   entryType: 'node',

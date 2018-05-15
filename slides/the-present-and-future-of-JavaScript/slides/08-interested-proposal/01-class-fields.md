@@ -1,9 +1,10 @@
 ## class fields
+
 stage-3
 
 ```javascript
 class Counter extends HTMLElement {
-  x = 0;  // public fields 
+  x = 0; // public fields
   #y = 0; // private fields
 
   constructor() {

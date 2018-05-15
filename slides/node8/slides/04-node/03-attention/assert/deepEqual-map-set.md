@@ -1,4 +1,4 @@
-## deepEqualがMap, Setのサポート
+## deepEqual が Map, Set のサポート
 
 **semver-major**
 

@@ -2,8 +2,8 @@
 
 **semver-major**
 
-現在のNodeのCore Modulesでは、各ファイルにエラーが定義されています。   
-[/lib/internal/errors.js](https://github.com/nodejs/node/blob/master/lib/internal/errors.js)を使うように移行しています。  
+現在の Node の Core Modules では、各ファイルにエラーが定義されています。  
+[/lib/internal/errors.js](https://github.com/nodejs/node/blob/master/lib/internal/errors.js)を使うように移行しています。
 
 <br>
 

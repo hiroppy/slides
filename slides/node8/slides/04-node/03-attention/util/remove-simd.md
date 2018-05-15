@@ -1,8 +1,8 @@
-## `util.format`からSIMDを取り除く
+## `util.format`から SIMD を取り除く
 
-**semver-major**  
+**semver-major**
 
-upstreamのv8がSIMDのサポートを切っているためです。
+upstream の v8 が SIMD のサポートを切っているためです。
 
 ```js
 $ node --harmony_simd

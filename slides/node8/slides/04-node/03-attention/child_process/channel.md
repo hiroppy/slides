@@ -1,10 +1,10 @@
-`channel`が公開APIへ追加
+`channel`が公開 API へ追加
 
 **semver-minor** since 7.1.0
 
 今までプライベート扱いだった`_channel`のエイリアスです。  
 将来的に`_channel`は廃止されます。  
-IPC(Inter Process Communication) channelへの参照を返します。
+IPC(Inter Process Communication) channel への参照を返します。
 
 ```js
 > const fork = require('child_process').fork

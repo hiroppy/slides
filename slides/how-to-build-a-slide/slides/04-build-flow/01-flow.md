@@ -11,7 +11,7 @@ markdown-loader -> html-loader
 <br>
 
 ```javascript
-// webpack.config.js 
+// webpack.config.js
 
 {
   test: /\.md$/,

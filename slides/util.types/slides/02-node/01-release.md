@@ -2,4 +2,4 @@
 
 <br />
 
-CHANGELOG: [Node.js v10の変更点まとめ](http://blog.hiroppy.me/entry/node10)
+CHANGELOG: [Node.js v10 の変更点まとめ](http://blog.hiroppy.me/entry/node10)

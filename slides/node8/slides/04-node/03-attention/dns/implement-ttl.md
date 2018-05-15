@@ -1,8 +1,8 @@
-## ttlが取得可能になった
+## ttl が取得可能になった
 
 **semver-minor** since 7.2.0
 
-各レコードのTTL(Time-To-Live)を取得します。  
+各レコードの TTL(Time-To-Live)を取得します。  
 `dns.resolve4()`と`dns.resolve6()`に実装されました。
 
 ```js

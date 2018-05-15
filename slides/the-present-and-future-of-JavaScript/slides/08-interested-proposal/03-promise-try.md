@@ -1,4 +1,5 @@
 ## Promise.try
+
 stage-1
 
 ```javascript

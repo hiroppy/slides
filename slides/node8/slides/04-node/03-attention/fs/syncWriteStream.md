@@ -1,9 +1,9 @@
-## fs.SyncWriteStreamが非推奨へ
+## fs.SyncWriteStream が非推奨へ
 
 **semver-major**
 
-6.xのドキュメントでは廃止されていました。  
-公開されていることを意図してないAPIなので非推奨へ。
+6.x のドキュメントでは廃止されていました。  
+公開されていることを意図してない API なので非推奨へ。
 
 ```js
 > fs.SyncWriteStream

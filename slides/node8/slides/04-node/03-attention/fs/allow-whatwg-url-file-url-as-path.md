@@ -1,9 +1,9 @@
-## fileプロトコルを許可する
+## file プロトコルを許可する
 
 **semver-minor** since 7.6.0
 
-whatwg-urlのfileプロトコルをfsモジュールで使うことが可能となった。  
-whatwg-urlのspecにより、  
+whatwg-url の file プロトコルを fs モジュールで使うことが可能となった。  
+whatwg-url の spec により、  
 常にファイルシステムのルートからの絶対パスである必要があります。
 
 ```js

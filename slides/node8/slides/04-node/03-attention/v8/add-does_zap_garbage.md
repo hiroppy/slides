@@ -2,10 +2,10 @@
 
 **semver-minor** since 7.2.0
 
-v8 HeapStatisticsへ`does_zap_garbage`が追加されました。  
-` --zap_code_space`が有効かどうかのフラグを返します。  
+v8 HeapStatistics へ`does_zap_garbage`が追加されました。  
+`--zap_code_space`が有効かどうかのフラグを返します。  
 これはヒープガーベージを上書きするパターンです。  
-`malloced_memory`, `peak_malloced_memory`もフィールドに追加されました。  
+`malloced_memory`, `peak_malloced_memory`もフィールドに追加されました。
 
 ```js
 > v8.getHeapStatistics()

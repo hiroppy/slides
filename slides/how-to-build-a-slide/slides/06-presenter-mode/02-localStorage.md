@@ -5,10 +5,13 @@ Use localStorage to talk in real time between Host and View.
 ```javascript
 // host.js
 window.slide.bespoke.on('activate', (e) => {
-  localStorage.setItem('page', JSON.stringify({
-    date: Date.now(),
-    page: e.index
-  }));
+  localStorage.setItem(
+    'page',
+    JSON.stringify({
+      date: Date.now(),
+      page: e.index
+    })
+  );
 });
 
 // view.js
