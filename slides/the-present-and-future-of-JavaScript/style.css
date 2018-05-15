@@ -1,31 +1,4 @@
-@import "../../common/style/variable";
-@import "../../common/style/mixins";
-
-:root {
-  --color-gray: #b7b8b7;
-}
-
-@font-face {
-  font-family: Stratum;
-  src: url("../../common/fonts/StratumNo1 Medium.ttf");
-}
-
-.bespoke-parent {
-
- /* stylelint-disable */
-  font-family: Stratum, "Helvetica Neue For Number", "Hiragino Kaku Gothic ProN", "メイリオ", Arial, sans-serif;
-  /* stylelint-enable */
-}
-
-h2 {
-  color: var(--color-js);
-}
-
-strong {
-  color: var(--color-orange);
-  font-size: 2.1rem;
-  font-weight: bold;
-}
+@import "../../common/styles/themes/javascript";
 
 .bespoke-backdrop {
   background: var(--color-gray);
@@ -93,14 +66,6 @@ strong {
 
 .node-fest {
   width: 70%;
-}
-
-img {
-  width: 90%;
-}
-
-.ref-link:hover {
-  color: var(--color-js);
 }
 
 .required {
