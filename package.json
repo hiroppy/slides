@@ -28,13 +28,12 @@
   },
   "homepage": "https://github.com/abouthiroppy/slides#readme",
   "devDependencies": {
+    "fusuma": "^0.2.0",
     "husky": "^0.14.3",
     "prettier": "^1.12.1",
-    "pretty-quick": "^1.4.1",
-    "serve": "^6.5.7"
+    "pretty-quick": "^1.4.1"
   },
   "dependencies": {
-    "fs-extra": "^6.0.1",
-    "fusuma": "^0.1.5"
+    "fs-extra": "^6.0.1"
   }
 }

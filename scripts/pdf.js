@@ -1,7 +1,6 @@
 'use strict';
 
 const path = require('path');
-const serve = require('serve');
 const { pdf } = require('fusuma');
 const fs = require('fs-extra');
 
@@ -13,12 +12,5 @@ if (!output) process.exit(1);
   const base = path.join(process.cwd(), output);
   const port = 3455;
 
-  const server = serve(path.join(base, 'dist'), {
-    port
-  });
-
-  await new Promise((resolve) => setTimeout(() => resolve(), 2000));
-  await pdf(`http://localhost:${port}`, path.join(process.cwd(), output, 'slide.pdf'));
-
-  server.stop();
+  await pdf(path.join(base, 'dist'), path.join(base, 'slide.pdf'), port);
 })();

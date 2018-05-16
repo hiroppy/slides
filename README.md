@@ -47,7 +47,7 @@ Niconare: https://niconare.nicovideo.jp/users/48434166
 
 ```sh
 # edit config.name in package.json
-$ npm run init <project-name>
+$ npm run init
 ```
 
 ### Development
