@@ -1,6 +1,0 @@
-{
-  extends: "sky/react",
-  rules: {
-    "react/prop-types": 0
-  }
-}
