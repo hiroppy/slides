@@ -3,17 +3,14 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/util.types"
+    "name": "slides/hello"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_name",
     "init": "node scripts/init.js $npm_package_config_name",
     "start": "fusuma start -d $npm_package_config_name",
     "build": "NODE_ENV=production fusuma build -d $npm_package_config_name",
-    "build:all": "npm run clean && NODE_ENV=production webpack",
-    "deploy": "npm run build && gh-pages -d dist -a",
-    "deploy:all": "npm run clean && npm run build:all && gh-pages -d dist",
-    "clean": "rimraf ./dist",
+    "deploy": "npm run build && node scripts/deploy.js $npm_package_config_name",
     "fmt": "prettier --write **/*.{js,json,css,md}",
     "precommit": "pretty-quick --staged"
   },
@@ -28,7 +25,8 @@
   },
   "homepage": "https://github.com/abouthiroppy/slides#readme",
   "devDependencies": {
-    "fusuma": "^0.2.0",
+    "fusuma": "^0.3.1",
+    "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "prettier": "^1.12.1",
     "pretty-quick": "^1.4.1"
