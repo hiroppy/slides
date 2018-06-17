@@ -21,7 +21,7 @@
   <div class="profile-info">
     <div class="profile-left">
       <p>A JS engineer and Architect</p>
-      <p>Dwango, Inc</p>
+      <p>Dwango, Inc. BizReach, Inc.</p>
     </div>
     <div class="profile-right">
       <p>Working on Node.js, Babel</p>
