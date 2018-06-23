@@ -1,37 +1,24 @@
-@import "../../common/style/variable";
-@import "../../common/style/mixins";
+@import '../../common/styles/themes/faint';
 
-strong {
+/* strong {
   color: var(--color-orange);
   font-size: 2.1rem;
   font-weight: bold;
 }
 
-.bespoke-backdrop.danger {
-  background: #c44444;
-}
-
-.bespoke-backdrop.title {
-  background: #ff0;
-}
-
-.bespoke-backdrop.sample-background {
-  background: url("./images/magic.gif");
-}
-
-.bespoke-backdrop.webpack {
-  background: #14aaf3;
-}
-
-.bespoke-backdrop.postcss {
-  background: #dd3a0a;
-}
-
-.bespoke-backdrop.end {
-  background: var(--color-main);
-}
-
 li:before {
   color: var(--color-main);
   margin-right: 10px;
+} */
+
+__bg.sample-background {
+  background: url('./images/magic.gif');
+}
+
+__bg.webpack {
+  background: #14aaf3;
+}
+
+__bg.postcss {
+  background: var(--color-red);
 }

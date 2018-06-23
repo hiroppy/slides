@@ -1,5 +1,11 @@
-const base = require("../../.fusumarc");
+const base = require('../../.fusumarc');
 
 module.exports = {
-  ...base
+  ...base,
+  slide: {
+    theme: 'nebula'
+  },
+  extends: {
+    css: 'style.css'
+  }
 };

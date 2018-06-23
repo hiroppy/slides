@@ -1,3 +1,3 @@
-<!-- background: title -->
+<!-- sectionTitle -->
 
 # bespoke

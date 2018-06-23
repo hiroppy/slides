@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Palanquin');
+
+:root {
+  --color-cyan: #0ac2d2;
+  --color-blue: #7bb7fa;
+  --color-green: #60d7a9;
+  --color-yellow: #fdc162;
+  --color-orange: #ffcc99;
+  --color-red: #fd6a62;
+  --color-pink: #f68dbb;
+}
+
+h2 {
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 800;
+  margin-bottom: 25px;
+  letter-spacing: 0.25rem;
+  text-transform: none;
+}
+
+h3 {
+  font-family: inherit;
+  font-style: normal;
+}
+
+strong {
+  color: var(--color-orange);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.7) !important;
+
+  & > code {
+    color: #fff !important;
+    font-size: 0.8rem !important;
+    text-shadow: none !important;
+  }
+
+  & span {
+    background: transparent !important;
+  }
+}
+
+.bespoke-parent {
+  font-family: 'Quicksand', 'Helvetica Neue For Number', 'Hiragino Kaku Gothic ProN', 'メイリオ',
+    Arial, sans-serif;
+}
+
+.bespoke-backdrop {
+  background: var(--color-orange);
+}
+
+.bespoke-backdrop.title {
+  background: var(--color-blue);
+}
+
+.bespoke-backdrop.end {
+  background: var(--color-cyan);
+}
+
+.bespoke-backdrop.section-title {
+  background: var(--color-green);
+}
