@@ -1,0 +1,15 @@
+@import '../../common/styles/themes/faint';
+
+__bg.title {
+  background: var(--color-node);
+}
+
+__bg.note {
+  background: var(--color-red);
+}
+
+.nodefest {
+  display: block;
+  margin: auto;
+  width: 150px;
+}
