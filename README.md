@@ -17,6 +17,8 @@ All slides can be written in Markdown or HTML.
   * 03/06: [SRE-SET Automation Night #2](https://mercari.connpass.com/event/79046/)
 * [util.types](http://slides.hiroppy.me/util.types)
   * 04/24: [Roppongi.js #2](https://roppongi-js.connpass.com/event/82998/)
+* [worker_threads](https://slides.hiroppy.me/worker_threads)
+  * 06/26: [Roppongi.js #4](https://roppongi-js.connpass.com/event/86684/)
 
 ### 2017
 

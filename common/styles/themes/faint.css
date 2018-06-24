@@ -1,3 +1,5 @@
+@import '../common';
+@import '../variable';
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Palanquin');
 
@@ -11,8 +13,12 @@
   --color-pink: #f68dbb;
 }
 
+h1 {
+  text-transform: none;
+}
+
 h2 {
-  font-family: 'Palanquin', sans-serif;
+  font-family: 'Palanquin', 'Hiragino Kaku Gothic ProN', 'メイリオ', Arial, sans-serif;
   font-weight: 800;
   margin-bottom: 25px;
   letter-spacing: 0.25rem;
@@ -63,4 +69,11 @@ pre {
 
 .bespoke-backdrop.section-title {
   background: var(--color-green);
+}
+
+.section-title h2 {
+  font-family: 'Quicksand', 'Helvetica Neue For Number', 'Hiragino Kaku Gothic ProN', 'メイリオ',
+    Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
 }
