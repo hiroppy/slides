@@ -1,5 +1,7 @@
 <!-- background: sample-background -->
 
+<!-- backgroundのgifはcssで指定しているため、lazy-loadは有効にならない -->
+
 ## background
 
 Use [bespoke-backdrop](https://github.com/bespokejs/bespoke-backdrop).  
