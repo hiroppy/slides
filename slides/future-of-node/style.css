@@ -1,1 +1,54 @@
 @import '../../common/styles/themes/javascript';
+
+__bg.title {
+  background-color: var(--color-node);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+__bg.end {
+  background: var(--color-main);
+}
+
+__bg.ref {
+  background: #7bb7fa;
+}
+
+__section-title {
+  background: var(--color-js);
+}
+
+.section-title h2 {
+  color: #f5f5f5;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+section > ul > li:not(:first-child) {
+  margin-top: 15px;
+}
+
+.collaborators-in-japan {
+  & a {
+    border: none;
+
+    & img {
+      border-radius: 50%;
+      width: 80px;
+    }
+  }
+}
+
+.lts {
+  background: #f5f5f5;
+  border-radius: 5px;
+  width: 60%;
+}

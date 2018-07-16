@@ -1,5 +1,3 @@
+## Contents
+
 <!-- contents -->
-
-## Content
-
-<br />
