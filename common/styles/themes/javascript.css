@@ -38,8 +38,12 @@ h2 {
 }
 
 h3 {
-  font-family: inherit;
+  border-bottom: 1px solid;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  padding: 0 1.2em 0.5em;
 }
 
 strong {

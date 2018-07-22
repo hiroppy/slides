@@ -1,9 +1,14 @@
 const base = require('../../.fusumarc');
 
+const url = 'https://slides.hiroppy.me';
+const title = '';
+
 module.exports = {
   meta: {
     ...base.meta,
-    name: '',
+    url: `${url}/${title}`,
+    title,
+    name: title,
     description: '',
     thumbnail: ''
   },

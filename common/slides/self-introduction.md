@@ -17,20 +17,20 @@
       <i class="fa fa-fw fa-home"></i>
     </a>
   </div>
-  <p>npx hiroppy</p>
   <div class="profile-info">
     <div class="profile-left">
-      <p>A JS engineer and Architect</p>
+      <p>A Web engineer and Architect</p>
       <p>Dwango, Inc. BizReach, Inc.</p>
     </div>
     <div class="profile-right">
-      <p>Working on Node.js, Babel</p>
+      <p>Node.js, Babel, Stylelint</p>
       <p>Node.js Japan User Group</p>
     </div>
   </div>
 </div>
 
 <!-- note
+BizReach: 2018/06 -
 Dwango: 2015/04 - 2017/05
 Mercari: 2017/06 - 2017/12/15
 Dwango: 2017/12/16 -
