@@ -8,7 +8,7 @@ node_js:
 os:
   - linux
 before_script:
-  - npm install
+  - npm ci
   - npm run build
 notifications:
   slack: about-hiroppy:rzKYJ3zRPzBaak3TeaTmPSH5
