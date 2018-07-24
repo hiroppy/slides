@@ -1,5 +1,4 @@
 @import './variable';
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro'); /* for highlight.js */
 
 :root {
   --icon-size: 150px;

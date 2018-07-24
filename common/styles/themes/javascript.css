@@ -55,3 +55,7 @@ strong {
 img {
   width: 90%;
 }
+
+code {
+  background: rgba(122, 122, 122, 0.6);
+}
