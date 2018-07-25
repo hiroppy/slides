@@ -1,4 +1,4 @@
-## when the entry point is CJS
+## When the entry point is CJS
 
 ```js
 // friends.mjs
@@ -6,7 +6,7 @@ export const cat = 'cat';
 export default 'dog';
 
 // ---------------------------------------
-// index.js
+// index.js // $ node --experimental-modules index.js
 
 // ESMのコードをCJSで呼び出すことはできません
 // const friends = require('./friends'); // Must use import to load ES Module

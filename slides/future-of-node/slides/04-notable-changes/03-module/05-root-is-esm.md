@@ -1,11 +1,11 @@
-## when the entry point is ESM
+## When the entry point is ESM
 
 ```js
 // friends.js
 module.exports.dog = 'dog';
 
 // ---------------------------------------
-// index.mjs
+// index.mjs // node --experimental-modules index.mjs
 import { readFileSync } from 'fs'; // ビルトインモジュールは named import が行えるようになった
 
 import dog from './friends'; // { dog: 'dog' }

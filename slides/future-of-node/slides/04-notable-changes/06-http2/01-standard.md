@@ -12,13 +12,11 @@ const options = {
 //証明書がなくても動くが、ブラウザからはアクセスできない
 const server = createSecureServer(options, (req, res) => {
   res.end('Hello World!');
+}).listen(8080);
+
+// streamを使う場合 (上記の場合は、res.streamが存在する)
+const server = createSecureServer(options).listen(8080);
+server.on('stream', (stream, headers) => {
+  stream.end('Hello World!');
 });
-
-// const server = createSecureServer(options);
-// server.on('stream', (stream, headers) => {
-//    stream.respond({ ':status': 200 });
-//    stream.end('Hello World!');
-// });
-
-server.listen(8080);
 ```

@@ -7,4 +7,4 @@
 * CJS のファイルを ESM でインポートする場合、named import は使えません
   * CJS のオブジェクトは`default`キーワードで包まれるため
 * ESM で使えないキーワードがあります
-  * `__dirname`, `__filename`, `require`, `exports`, `module`, `arguments`
+  * `__dirname`, `__filename`, `require`, `exports`, `module`, etc
