@@ -11,7 +11,6 @@ const obs = new PerformanceObserver((list, observer) => {
   });
   observer.disconnect();
 });
-
 obs.observe({ entryTypes: ['function'], buffered: true });
 
 const Main = ({ n }) =>

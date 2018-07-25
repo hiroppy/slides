@@ -1,7 +1,7 @@
 ## Messaging
 
 child_process の IPC と異なります。  
-ブラウザと同様に`postMessage`を使い会話をします。
+ブラウザと同様に`postMessage`のシンタックスを使うことができます。
 
 <br />
 
