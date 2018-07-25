@@ -11,7 +11,7 @@ All slides can be written in Markdown or HTML.
 
 ### 2018
 
-* [Future of Node.js]()(Japanese)
+* [Future of Node.js](https://slides.hiroppy.me/future-of-node)(Japanese)
   * 07/25: [BPStudy#131〜JavaScript の今を語る](https://bpstudy.connpass.com/event/90777/)
 * [worker_threads](https://slides.hiroppy.me/worker_threads)(Japanese)
   * 06/26: [Roppongi.js #4](https://roppongi-js.connpass.com/event/86684/)
