@@ -3,7 +3,7 @@ self.__precacheManifest = [
     "url": "7b464e274bc331f9a765d765359635a5.woff"
   },
   {
-    "url": "main.0.f8680c38cda767ae56ff.css"
+    "url": "main.0.cc517edfcb5a114d7a9a.css"
   },
   {
     "url": "presenter.view.1.166a5365c3a21ff98bfd.bundle.js"
@@ -30,11 +30,11 @@ self.__precacheManifest = [
     "url": "14a08198ec7d1eb96d515362293fed36.woff2"
   },
   {
-    "revision": "8f0f07c089e5cd86707ef79694b3646e",
+    "revision": "6f7e8eab85319f3255015bac1a53cd8f",
     "url": "index.html"
   },
   {
-    "url": "main.0.f8680c38cda767ae56ff.bundle.js"
+    "url": "main.0.cc517edfcb5a114d7a9a.bundle.js"
   },
   {
     "url": "a3211439b943d6bc9ecc522605b5b5a5.svg"
