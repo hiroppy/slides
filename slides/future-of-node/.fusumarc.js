@@ -16,6 +16,7 @@ module.exports = {
     theme: 'nebula'
   },
   extends: {
-    css: 'style.css'
+    css: 'style.css',
+    js: '../../common/main.js'
   }
 };
