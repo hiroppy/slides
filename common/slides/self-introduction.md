@@ -2,6 +2,8 @@
 
 ## 😋 ME 😙
 
+<br />
+
 <div class="profile">
   <div class="profile-left">
     <img src="../../../common/images/profile.jpg" alt="profile" class="profile-avatar">
@@ -27,8 +29,8 @@
       A Web engineer and Architect
     </h5>
     <h4>Working at</h4>
-    <p>Dwango, Inc.</p>
-    <p>Mercari, Inc.</p>
+    <p>Dwango, Inc. as a developer</p>
+    <p>Mercari, Inc. as a technical advisor</p>
     <h4>Contributor to</h4>
     <p>Node.js</p>
     <p>Babel</p>
