@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/future-of-node"
+    "name": "slides/event-loop-of-node"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_name",
@@ -32,7 +32,7 @@
     "pretty-quick": "^1.4.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.3.1",
+    "@fortawesome/fontawesome-free": "^5.4.1",
     "fs-extra": "^6.0.1"
   }
 }
