@@ -1,0 +1,13 @@
+@import '../../common/styles/themes/faint';
+@import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '@fortawesome/fontawesome-free/css/brands.min.css';
+@import '@fortawesome/fontawesome-free/css/solid.min.css';
+
+.profile-avatar {
+  border-radius: 50%;
+  width: 120px;
+}
+
+.profile-name {
+  font-size: 30px;
+}
