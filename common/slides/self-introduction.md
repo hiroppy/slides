@@ -29,8 +29,8 @@
       A Web engineer and Architect
     </h5>
     <h4>Working at</h4>
-    <p>Dwango, Inc. as a developer</p>
-    <p>Mercari, Inc. as a technical advisor</p>
+    <p>Dwango, Inc. as a web frontend developer</p>
+    <p>Mercari, Inc. as a web technical advisor</p>
     <h4>Contributor to</h4>
     <p>Node.js</p>
     <p>Babel</p>
