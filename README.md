@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
 
 ### 2018
 
+* [The event loop of node]()
+  * 10/24: [We Are JavaScripters! @25th](https://wajs.connpass.com/event/103761/)
 * [Future of Node.js](https://slides.hiroppy.me/future-of-node)(Japanese)
   * 07/25: [BPStudy#131〜JavaScript の今を語る](https://bpstudy.connpass.com/event/90777/)
 * [worker_threads](https://slides.hiroppy.me/worker_threads)(Japanese)
