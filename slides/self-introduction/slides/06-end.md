@@ -1,8 +1,8 @@
-<!-- background: profile -->
+<!-- background: end -->
 
-## 😋 ME 😙
+# THE END
 
-<img src="../../../common/images/profile.jpg" alt="profile" class="profile-avatar">
+<br />
 
 <div class="sns-list">
   <a href="https://hiroppy.me" target="_blank">
@@ -18,9 +18,3 @@
     <i class="fab fa-facebook"></i>
   </a>
 </div>
-
-<br />
-
-<p class="profile-name">Yuta Hiroto, a.k.a. hiroppy</p>
-
-key-color: #3498db
