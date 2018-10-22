@@ -7,7 +7,8 @@ All slides can be written in Markdown or HTML.
 
 ## My Slides
 
-* [sample](http://slides.hiroppy.me/hello/)
+* [self introduction](https://slides.hiroppy.me/self-introduction)
+* [sample](https://slides.hiroppy.me/hello/)
 
 ### 2018
 
