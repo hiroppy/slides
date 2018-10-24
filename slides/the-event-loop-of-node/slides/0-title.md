@@ -1,4 +1,4 @@
-<!-- background: title -->
+<!-- background: zero -->
 
 # The Event Loop <br /> of Node
 

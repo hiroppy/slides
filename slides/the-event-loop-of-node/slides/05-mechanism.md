@@ -2,7 +2,9 @@
 
 ## Mechanism
 
-<img src="../images/mechanism.png" class="event-loop-mechanism" />
+<img src="../images/mechanism.png" style="width: 50%" />
+
+<a class="ref-link" href="http://voidcanvas.com/nodejs-event-loop/">http://voidcanvas.com/nodejs-event-loop/</a>
 
 ---
 
@@ -31,9 +33,49 @@ and execution of JavaScript is executed in a phase somewhere excepted "idle, pre
 ### Timers Phase
 
 This phase is the starting point of the event loop.  
-Callbacks is executed in this phase's queue.
+Executes `setTimeout` or `setInterval` timer callbacks.
+
+<br />
 
 ### Pending Callbacks Phase
+
+Executes I/O callbacks deferred to the next loop iteration  
+that exist in `pending_queue`.
+
+---
+
+## Phases
+
+### Idle, Prepare
+
+It is called internally by libuv.
+
+<br />
+
+### Poll Phase
+
+Waits for the server or I/O response.
+
+<br />
+
+* blocks I/O and calculate polling time
+* processing events in the poll queue
+
+---
+
+## Phases
+
+### Check Phase
+
+Executes `setImmediate` timer callbacks.  
+If a callback that has a callback registered by `setImmediate` exists  
+in the Poll Phase, it is guaranteed to be called before `setTimeout`.
+
+<br />
+
+### Close Callbacks Phase
+
+Executes callbacks that registered by `close` event.
 
 ---
 
@@ -65,3 +107,7 @@ It has callbacks that registered by `promise`.
 
 nextTickQueue and microTaskQueue execute  
 when each phases' queue has empty and finished.
+
+---
+
+<img src="../images/libuv.jpg" style="width: 70%" />

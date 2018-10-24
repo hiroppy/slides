@@ -3,6 +3,9 @@
 @import '@fortawesome/fontawesome-free/css/brands.min.css';
 @import '@fortawesome/fontawesome-free/css/solid.min.css';
 
-.event-loop-mechanism {
-  width: 50%;
+.zero {
+  background-image: url('./images/event-loop-of-cat.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
