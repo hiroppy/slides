@@ -12,7 +12,7 @@ All slides can be written in Markdown or HTML.
 
 ### 2018
 
-* [The event loop of node]()
+* [The event loop of node](https://slides.hiroppy.me/the-event-loop-of-node)
   * 10/24: [We Are JavaScripters! @25th](https://wajs.connpass.com/event/103761/)
 * [Future of Node.js](https://slides.hiroppy.me/future-of-node)(Japanese)
   * 07/25: [BPStudy#131〜JavaScript の今を語る](https://bpstudy.connpass.com/event/90777/)
