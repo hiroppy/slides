@@ -13,7 +13,11 @@
 /* 1 (sync)           */ (() => console.log('sync'))();
 ```
 
-* the Node.js's event loop has 6 phases and 2 queues(?)
+* Node.js uses `libuv`
+* the Node.js's event loop has 6 phases and 2 queues
 
-If you want to know the detail, please see my article!  
-[Node.js でのイベントループの仕組みとタイマーについて](https://blog.hiroppy.me/entry/nodejs-event-loop)
+<br />
+
+If you want to know the detail, please see my article!
+
+👉 [Node.js でのイベントループの仕組みとタイマーについて](https://blog.hiroppy.me/entry/nodejs-event-loop)
