@@ -58,4 +58,9 @@ img {
 
 code {
   background: rgba(122, 122, 122, 0.6);
+  font-size: 20px;
+}
+
+pre code {
+  font-size: inherit;
 }
