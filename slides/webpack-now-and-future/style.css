@@ -1,0 +1,18 @@
+@import '../../common/styles/themes/javascript';
+@import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '@fortawesome/fontawesome-free/css/brands.min.css';
+@import '@fortawesome/fontawesome-free/css/solid.min.css';
+
+:root {
+  --color-webpack: #8ed6fb;
+}
+
+.webpack {
+  background: var(--color-webpack);
+}
+
+.history-container {
+  & > div:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
