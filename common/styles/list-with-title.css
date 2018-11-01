@@ -1,0 +1,15 @@
+.list-with-title {
+  display: flex;
+
+  & .list-with-title-title {
+    border-right: 1px solid #ccc;
+    color: #ccc;
+    font-size: 36px;
+    padding-right: 8px;
+  }
+
+  & .list-with-title-body {
+    padding-left: 8px;
+    text-align: left;
+  }
+}

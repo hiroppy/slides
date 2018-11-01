@@ -31,7 +31,7 @@
     <h4>Working at</h4>
     <p>Dwango, Inc. as a web frontend developer</p>
     <p>Mercari, Inc. as a web technical advisor</p>
-    <h4>Contributor to</h4>
+    <h4>A member of</h4>
     <p>Node.js</p>
     <p>Babel</p>
     <p>Stylelint</p>
