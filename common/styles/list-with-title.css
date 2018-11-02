@@ -4,12 +4,16 @@
   & .list-with-title-title {
     border-right: 1px solid #ccc;
     color: #ccc;
-    font-size: 36px;
+    font-size: 40px;
     padding-right: 8px;
   }
 
   & .list-with-title-body {
-    padding-left: 8px;
+    padding-left: 16px;
     text-align: left;
+
+    & > * {
+      display: block;
+    }
   }
 }
