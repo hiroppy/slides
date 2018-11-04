@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
 
 ### 2018
 
+* [OSS に貢献する最初の一歩](https://niconare.nicovideo.jp/watch/kn3590)(Japanese)
+  * 11/03: 会津大学で開かれた[IoT・ICT フェア](https://www.city.aizuwakamatsu.fukushima.jp/docs/2018092500030/)の企業 LT 資料
 * [The event loop of node](https://slides.hiroppy.me/the-event-loop-of-node)
   * 10/24: [We Are JavaScripters! @25th](https://wajs.connpass.com/event/103761/)
 * [Future of Node.js](https://slides.hiroppy.me/future-of-node)(Japanese)
