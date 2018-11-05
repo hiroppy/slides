@@ -16,3 +16,14 @@
     margin-bottom: 12px;
   }
 }
+
+__section-title {
+  background: var(--color-webpack);
+}
+
+.section-title h2 {
+}
+
+.module-bundler {
+  width: 70%;
+}
