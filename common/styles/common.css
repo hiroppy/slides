@@ -149,3 +149,9 @@
     padding: 5px 10px;
   }
 }
+
+pre {
+  & > code {
+    padding: 0;
+  }
+}
