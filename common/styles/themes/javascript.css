@@ -29,6 +29,15 @@
   color: var(--color-js);
 }
 
+.language-transparent {
+  background: transparent !important;
+
+  & > code {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
 h2 {
   color: var(--color-js);
   font-family: 'IBM Plex Sans', sans-serif;
