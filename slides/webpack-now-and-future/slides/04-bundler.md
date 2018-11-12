@@ -27,7 +27,7 @@ WASM(WebAssembly module)
 
 ## 実行時の仕組み
 
-```txt
+```transparent
 IIFE(Immediately Invoked Function Expression)
 +---------------------------------------------------------------+ an argument
 |                                                               +------------+
