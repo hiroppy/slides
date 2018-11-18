@@ -1,6 +1,8 @@
-<!-- sectionTitle: Tree Shaking & Dead Code Elimination -->
+<!-- sectionTitle: Feature: Tree Shaking & Dead Code Elimination -->
 
 ## Tree Shaking & Dead Code Elimination
+
+a.k.a. Unused Exports Elimination
 
 ---
 

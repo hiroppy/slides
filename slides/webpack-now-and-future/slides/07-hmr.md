@@ -1,4 +1,4 @@
-<!-- sectionTitle: Hot Module Replacement -->
+<!-- sectionTitle: Feature: Hot Module Replacement -->
 
 ## Hot Module Replacement
 
