@@ -110,7 +110,6 @@
 
 .list {
   display: flex;
-  margin-top: 50px;
 
   & > ul {
     list-style: none;
@@ -119,6 +118,15 @@
     li {
       padding: 0;
     }
+  }
+}
+
+.list-with-description {
+  display: flex;
+  margin: 0 50px;
+
+  & > div:last-child {
+    text-align: left;
   }
 }
 

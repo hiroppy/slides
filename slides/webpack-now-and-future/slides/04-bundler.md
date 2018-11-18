@@ -6,6 +6,8 @@
 
 ## Module Bundler
 
+<br />
+
 JavaScript を起点にモジュールシステムを使い  
 様々なファイルをつなぎ、実行可能ファイルへと変換します。
 
@@ -13,13 +15,32 @@ JavaScript を起点にモジュールシステムを使い
 
 ---
 
-## モジュールタイプ
+## Module Types
 
-ECMAScript Modules
-CommonJS Modules
-AMD(Asynchronous Module Definition)
-JSON
-WASM(WebAssembly module)
+```javascript
+// ESM (ECMAScript Modules)
+import foo from './foo';
+export default foo;
+import('./foo.wasm'); // native support for WebAssembly
+import('./foo.json'); // native support for JSON
+
+// CJS (CommonJS Modules)
+const foo = require('./foo');
+module.exports = foo;
+
+// AMD (Asynchronous Module Definition)
+define(['./foo'], function(foo) {
+  return foo;
+});
+```
+
+```css
+@import url('foo.css');
+```
+
+```html
+<img src="./foo.png">
+```
 
 <a class="ref-link" href="https://webpack.js.org/concepts/modules/">https://webpack.js.org/concepts/modules</a>
 

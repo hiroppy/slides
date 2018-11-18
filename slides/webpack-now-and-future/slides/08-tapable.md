@@ -1,4 +1,4 @@
-<!-- sectionTitle: Tapable -->
+<!-- sectionTitle: Feature: Tapable -->
 
 ## Tapable
 
@@ -10,9 +10,9 @@
 
 ## Tapable
 
-webpack を支えるプラグインシステム
-
 <br />
+
+webpack プラグインシステム
 
 `Waterfall`, `Bail`, `Loop` のタイプを持ち、  
 webpack のライフサイクルをフックします

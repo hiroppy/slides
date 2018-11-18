@@ -27,3 +27,9 @@ __section-title {
 .module-bundler {
   width: 70%;
 }
+
+.description-logo {
+  display: block;
+  margin: auto;
+  width: 120px;
+}
