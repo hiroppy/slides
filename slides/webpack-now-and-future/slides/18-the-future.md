@@ -4,6 +4,10 @@
 
 ---
 
+<!-- note
+web、webworker、node.jsで実行されるランタイムコードを挿入します。
+-->
+
 ## Version 5
 
 <!-- https://github.com/webpack/webpack/pull/8162
@@ -19,11 +23,16 @@ https://github.com/webpack/webpack/milestone/18 -->
   <div style="text-align: center">
     <img src="../images/logo-new.svg" class="description-logo" />
     <br />
-    <p>🚀: 未定</p>
+    <div style="text-align: left">
+      <p>🚀 未定</p>
+      <p>[Project](https://github.com/webpack/webpack/projects/5)</p>
+    </div>
   </div>
   <ul>
     <li>[persistent cachingの追加(FileCachePluginの追加)](https://github.com/webpack/webpack/pull/8162)</li>
     <li>HTTP/2をデフォルトへ</li>
+    <li>`target: 'universal'` の追加</li>
+    <li>`import.meta`</li>
     <li>[wip]: モジュールタイプに[`css`](https://github.com/webpack/webpack/pull/6448), [`html`](https://github.com/webpack/webpack/pull/6447), [`url`](https://github.com/webpack/webpack/pull/6446)のサポート</li>
     <li>[wip]: [`webpack-preset-`の対応, 及びwebpack-mergeの導入](https://github.com/webpack/webpack/pull/6395)</li>
     <li>[spec]: [`target.webpackGraph`の追加](https://github.com/webpack/webpack/issues/6386)

@@ -8,14 +8,11 @@
 
 <br />
 
-JavaScript を起点にモジュールシステムを使い  
-様々なファイルをつなぎ、実行可能ファイルへと変換します。
-
 <img src="../images/module-bundler.png" class="module-bundler" />
 
 ---
 
-## Module Types
+## Modules
 
 ```javascript
 // ESM (ECMAScript Modules)
@@ -29,9 +26,7 @@ const foo = require('./foo');
 module.exports = foo;
 
 // AMD (Asynchronous Module Definition)
-define(['./foo'], function(foo) {
-  return foo;
-});
+define(['./foo'], (foo) => foo);
 ```
 
 ```css
@@ -46,44 +41,39 @@ define(['./foo'], function(foo) {
 
 ---
 
-## 実行時の仕組み
-
-```transparent
-IIFE(Immediately Invoked Function Expression)
-+---------------------------------------------------------------+ an argument
-|                                                               +------------+
-|     +---------+   +---------+   +---------+   +---------+     |  {
-|     |         | 3 |         | 6 |         | 9 |         |     |    0: ...,
-|     |  Entry  +--->  index  +--->    a    +--->    b    |     |    'index.js': ...,
-|     | (index) |   |         |   |         |   |         |     |    'a.js': ...,
-|     +--+---^--+   +--+---^--+   +--+---^--+   +---------+     |    'b.js': ...
-|        |   |         |   |         |   |                      |  }
-|      1 |   | 2     4 |   | 5     7 |   | 8                    +-------------+
-|     +--v---+---------v---+---------v---+----------------+     |
-|     |                                                   |     |
-|     |          __webpack_require__(Function)            |     |
-|     |                                                   |     |
-|     +---------------------------------------------------+     |
-|                                                               |
-+---------------------------------------------------------------+
-```
-
+<!-- note
+少し語弊がありそうな図。  
 Production ビルド時では、引数は Object ではなく Array となり、  
 moduleID がファイル名ではなく、index の値となります。
 
+webpack_require
+* s: `entry`の ID
+* c: 各モジュールのキャッシュ `{ [ファイル名]: [module] }`
+* m: 各モジュールのリスト `{ [ファイル名]: [内部コード] }`
+* p: `__webpack_public_path__`の文字列値
+* i = the identity function used for harmony imports
+* e = the chunk ensure function
+* d: ESM のための getter 関数
+* o: Object.prototype.hasOwnProperty.call
+* r: `__esModule`を exports へ`Object.defineProperty`でセットする関数
+* t: 偽物の名前空間を作成するための関数
+* n: ESM ではないモジュールに対する`default`の互換性保持関数
+* h: webpack の hash 値
+* w = an object containing all installed WebAssembly.Instance export objects keyed by module id
+* oe = the uncaught error handler for the webpack runtime
+* nc: `nonce`
+
+-->
+
+## How it works at runtime
+
+<br />
+
+<img src="../images/module-system.png" style="width: 70%" />
+
 ---
 
-## 手順
-
-いる?
-
-* 1: 各モジュールを`function`で包む
-* 2: IIFE の引数として、`{ [ファイル名]: function() { eval(...)} }` を渡す
-* 3: IIFE の`return`がエントリーポイント(`entry`)になる
-
----
-
-## モジュール群
+## Modules Object
 
 ```javascript
 const modules = {
@@ -97,7 +87,7 @@ const modules = {
   './index.js': function(module, exports, __webpack_require__) {
     eval(...);
   },
-  /* !*** multi ./index.js ***! */
+  /* !*** multi ./index.js ***! */ // もしentryが配列の場合はこのようになる
   /* ! no static exports found */
   0: function(module, exports, __webpack_require__) {
     eval(...);
@@ -107,7 +97,7 @@ const modules = {
 
 ---
 
-## クライアントサイドでの CJS と ESM
+## Client-Side CJS and ESM
 
 <!-- prettier-ignore -->
 ```javascript
@@ -122,7 +112,7 @@ module.exports.d = 1;     // module.exports.d = 1;\n\n
 
 <!-- prettier-ignore -->
 ```javascript
-// ESM                       // `__webpack_exports__`は esm と判断するために置換される
+// ESM                       // 生成されたコード
 import b1, { b } from './b'; // __webpack_require__.r(__webpack_exports__);\n
                              // /* harmony export (binding) */
                              // __webpack_require__.d(__webpack_exports__, \"d\", function() { return d; });\n
@@ -138,7 +128,7 @@ export const d = b;          // const d = _b__WEBPACK_IMPORTED_MODULE_0__[\"b\"]
 
 ---
 
-## 依存解決処理
+## Processing Dependency Resolution
 
 ```javascript
 (function(modules) {
@@ -152,8 +142,7 @@ export const d = b;          // const d = _b__WEBPACK_IMPORTED_MODULE_0__[\"b\"]
     // module.exportsをbindし、function(module, exports, __webpack_require__) を実行する
     // moduleのexportsにそのファイルからexportsされた実行結果が入る
     modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-    module.l = true;
+    module.l = true; // 読み込み済みフラグ
 
     return module.exports;
   }
@@ -166,23 +155,3 @@ export const d = b;          // const d = _b__WEBPACK_IMPORTED_MODULE_0__[\"b\"]
   }
 });
 ```
-
----
-
-## webpack_require
-
-webpack において require を管理する大切な関数
-
-* `m`: 各モジュールのリスト `{ [ファイル名]: [内部コード] }`
-* `c`: 各モジュールのキャッシュ `{ [ファイル名]: [module] }`
-* `d`: ESM のための getter 関数
-* `r`: `__esModule`を exports へ`Object.defineProperty`でセットする関数
-* `t`: 偽物の名前空間を作成するための関数 TODO
-* `n`: ESM ではないモジュールに対する`default`の互換性保持関数 TODO
-* `o`: `Object.prototype.hasOwnProperty.call`のラッパー関数
-* `p`: `__webpack_public_path__`の文字列値
-* `s`: `entry`の ID
-
----
-
-wip

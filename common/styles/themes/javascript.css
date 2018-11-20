@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 @import '../variable';
 @import '../mixins';
 @import '../common';
@@ -9,8 +10,8 @@
 }
 
 .bespoke-parent {
-  font-family: Stratum, 'Helvetica Neue For Number', 'Hiragino Kaku Gothic ProN', 'メイリオ', Arial,
-    sans-serif;
+  font-family: Stratum, 'Noto Sans JP', 'Helvetica Neue For Number', 'Hiragino Kaku Gothic ProN',
+    'メイリオ', Arial, sans-serif;
 }
 
 .bespoke-backdrop {
