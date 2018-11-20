@@ -2,7 +2,13 @@
 
 ## Prefetch / Preload
 
+---
+
+## Web performance made easy
+
 <br />
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mv-l3-tJgGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
@@ -18,9 +24,10 @@ chromeには、httpキャッシュ、メモリキャッシュ、service worker�
 
 <br />
 
-アイドル状態の時に、将来使用する可能性が高いリソースを取得します。  
+Resource Hints の一つ。  
+アイドル状態の時に、将来使用する可能性が高いリソースを取得する。  
 ブラウザのページのロードが完了すると  
-指定されたドキュメントをプリフェッチして http キャッシュに保存します。
+指定されたドキュメントをプリフェッチして http キャッシュに保存する。
 
 <a class="ref-link" href="https://w3c.github.io/resource-hints/#prefetch">w3c/resource-hints/#prefetch</a>
 
@@ -40,14 +47,14 @@ Resource Hintsではない
 
 現在のページで必要なリソースをブラウザへ事前に伝えることにより、  
 ページの最初のレンダリングがブロックされにくくなり、  
-リソースの取得を最適化します。
+リソースの取得を最適化する。
 
 <a class="ref-link" href="https://w3c.github.io/preload/">w3c/preload/</a>
 
 ---
 
 <!-- note
-webpackは賢くってpreloadにするかどうかを判断する
+initial chunkでは、preloadを設置できません
 -->
 
 <!-- prettier-ignore -->
@@ -60,6 +67,5 @@ import(
   /* webpackChunkName: "preload", webpackPreload: true */
   './preload'
 );
-```
 
-<img src="../images/prefetch.png" />
+```

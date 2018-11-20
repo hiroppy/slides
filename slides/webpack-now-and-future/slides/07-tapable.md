@@ -15,7 +15,7 @@
 webpack プラグインシステム
 
 `Waterfall`, `Bail`, `Loop` のタイプを持ち、  
-webpack のライフサイクルをフックします
+webpack のライフサイクルをフックする
 
 <br />
 
