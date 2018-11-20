@@ -4,9 +4,11 @@
 
 <br />
 
-Resource Hints
-
 ---
+
+<!-- note
+chromeには、httpキャッシュ、メモリキャッシュ、service workerキャッシュ、プッシュキャッシュが存在する
+-->
 
 ## Prefetch
 
@@ -18,11 +20,15 @@ Resource Hints
 
 アイドル状態の時に、将来使用する可能性が高いリソースを取得します。  
 ブラウザのページのロードが完了すると  
-指定されたドキュメントをプリフェッチしてキャッシュに保存します。
+指定されたドキュメントをプリフェッチして http キャッシュに保存します。
 
 <a class="ref-link" href="https://w3c.github.io/resource-hints/#prefetch">w3c/resource-hints/#prefetch</a>
 
 ---
+
+<!-- note
+Resource Hintsではない
+-->
 
 ## Preload
 
@@ -32,17 +38,17 @@ Resource Hints
 
 <br />
 
-現在のページで利用される読み込み直後に必要なリソース
+現在のページで必要なリソースをブラウザへ事前に伝えることにより、  
+ページの最初のレンダリングがブロックされにくくなり、  
+リソースの取得を最適化します。
 
-読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチ要求を記述することができます。
-
-これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。
-
-リソースを事前に発見させ、waterfall 状態の fetch から避けます。
-
-https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf
+<a class="ref-link" href="https://w3c.github.io/preload/">w3c/preload/</a>
 
 ---
+
+<!-- note
+webpackは賢くってpreloadにするかどうかを判断する
+-->
 
 <!-- prettier-ignore -->
 ```javascript
@@ -57,5 +63,3 @@ import(
 ```
 
 <img src="../images/prefetch.png" />
-
-https://stackoverflow.com/questions/36322349/prefetched-resources-are-loaded-twice
