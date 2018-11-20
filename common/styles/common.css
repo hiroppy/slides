@@ -111,6 +111,10 @@
 .list {
   display: flex;
 
+  & > *:not(:first-child) {
+    margin-left: 8px;
+  }
+
   & > ul {
     list-style: none;
     margin: 0 50px;
