@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
 
 ### 2018
 
+* [webpack の イママデ と コレカラ](https://slides.hiroppy.me/webpack-history)
+  * 11/25: [HTML5 Conference 2018](https://events.html5j.org)
 * [OSS に貢献する最初の一歩](https://niconare.nicovideo.jp/watch/kn3590)(Japanese)
   * 11/03: 会津大学で開かれた[IoT・ICT フェア](https://www.city.aizuwakamatsu.fukushima.jp/docs/2018092500030/)の企業 LT 資料
 * [The event loop of node](https://slides.hiroppy.me/the-event-loop-of-node)
