@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/webpack-now-and-future"
+    "name": "slides/webpack-history"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_name",

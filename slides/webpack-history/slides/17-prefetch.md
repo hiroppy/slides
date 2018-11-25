@@ -4,6 +4,13 @@
 
 ---
 
+<!-- note
+2018年のgoogle I/Oで話があった、web performance made easyの中で、
+多くprefetch/preloadが話されました。
+その他には、lighthouse, webpackのチャンク, webp
+
+-->
+
 ## Web performance made easy
 
 <br />
@@ -54,7 +61,7 @@ Resource Hintsではない
 ---
 
 <!-- note
-initial chunkでは、preloadを設置できません
+initial chunkでは、preloadを設置できません。
 -->
 
 <!-- prettier-ignore -->

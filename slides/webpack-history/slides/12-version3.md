@@ -1,6 +1,8 @@
 <!-- sectionTitle: Release: Version 3 -->
 
 <!-- note
+内部の大幅な変更がメインだったので、移行は簡単だが、ローダーが動かなくなるという問題が多かった。
+
 webpackMode
 
 - lazy(default)
@@ -8,7 +10,6 @@ webpackMode
 - eager
 - weak
 
-https://webpack.js.org/api/module-methods/#import-
 -->
 
 ## Version 3

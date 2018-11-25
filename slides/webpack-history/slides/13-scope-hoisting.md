@@ -17,9 +17,13 @@ ESM を使うことによりインポートチェーンをフラット化し、
 
 <br />
 
-余分な関数呼び出しを減らし、実行時間・コード量を減らす。
+余分な関数呼び出しを減らし、実行時間・コード量を減らすことを期待する。
 
 ---
+
+<!-- note
+cjsと書かれたもの以外はすべてESMです。
+-->
 
 <div class="list-with-description">
   <div>
@@ -39,6 +43,11 @@ ESM を使うことによりインポートチェーンをフラット化し、
 <a class="ref-link" href="https://github.com/webpack/webpack/tree/master/examples/scope-hoisting">examples/scope-hoisting</a>
 
 ---
+
+<!-- note
+左の図のようにチャンクを分ける必要があります。  
+しかし、その中でもさらに同じレイヤーのものがあるため同一にすることが可能です。
+-->
 
 <div class="list">
   <img src="../images/scope-hoisting/graph2.svg" />
@@ -81,7 +90,7 @@ export default 'shared2';           //      +----------+
 ## Invalid Case
 
 ```javascript
-{ // main.js
+{ // dist/main.js
 /***/ "./a.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 /***/ "./index.js":
@@ -107,6 +116,10 @@ export default 'shared2';           //      +----------+
 ```
 
 ---
+
+<!-- note
+--display-optimization-bailoutをつけると、なぜできないかという理由が出力されます。
+-->
 
 ## Valid Case
 
@@ -138,6 +151,12 @@ $ webpack --display-optimization-bailout
 ```
 
 ---
+
+<!-- note
+shared.jsを見るとわかるが、webpackがすでにモジュール解決を行った状態で出力します。  
+このように実行回数を減らしています。
+
+-->
 
 ```javascript
 {

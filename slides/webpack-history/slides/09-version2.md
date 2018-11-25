@@ -1,5 +1,13 @@
 <!-- sectionTitle: Release: Version 2 -->
 
+<!-- note
+ここに書いてしまったので分かりづらいですが、リリースは2017年です。
+
+大幅にスキーマが変更されました。
+多くの人がこの変更に苦労したと思います。
+また、特に特にextractTextPlugin等
+-->
+
 ## Version 2
 
 <br />
@@ -24,45 +32,6 @@
     <li>Tree Shakingの追加</li>
   </ul>
 </div>
-
----
-
-## Changes of the configuration file
-
-```javascript
-module.exports = {
-  resolve: {
-    modulesDirectories: []
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loaders: ['babel-loader'],
-        query: {}
-      }
-    ]
-  }
-};
-```
-
-```javascript
-module.exports = {
-  resolve: {
-    modules: []
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: 'babel-loader',
-        options: {},
-        enforce: 'pre'
-      }
-    ]
-  }
-};
-```
 
 ---
 

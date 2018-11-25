@@ -40,6 +40,8 @@
 </div>
 
 <!-- note
+今、自分は、webpackのメンバーでしたが、webpackはinactiveです。
+
 Mercari: 2018/09 -
 BizReach: 2018/06 -
 Dwango: 2015/04 - 2017/05
