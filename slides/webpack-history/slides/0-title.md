@@ -4,8 +4,8 @@
 今回は、みんなでwebpackの歴史を追っていこうと思いました。
 -->
 
-# webpack の <br /> 今まででとこれから
+# webpack の <br /> イママデ と コレカラ
 
 <br>
 
-repo: https://github.com/hiroppy/slides
+https://github.com/hiroppy/slides

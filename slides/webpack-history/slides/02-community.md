@@ -12,21 +12,43 @@
 
 ---
 
+<!-- note
+2つのgithub organazationを持っている。
+一つはコアでwebpackやwebpack-dev-server, tapable等がある。
+もう一つは、3rd partyパッケージ。例えば、style-loaderやcss-loaderなど。
+
+また、開発メンバーと有名なプラグインの作者が集まるプライベートslackがある。
+ここでは、babelなどとのshared channelも存在し、webpackとの関わりがあるOSSとのコミュニケーションを測っている。
+
+-->
+
 ## Members & Plugin Authors
 
-* github
-  * webpack
-    * コア
-  * webpack-contrib
-    * 3rd party パッケージ
-* slack
+<br />
+
+<div class="list">
+  <div>
+    <img src="../images/github.png" class="icon" />
+    <br />
+    <p>GitHub</p>
+    <a href="https://github.com/webpack">webpack</a>, <a href="https://github.com/webpack-contrib">webpack-contrib</a>
+  </div>
+  <div>
+    <img src="../images/slack.png" class="icon" />
+    <br />
+    <p>Slack</p>
+  </div>
+</div>
 
 ---
 
-<!--note
-個人では、$2~
+<!-- note
+backerでは、$2~
 
-trivago, airbnb, facebook opensource, adobe, slackなど
+trivago, airbnb, facebook opensource, adobe, slackなどで、trivagoが一番多く資金を提供しています。
+
+この資金は、メンバーが開発するときの資金に使われたりします。
+
 -->
 
 ## OpenCollective
@@ -38,6 +60,10 @@ trivago, airbnb, facebook opensource, adobe, slackなど
 <!-- note
 GitHubのメンバーであった時間に基づく測定された単位
 2017年からは1日1回の影響がある。
+
+gold influenceは、open collectiveのbackerかスポンサーに与えられます。
+これは、influenceの100に等しい値です。
+
 -->
 
 ## Vote and Prioritize
@@ -54,12 +80,6 @@ GitHubのメンバーであった時間に基づく測定された単位
 <img src="../images/vote-ranking.png" style="width: 60%" />
 
 ---
-
-<!-- note
-時給は$50
-
-この時間は、ツールによって決定される
--->
 
 ## Short / Long Term Goals
 

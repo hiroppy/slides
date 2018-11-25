@@ -33,3 +33,10 @@ __section-title {
   margin: auto;
   width: 120px;
 }
+
+.icon {
+  display: block;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+}

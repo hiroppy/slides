@@ -4,6 +4,17 @@
 
 ---
 
+<!-- note
+webpack-commandはいいのですが、webpack-serve問題はいろいろと騒がせたのではないかなと思います。
+
+google summer of code
+学生がOSSへコミットするイベントです。
+
+- deep scopeの解析
+- wasmとwebpackの依存周り
+- webpack-cliの開発
+-->
+
 <div class="history-container">
   <div class="list-with-title">
     <div class="list-with-title-title">2018</div>

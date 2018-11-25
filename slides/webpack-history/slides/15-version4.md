@@ -1,5 +1,14 @@
 <!-- sectionTitle: Release: Version 4 -->
 
+<!-- note
+webpack4からコードネームがつくようになりました。
+レガート（伊: legato）は、音楽のアーティキュレーションのひとつで、
+連続する2つの音（通常音の高さは異なる）を途切れさせずに滑らかに続けて演奏すること
+
+また、webpack本体の話ではないですが、CSSとSourceMapsのオンデマンドロードをサポートするmini-css-extract-pluginがリリースされました。
+extract-text-webpack-plugin でcssを分けるのは非推奨です。
+-->
+
 ## Version 4 (Legato)
 
 <br />
@@ -18,7 +27,7 @@
   </div>
   <ul>
     <li>webpack-cliへ移行</li>
-    <li>#0CJSの追加</li>
+    <li>#0CJS, modeの追加</li>
     <li>`CommonsChunkPlugin`が`splitChunks`, `runtimeChunk`へ</li>
     <li>モジュールタイプのサポート</li>
     <li>WebAssemblyのサポート</li>
@@ -31,7 +40,7 @@
 
 ---
 
-<!--
+<!-- note
 しかし、例えばgraphqlの場合、mjsを読み込みますがjavascript/autoを指定しないと動かないです
 
 -->

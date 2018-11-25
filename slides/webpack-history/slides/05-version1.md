@@ -23,7 +23,7 @@ require.include: 現在のチャンクにモジュールを追加する関数(�
   <ul>
     <li>プラグイン・ローダー機構の追加</li>
     <li>`require.(context|ensure|include)`の追加</li>
-    <li>CJS・AMDのモジュールタイプをサポート</li>
+    <li>CJS・AMDのモジュールシステムをサポート</li>
     <li>webpack-dev-server, webpack-dev-middlewareのサポート</li>
     <li>Web, WebWorkers, Node.jsへのバンドル生成をサポート</li>
   </ul>

@@ -10,6 +10,9 @@ Tree Shaking, a.k.a. Unused Exports Elimination
 
 <!-- note
 つい先日でたv4.26.0でuglify-esからterserへ移行されました
+まだ、terserも不安定なので注意してください。
+
+なので、tree shakingはあくまでコードを分解するのであって、実際にコードを消すのはminifyツールが行います。
 -->
 
 ## Tree Shaking & Dead Code Elimination
@@ -27,6 +30,11 @@ webpack の場合は、uglifyJS(or terser) が使われる
 
 ---
 
+<!-- note
+tree shakingの歴史は意外と古く、1995年にはlispのgoogle groupsで議論がされています
+多くの人がtree shakingという単語を知ったのは、おそらく2015年のrich harrisがrollupで実装したときだと思います。
+-->
+
 ## History of Tree Shaking
 
 <br />
@@ -37,15 +45,14 @@ webpack の場合は、uglifyJS(or terser) が使われる
 
 ---
 
+<!-- note
+--display-used-exportsをつけると使われる値を確認できます。
+-->
+
 ```javascript
-// webpack.config.js
+// mode: productionではデフォルトで有効
 
 module.exports = {
-  mode: 'development',
-  entry: './index.js',
-  output: {
-    filename: 'bundle.js'
-  },
   optimization: {
     usedExports: true // このオプションが必要
   }
@@ -76,16 +83,16 @@ console.log(a);
 // a.js
 import { b1 } from './b';
 
-const a = `${b1} from b`;
+const a = `${b1} from b`; // 使われる
 
 export default a;
 
-export const test = () => 2 * 2;
+export const test = () => 2 * 2; // 使われない
 
 // b.js
-export const b1 = 'b1';
-export const b2 = 'b2';
-const b3 = 'b3';
+export const b1 = 'b1'; // 使われる
+export const b2 = 'b2'; // 使われない
+const b3 = 'b3'; // ローカル変数
 ```
 
 ---
@@ -103,8 +110,8 @@ const b3 = 'b3';
   /* unused harmony export test */
   /* harmony import */ var _b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./b */ './b.js');
 
-  const a = `${_b__WEBPACK_IMPORTED_MODULE_0__[/* b1 */ 'a']} from b`;
-  /* harmony default export */ __webpack_exports__['a'] = a;
+  const a = `${_b__WEBPACK_IMPORTED_MODULE_0__[/* b1 */ 'a']} from b`; // b.jsのb1を参照する
+  /* harmony default export */ __webpack_exports__['a'] = a; // index.jsのexportsへ'a'キーとして結果を渡す
   const test = () => 2 * 2;
 });
 
@@ -120,6 +127,10 @@ const b3 = 'b3';
 ```
 
 ---
+
+<!-- note
+tree shakingとdead code eliminationの仕組みはこのような感じです
+-->
 
 ## Dead Code Elimination
 

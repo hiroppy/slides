@@ -5,13 +5,12 @@
 ---
 
 <!-- note
-web、webworker、node.jsで実行されるランタイムコードを挿入します。
+universal: web、webworker、node.jsで実行されるランタイムコードを挿入します。
+import.meta: stage3 Node.jsのESMでは__filename, __dirnameなどは使えないため、それの代用
+webpackGraph: 依存解決ツリーをキャッシングすることによる開発の高速化
 -->
 
 ## Version 5
-
-<!-- https://github.com/webpack/webpack/pull/8162
-https://github.com/webpack/webpack/milestone/18 -->
 
 <br />
 
@@ -30,8 +29,7 @@ https://github.com/webpack/webpack/milestone/18 -->
   </div>
   <ul>
     <li>[persistent cachingの追加(FileCachePluginの追加)](https://github.com/webpack/webpack/pull/8162)</li>
-    <li>HTTP/2をデフォルトへ</li>
-    <li>`target: 'universal'` の追加</li>
+    <li>[`target: 'universal'` の追加](https://github.com/webpack/webpack/issues/6525)</li>
     <li>`import.meta`</li>
     <li>[wip]: モジュールタイプに[`css`](https://github.com/webpack/webpack/pull/6448), [`html`](https://github.com/webpack/webpack/pull/6447), [`url`](https://github.com/webpack/webpack/pull/6446)のサポート</li>
     <li>[wip]: [`webpack-preset-`の対応, 及びwebpack-mergeの導入](https://github.com/webpack/webpack/pull/6395)</li>
@@ -73,4 +71,16 @@ $ npm i -D webpack/webpack#next
 
 ---
 
-🏃
+<!-- note
+時間があれば。。。
+
+webpack5/6 idea
+
+named rulesの複雑化。
+module.rulesの上書きが難しいため、そこを解決したい。
+
+HMRの改善
+statsをpluginへ
+-->
+
+<p style="font-size: 4rem">🏃</p>

@@ -8,6 +8,10 @@
 
 ---
 
+<!-- note
+webpackのプラグインを作ったことがある人は馴染みがあるかもしれません。
+-->
+
 ## Tapable
 
 <br />
@@ -51,6 +55,7 @@ class Compiler extends SyncHook {
   }
 }
 
+// ---- userland ---
 const compiler = new Compiler(), src = 'xxx', chunk = 'abc', hash = 'def';
 
 compiler.hooks.run.tap('fooPlugin', (source, chunk) => { console.log('[userLand]: plugin')});
@@ -68,7 +73,7 @@ compiler.hooks.run.promise(src, chunk, hash).then(() => { // 引数を設定し�
 ---
 
 <!-- note
-  プラグイン作ったことある人？
+webpackのhooksでは、多くのバリエーションがあり、様々な表現をすることが可能です。
 -->
 
 ## Compiler Hooks

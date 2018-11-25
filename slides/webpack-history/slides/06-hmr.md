@@ -19,6 +19,15 @@
 
 ---
 
+<!-- note
+最初にブラウザの準備の方を話す。
+
+Runtimeを追加するために、pluginへHotModuleReplacementPluginを入れる。
+また、webpack/hot/dev-server、webpack-dev-server/clientを追加。
+
+次に、ファイル監視の話をする。
+-->
+
 <img src="../images/hmr.png" style="width: 70%" />
 
 ---
@@ -26,6 +35,10 @@
 <img src="../images/hmr-ws.png" />
 
 ---
+
+<!-- note
+以上がwebpackのhot module replacementの仕組みです
+-->
 
 <!-- prettier-ignore -->
 ```javascript

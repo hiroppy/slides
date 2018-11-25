@@ -1,5 +1,9 @@
 <!-- sectionTitle: Module Bundler -->
 
+<!-- note
+06:00 ~
+-->
+
 ## Module Bundler
 
 ---
@@ -43,8 +47,6 @@ define(['./foo'], (foo) => foo);
 
 <!-- note
 少し語弊がありそうな図。  
-Production ビルド時では、引数は Object ではなく Array となり、  
-moduleID がファイル名ではなく、index の値となります。
 
 webpack_require
 * s: `entry`の ID
@@ -72,6 +74,11 @@ webpack_require
 <img src="../images/module-system.png" style="width: 70%" />
 
 ---
+
+<!-- note
+Production ビルド時では、引数は Object ではなく Array となり、  
+moduleID がファイル名ではなく、index の値となります。
+-->
 
 ## Modules Object
 
