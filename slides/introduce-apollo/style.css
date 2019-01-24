@@ -1,0 +1,29 @@
+@import '../../common/styles/themes/javascript';
+@import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '@fortawesome/fontawesome-free/css/brands.min.css';
+@import '@fortawesome/fontawesome-free/css/solid.min.css';
+
+:root {
+  --color-apollo: #14bab7;
+  --color-graphql: #e10098;
+}
+
+__bg.title {
+  background-color: var(--color-apollo);
+}
+
+__bg.graphql {
+  background: var(--color-graphql);
+}
+
+__section-title {
+  background: var(--color-apollo);
+}
+
+.logo {
+  width: 150px;
+}
+
+td {
+  padding-left: 12px;
+}

@@ -10,6 +10,11 @@ All slides can be written in Markdown or HTML.
 * [self introduction](https://slides.hiroppy.me/self-introduction)
 * [sample](https://slides.hiroppy.me/hello/)
 
+### 2019
+
+* []()
+  * 01/31: [React.js meetup #6](https://reactjs-meetup.connpass.com/event/115274/)
+
 ### 2018
 
 * [webpack の イママデ と コレカラ](https://slides.hiroppy.me/webpack-history)
