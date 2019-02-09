@@ -12,7 +12,7 @@ All slides can be written in Markdown or HTML.
 
 ### 2019
 
-* []()
+* [Apollo と Rreact を使ったアプリケーション設計](https://slides.hiroppy.me/introduce-apollo)
   * 01/31: [React.js meetup #6](https://reactjs-meetup.connpass.com/event/115274/)
 
 ### 2018
