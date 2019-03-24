@@ -22,6 +22,8 @@
         <i class="fab fa-facebook"></i>
       </a>
     </div>
+    <br>
+    <a href="https://www.patreon.com/hiroppy">please support me!</a>
   </div>
   <div class="profile-right">
     <h5>
@@ -33,7 +35,9 @@
     <p>Mercari, Inc. as a web technical advisor</p>
     <h4>A member of</h4>
     <p>Node.js</p>
+    <p>webpack</p>
     <p>Babel</p>
+    <p>Gatsby</p>
     <p>Stylelint</p>
     <p>Node.js Japan User Group</p>
   </div>
