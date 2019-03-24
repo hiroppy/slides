@@ -16,7 +16,3 @@ if (fs.pathExistsSync(base)) {
 
 fs.mkdirsSync(base);
 fs.copySync('template', base);
-fs.copyFileSync(
-  path.join(process.cwd(), 'common', 'slides', 'self-introduction.md'),
-  path.join(base, 'slides', '01-self-introduction.md')
-);
