@@ -54,13 +54,13 @@ self.__precacheManifest = [
     "url": "9d56249d09070f656a1c52e566448f0d.woff"
   },
   {
-    "url": "997f6b1819184c54248de33c81b7bb0c.woff"
-  },
-  {
     "url": "f2594ef62455697f61dc99862c19afba.eot"
   },
   {
     "url": "ab673bac3a9e36cb1d4e54777c413fe3.ttf"
+  },
+  {
+    "url": "997f6b1819184c54248de33c81b7bb0c.woff"
   },
   {
     "url": "20b351a6af2d523589fd193785e7d7f0.eot"
@@ -75,7 +75,7 @@ self.__precacheManifest = [
     "url": "b37f7ece702452a9a03447c9e558f97c.svg"
   },
   {
-    "revision": "f410a90b2cb4085b2f5f75c72d71fb11",
+    "revision": "bce8327937d616c105ffb6be71570480",
     "url": "index.html"
   }
 ];
