@@ -1,0 +1,36 @@
+@import '../../common/styles/themes/javascript';
+@import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '@fortawesome/fontawesome-free/css/brands.min.css';
+@import '@fortawesome/fontawesome-free/css/solid.min.css';
+
+.japan {
+  background: url('https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/50/2017/04/J1GDDB-1920x1281.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.browser-compatibility {
+  width: 60%;
+}
+
+__section-title {
+  background: var(--color-node);
+}
+
+.section-title h2 {
+  color: var(--color-js);
+}
+
+.bespoke-backdrop.title {
+  background: url('https://media.giphy.com/media/O8jYcO7IQHFWE/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#introduce-br-ecmascript-modules-br-of-node-js {
+  color: var(--color-js);
+}
+
+.esm-pr {
+  width: 70%;
+}
