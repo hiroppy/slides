@@ -4,15 +4,15 @@
 First of all, let me introduce myself.
 
 I'm Yuta. Everyone calls me "hiroppy".
-I came to Dublin from Japan to study English, so I'm a student now!
-I'm living in Dublin until September and then I'm going to go back to Japan.
+I came to Dublin from Japan / to study English, so I'm a student now!
+I'm living in Dublin until September / and then / I'm going to go back to Japan.
 
-Currently, I'm a technical advisor at Mercari and working on improving webpack as an OSS developer.
+Currently, I'm a technical advisor at Mercari / and / working on improving webpack as an OSS developer.
 Also, I'm a Node.js Core Collaborator.
 
-This picture above is a famous shrine in Japan was taken from the article called "Why 2019 is the best year to visit Japan".
+This picture above is a famous shrine in Japan / was taken from the article / called "Why 2019 is the best year to visit Japan".
 
-If you come to Japan at this time of year, you will see the cherry blossoms like in this picture.
+If you come to Japan / at this time of year, you will see the cherry blossoms / like in this picture.
 -->
 
 ## 😋 ME 😙
