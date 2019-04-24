@@ -3,11 +3,11 @@
 <!-- note
 This is today's summary.
 
-* a file becomes ESM when package.json has `type: module`
-* a file's module depends on the closest parent's package.json
+* a file becomes ESM / when package.json has `type: module`
+* a file's module / depends on the closest parent's package.json
 * at the top level, CJS cannot call ESM
-* some variables used in CJS cannot be used in ESM
-* the goal is to drop a flag by when Node 12 starts LTS in October 2019
+* some variables used in CJS / cannot be used in ESM
+* the goal is to drop a flag / by when Node 12 starts LTS / in October 2019
 
 Please look forward to future Node.js!
 -->
@@ -27,7 +27,7 @@ Please look forward to future Node.js!
 <!-- sectionTitle: References -->
 
 <!-- note
-These are the references used to make this slide.
+These are the references / used to make this slide.
 -->
 
 ## References

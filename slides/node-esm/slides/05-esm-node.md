@@ -25,8 +25,8 @@ The goal is to “release” (drop a flag) by when Node 12 starts LTS in October
 ---
 
 <!-- note
-PR was submitted on 18th March to Node.js Core by Myles.
-We discuss the specification at nodejs/modules. Then, implement in the repository called nodejs/ecmascript-modules which forked Node.js Core, and finally backport to Node.js Core.
+PR was submitted on 18th March / to Node.js Core by Myles.
+We discuss the specification at nodejs/modules. Then, implement at nodejs/ecmascript-modules / which forked Node.js Core, and finally / backport to Node.js Core.
 -->
 
 <img src="../images/pr.png" class="esm-pr" />
@@ -37,17 +37,17 @@ We discuss the specification at nodejs/modules. Then, implement in the repositor
 
 <!-- note
 Node.js spent a long time implementing ESM.
-Node.js had two major problems that browsers don't have.
+Node.js had two major problems / that browsers don't have.
 
-One is that Node.js cannot recognize if a file is written in ESM.
-In the case of browsers, it can be recognized because it is written as `module` in the `type` attribute.
-However, Node.js' import does not have an attribute like the `type`.
-So we decided to look at the file extensions to be imported.
-We made a rule that a file with the `.mjs` extension is written in ESM.
+One is that Node.js cannot recognize / if a file is written in ESM.
+In the case of browsers, it can be recognized / because it is written as `module` / in the `type` attribute.
+However, Node.js' import doesn't have an attribute / like the `type`.
+So we decided to look at the file extensions / to be imported.
+We made a rule / that a file with the `.mjs` extension is written in ESM.
 
 And another issue is compatibility with existing CJS Modules.
 Node.js values backward compatibility. However, Node.js already has a module system.
-It's very difficult to implement ESM so as not to break the existing code.
+It's very difficult / to implement ESM / so as not to break the existing code.
 
 -->
 
@@ -65,16 +65,16 @@ Node.js spent a long long time to implement ESM...
 ---
 
 <!-- note
-Node.js defined the standard for implementation.
+Node.js defined the standard / for implementation.
 
 * Spec compliance
-  * we always follow the ES spec
+  * we always follow the ECMAScript spec
 * Browser equivalence
-  * a code that executes in both environments should produce identical results
+  * a code that executes in both environments / should produce identical results
 * Don’t break CommonJS
-  * we cannot cause breaking changes with regards to CommonJS
+  * we cannot cause breaking changes / with regards to CommonJS
 
-We keep these standards and implement ESM in Node.js.
+We keep these standards / and implement ESM in Node.js.
 --->
 
 ## Standards
@@ -97,7 +97,7 @@ We keep these standards and implement ESM in Node.js.
 <!-- sectionTitle: Rules -->
 
 <!-- note
-I would like to introduce some of ESM's rules.
+I would like to introduce some of ESM rules.
 -->
 
 ## Rules
@@ -108,8 +108,8 @@ I would like to introduce some of ESM's rules.
 ESM's path conforms to whatwg url.
 See the example.
 As you can see, import syntax accepts URL object.
-Access using a relative path, an absolute path, a package name, and `file` protocol can be performed.
-Currently, only `file` protocol is supported.
+Access using a relative path, an absolute path, a package name, and `file` protocol can be performed.  
+Currently, protocols support only `file`.
 -->
 
 ## ESM's path conforms to whatwg url
@@ -132,13 +132,14 @@ import 'file:///xxxx/foo.js';
 ---
 
 <!-- note
-You can not use Node.js specific variables that were available until now.
+You can not use Node.js specific variables / that were available until now.
 Such as, `require`, `module`, `exports`, `__dirname`, and `__filename`.
-These variables will become `undefined` when you write in ESM.
+These variables will become `undefined` / when you write in ESM.
 
 To use these variables in ESM, you can use `import.meta` or `createRequireFromPath` to reproduce the same behavior.
-If you want to get a file path, you can use `import.meta.url`. This is an ESM specification and currently exists in stage-3 of TC39.
-If you want to use `require` syntax in ESM, you can use `createRequireFromPath` method. By passing a based path as an argument, This function returns an executable `require` method based on passed a based path.
+If you want to get a file path, you can use `import.meta.url`.
+This is an ESM specification / and currently exists in stage-3 of TC39.
+If you want to use `require` syntax in ESM, you can use `createRequireFromPath` method. By passing a based path as an argument, This function returns an executable `require` method / based on passed the argument.
 -->
 
 ## Invalid variables
@@ -172,11 +173,11 @@ require('./cjs/index.js');
 ---
 
 <!-- note
-CJS can omit `.js`, `.node`, `.json` extensions and the filename "index".
-However, ESM doesn't have this specification, so we also make this CJS specification unavailable in ESM by default.
+CJS can omit `.js`, `.node`, `.json` extensions / and the filename "index".
+However, ESM doesn't have this specification, so we also make this CJS specification / unavailable in ESM by default.
 So, we prepared `--es-module-specifier-resolution` flag.
 This flag has `explicit` and `node` options, and the default is `explicit`.
-I think that most of the existing code written in ESM has omitted the extension and `index`. Then, please use `node` option.
+I think / most of the existing code written in ESM / has omitted the extension and `index`. Then, please use `node` option.
 -->
 
 ## Explicit filenames
@@ -206,13 +207,13 @@ $ node --experimental-modules  ./strict/index.js # default is `explicit`
 ---
 
 <!-- note
-In the future, you will not be able to execute anything other than JavaScript.
+In the future, you will not be able to execute anything / other than JavaScript.
 
 CJS supported JSON(`.json`) and native modules(`.node`), but ESM does not.  
 You might use `module.createRequireFromPath()` for these.
 
 However, Node.js has `--experimental-json-modules` flag to load JSON  
-because there is work in progress for standardizing this feature with browsers.
+/ because there is work in progress / for standardizing this feature / with browsers.
 -->
 
 ## JavaScript only
@@ -235,10 +236,12 @@ because there is work in progress for standardizing this feature with browsers.
 
 <!-- note
 This example is written in CJS.
-It is impossible to call an ESM file using require syntax.
+
+It is impossible / to call an ESM file / using require syntax.
 On the other hand, if you use import syntax, you can call CJS files.
-However, only dynamic import can call ESM files from CJS.
-In conclusion, CJS cannot call ESM at the top level, but CJS can use dynamic import syntax. Also, ESM can call CJS.
+However, only dynamic import can call ESM files / from CJS.
+
+In conclusion, CJS cannot call ESM / at the top level, but CJS can use dynamic import. Also, ESM can call CJS.
 -->
 
 ## Cannot load ESM from CJS
@@ -280,8 +283,11 @@ Let's explain how Node.js distinguishes ESM and CJS.
 ---
 
 <!-- note
-I think many people have heard the word `.mjs` in the past.
-Certainly, it is easy to distinguish by the extension. However, in the future, ESM will become the de-facto standard, so we do not want to change the extension from `.js` to `.mjs` it's not needed. Probably, this is something that many people wanted. So we looked for another solution.
+I think many people have heard the word `.mjs` / in the past.
+Certainly, it is easy to distinguish by the extension.
+However, in the future, ESM will become the de-facto standard,
+so we don't want to change the extension / from `.js` to `.mjs` / it's not needed.
+Probably, this is something that / many people wanted. So we looked for another solution.
 -->
 
 ## .mjs ?
@@ -292,22 +298,25 @@ Certainly, it is easy to distinguish by the extension. However, in the future, E
 
 <br />
 
-It is easy to judge a file which has the `.mjs` extension is as ESM.  
+It is easy to distinguish a file which has the `.mjs` extension is as ESM.  
 But, maybe many people don't want to use the `.mjs` extension.😞
 
 ---
 
 <!-- note
-There is a way to specify the module type to package.json.
+There is a way / to specify the module type / to package.json.
+
 This solution is already in the Core of Node.js, and probably will not be changed.  
-The solution is very simple. Each file's module type depends on the closest parent's package.json.
+The solution is very simple.
+Each file's module type / depends on the closest parent's package.json.
 
 See this picture.
 package.json on the root.js has `type: module`, so root.js will be read as ESM.
 
-index.js in esm directory does not have package.json in the same hierarchy so index.js depends on package.json in the root hierarchy. Therefore, this file is also read as ESM.
+index.js in esm directory doesn't have package.json / in the same hierarchy / so index.js depends on package.json in the root hierarchy.
+Therefore, this file is also read as ESM.
 
-Finally, let's look at the index.js in cjs. package.json exists in the same hierarchy but does not have `type` attribute. So, index.js is read as CJS.
+Finally, let's look at the index.js in cjs. package.json exists in the same hierarchy / but doesn't have `type` attribute. So, index.js is read as CJS.
 -->
 
 ## Package.json "type" field
@@ -326,7 +335,7 @@ Refers to the closest parent's package.json.
 ---
 
 <!-- note
-You can specify the type attribute in package.json.
+You can specify the type attribute / in package.json.
 This attribute has `commonjs` and `module`, and the default is `commonjs`.
 -->
 
@@ -350,14 +359,14 @@ so they are read as CJS. Thus this change isn't breaking changes.
 <!-- note
 Let's check the code. The directory structure is the same as the previous slide.
 
-Since ESM does not have a `module` variable, it is ESM if `module` is undefined.
+Since / ESM doesn't have a `module` variable, it is ESM if `module` is undefined.
 
 Look at the output results.
 
-At first, `./esm/index.js` is called and output as ESM. This file depends on package.json of the root directory.
-Next, `./esm/cjs/index.js` is called and output as CJS. This file depends on package.json which exists in the same hierarchy and this package.json doesn't have `type` attribute.
-Finally, `./root.js` outputs as ESM because package.json in the same hierarchy has `type:module`.
-If package.json in the root directory doesn't have `type:module`, this file can not be executed. Because it is executed as CJS, it can not interpret import syntax.
+At first, `./esm/index.js` is called / and output as ESM. This file depends on package.json / of the root directory.  
+Next, `./esm/cjs/index.js` is called / and output as CJS. This file depends on package.json / which exists in the same hierarchy / and this package.json doesn't have `type` attribute.
+Finally, `./root.js` outputs as ESM / because package.json in the same hierarchy has `type:module`.
+If package.json in the root directory / doesn't have `type:module`, this file can not be executed. Because it is executed as CJS, it can not interpret import syntax.
 -->
 
 <!-- prettier-ignore -->
@@ -394,7 +403,7 @@ root.js         : esm # 1
 ---
 
 <!-- note
-If you do not want to follow this rule for specific files, you specify the extension.
+If you do not want to follow this rule / for specific files, you specify the extension.
 You can use `.mjs` and `.cjs` extensions.
 If you want to read as ESM, use the mjs extension. If you want to read as CJS, use the cjs extension.
 -->
@@ -422,14 +431,14 @@ import './file.mjs';
 <!-- sectionTitle: Working in progress -->
 
 <!-- note
-Currently, this is an ongoing tasks.
+Currently, this is an ongoing task.
 
 * dual CommonJS/ES module packages
 * easier `require`
 * package path maps
 * automatic entry point module type detection
 
-These tasks will be improved before the `--experimental-modules` flag is removed.
+These tasks will be improved / before the `--experimental-modules` flag is removed.
 -->
 
 ## Working in progress
