@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/introduce-apollo"
+    "name": "slides/node-esm"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_name",
