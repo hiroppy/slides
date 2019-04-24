@@ -17,4 +17,7 @@
   <a href="https://www.facebook.com/abouthiroppy" target="_blank">
     <i class="fab fa-facebook"></i>
   </a>
+  <a href="https://www.linkedin.com/in/hiroppy" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
 </div>
