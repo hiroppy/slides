@@ -40,7 +40,7 @@
 
 .sns-list {
   display: flex;
-  font-size: 1.3rem;
+  font-size: 34px;
   justify-content: center;
 
   & > a {

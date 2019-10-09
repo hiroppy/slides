@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
 
 ### 2019
 
+* [Introducing top-level-await]()
+  * 10/09: [#tc39_study](https://web-study.connpass.com/event/147538/)
 * [Introduce the new ESM implementation of Node.js](https://slides.hiroppy.me/node-esm)
   * 04/25: [Dublin Node.js Meetup](https://www.meetup.com/ja-JP/Dublin-Node-js-Meetup/events/260666447/)
 * [Apollo と Rreact を使ったアプリケーション設計](https://slides.hiroppy.me/introduce-apollo)

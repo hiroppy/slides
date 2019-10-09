@@ -1,6 +1,6 @@
 <!-- classes: title -->
 
-# Title
+# Introducing top-level-await
 
 <br />
 
