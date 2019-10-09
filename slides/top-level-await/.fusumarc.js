@@ -3,9 +3,9 @@ const base = require('../../.fusumarc');
 module.exports = {
   meta: {
     ...base.meta,
-    title: '',
+    title: 'Introducing top-level-await',
     description: '',
-    thumbnail: ''
+    thumbnail: 'https://avatars1.githubusercontent.com/u/1725583?s=200&v=4'
   },
   slide: {
     showIndex: true,

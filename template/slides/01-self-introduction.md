@@ -6,7 +6,7 @@
 
 <div class="profile">
   <div class="profile-left">
-    <img src="../../../common/images/profile.jpg" alt="profile" class="profile-avatar">
+    <img src="../../../common/images/profile.jpg" alt="profile" class="profile-avatar" />
     <h4 class="profile-name">Yuta Hiroto</h4>
     <div class="sns-list">
       <a href="https://hiroppy.me" target="_blank">

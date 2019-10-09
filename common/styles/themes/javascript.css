@@ -9,21 +9,22 @@
   src: url('../../fonts/StratumNo1.ttf');
 }
 
-.bespoke-parent {
+html {
   font-family: Stratum, 'Noto Sans JP', 'Helvetica Neue For Number', 'Hiragino Kaku Gothic ProN',
     'メイリオ', Arial, sans-serif;
 }
 
-.bespoke-backdrop {
-  background: var(--color-gray);
+body {
+  background: var(--color-black);
+  color: var(--color-white);
 }
 
-.bespoke-backdrop.title {
-  background: var(--color-node);
+.title {
+  color: var(--color-js);
 }
 
-.bespoke-backdrop.end {
-  background: var(--color-js);
+.end {
+  color: var(--color-js);
 }
 
 .ref-link:hover {
@@ -37,6 +38,10 @@
     color: #fff;
     text-shadow: none;
   }
+}
+
+a {
+  color: var(--color-main);
 }
 
 h2 {
