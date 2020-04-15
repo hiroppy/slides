@@ -9,18 +9,19 @@
   src: url('../../fonts/StratumNo1.ttf');
 }
 
-html {
+body {
+  background: var(--color-black);
+  color: var(--color-white);
   font-family: Stratum, 'Noto Sans JP', 'Helvetica Neue For Number', 'Hiragino Kaku Gothic ProN',
     'メイリオ', Arial, sans-serif;
 }
 
-body {
-  background: var(--color-black);
-  color: var(--color-white);
-}
-
 .title {
-  color: var(--color-js);
+  & > h1 {
+    color: var(--color-js);
+  }
+
+  color: var(--color-gray);
 }
 
 .end {

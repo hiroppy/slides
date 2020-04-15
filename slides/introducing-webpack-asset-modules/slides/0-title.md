@@ -1,6 +1,6 @@
 <!-- classes: title -->
 
-# Title
+# Introducing webpack asset modules
 
 <br />
 

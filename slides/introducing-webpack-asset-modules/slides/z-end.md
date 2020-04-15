@@ -1,16 +1,11 @@
-<!-- classes: title -->
+<!-- background: end -->
 
-# Title
-
-<br />
-
-#### hiroppy
+# The End
 
 <br />
 <br />
-<br />
 
-<div class="sns-list">
+<div class="sns-list sns-list-end">
   <a href="https://hiroppy.me" target="_blank">
     <i class="fas fa-home"></i>
   </a>
@@ -21,3 +16,8 @@
     <i class="fab fa-github"></i>
   </a>
 </div>
+
+<br />
+<br />
+
+[please support me!](https://github.com/sponsors/hiroppy)
