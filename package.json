@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "name": "slides/top-level-await"
+    "name": "slides/introducing-webpack-asset-modules"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_name",
@@ -33,6 +33,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.4.1",
     "fs-extra": "^6.0.1",
-    "fusuma": "^1.15.0"
+    "fusuma": "^1.16.0"
   }
 }
