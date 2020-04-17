@@ -10,6 +10,11 @@ All slides can be written in Markdown or HTML.
 * [self introduction](https://slides.hiroppy.me/self-introduction)
 * [sample](https://slides.hiroppy.me/hello/)
 
+### 2020
+
+* [Introducing webpack asset modules](https://slides.hiroppy.me/introducing-webpack-asset-modules)
+  * 04/17: [#remo_study](https://live.remo.co/e/remo_study/register)
+
 ### 2019
 
 * [Introducing top-level-await](https://slides.hiroppy.me/top-level-await)
