@@ -21,18 +21,18 @@
   "author": "hiroppy <git@hiroppy.me> (https://hiroppy.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abouthiroppy/slides/issues"
+    "url": "https://github.com/hiroppy/slides/issues"
   },
-  "homepage": "https://github.com/abouthiroppy/slides#readme",
+  "homepage": "https://github.com/hiroppy/slides#readme",
   "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "husky": "^0.14.3",
-    "prettier": "^1.12.1",
-    "pretty-quick": "^1.4.1"
+    "fusuma": "^2.0.0-alpha.3",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.3.8",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.4.1",
-    "fs-extra": "^6.0.1",
-    "fusuma": "^1.16.0"
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "fs-extra": "^9.0.1"
   }
 }
