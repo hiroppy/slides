@@ -14,7 +14,7 @@ await import('b');
 // implement a hoistable then() to prevent cycles while a module is still evaluating.
 export function then(f, r) {
   r('not finished');
-};
+}
 
 // remove the rejection
 then = null;

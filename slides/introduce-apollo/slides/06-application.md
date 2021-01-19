@@ -12,20 +12,20 @@ reduxを使ったことがある人は、reduxだったらどう書くかを想�
 
 <br />
 
-* 1: ページが読み込まれたらリポジトリの ID を取得する
-  * `query`で GitHub の Repository を 実行
-* 2: ボタンを押すと以下の動作を行う
-  * ID を使い、`mutation`で GitHub の AddStar を 実行
-  * ローカルデータのカウントを上げる
+- 1: ページが読み込まれたらリポジトリの ID を取得する
+  - `query`で GitHub の Repository を 実行
+- 2: ボタンを押すと以下の動作を行う
+  - ID を使い、`mutation`で GitHub の AddStar を 実行
+  - ローカルデータのカウントを上げる
 
 ---
 
 ## 必要なこと
 
-* Apollo Client を作成する
-* Initial State を作成する
-* Resolvers を作成する
-* コンポーネントを作成する
+- Apollo Client を作成する
+- Initial State を作成する
+- Resolvers を作成する
+- コンポーネントを作成する
 
 ---
 
@@ -67,11 +67,11 @@ export const client = new ApolloClient({
 
 export const counter = {
   current: 0,
-  __typename: 'Counter'
+  __typename: 'Counter',
 };
 
 export const initialState = {
-  counter
+  counter,
 };
 ```
 
@@ -170,8 +170,8 @@ export const resolvers: IResolvers = {
       cache.writeData({ query, data }); // 更新
 
       return null;
-    }
-  }
+    },
+  },
 };
 ```
 

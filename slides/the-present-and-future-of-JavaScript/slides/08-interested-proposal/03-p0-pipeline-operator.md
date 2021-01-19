@@ -16,7 +16,7 @@ function exclaim(str) {
 // exclaim(capitalize(doubleSay('hello'))); // 'Hello, hello!'
 let result =
   'hello'
-  |> doubleSay  // the argument is 'hello'
+  |> doubleSay // the argument is 'hello'
   |> capitalize
   |> exclaim; // 'Hello, hello!'
 
@@ -33,7 +33,7 @@ function boundScore(min, max, score) {
 // boundScore(0, 100, add(7, double(person.score)));
 let newScore =
   25
-  |> double  // the argument is 25
+  |> double // the argument is 25
   |> ((_) => add(7, _) |> ((_) => boundScore(0, 100, _))); // `_` is the return value of `double` // 57 // `_` is the return value of `add`
 ```
 

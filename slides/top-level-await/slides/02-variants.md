@@ -10,5 +10,5 @@ A / B / C(dropped. to the optional constraint)
 
 <br />
 
-* Variant A: TLA blocks tree execution
-* Variant B: TLA doesn't block sibling execution
+- Variant A: TLA blocks tree execution
+- Variant B: TLA doesn't block sibling execution

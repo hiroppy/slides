@@ -93,6 +93,6 @@ redux-saga などで複雑な処理を書く必要があるアプリケーショ
 
 <br />
 
-* Apollo はエコシステムも含め充実している
-* Redux で書いていたことを減らせる可能性が高い
-* apollo-link-state は今後コアに入る
+- Apollo はエコシステムも含め充実している
+- Redux で書いていたことを減らせる可能性が高い
+- apollo-link-state は今後コアに入る

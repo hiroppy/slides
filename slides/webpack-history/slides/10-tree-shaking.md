@@ -39,9 +39,9 @@ tree shakingの歴史は意外と古く、1995年にはlispのgoogle groupsで�
 
 <br />
 
-* 1990s: LISP で議論される([why is tree-shaking hard?](https://groups.google.com/forum/#!msg/comp.lang.lisp/6zpZsWFFW18/-z_8hHRAIf4J))
-* 2013: Google Closure Tools, dart2js で実装される
-* 2015: Rollup で実装される
+- 1990s: LISP で議論される([why is tree-shaking hard?](https://groups.google.com/forum/#!msg/comp.lang.lisp/6zpZsWFFW18/-z_8hHRAIf4J))
+- 2013: Google Closure Tools, dart2js で実装される
+- 2015: Rollup で実装される
 
 ---
 
@@ -54,8 +54,8 @@ tree shakingの歴史は意外と古く、1995年にはlispのgoogle groupsで�
 
 module.exports = {
   optimization: {
-    usedExports: true // このオプションが必要
-  }
+    usedExports: true, // このオプションが必要
+  },
 };
 ```
 

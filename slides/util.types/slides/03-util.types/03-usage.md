@@ -16,12 +16,12 @@ const { types } = require('util');
 types.isDate(new Date());
 
 // if you want to check Generator Function
-isGeneratorFunction(function*() {});
+isGeneratorFunction(function* () {});
 
 function isGeneratorFunction(g) {
   return objectToString(g) === '[object GeneratorFunction]';
 }
 
 // from Node10
-types.isGeneratorFunction(function*() {});
+types.isGeneratorFunction(function* () {});
 ```

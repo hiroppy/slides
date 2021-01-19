@@ -10,9 +10,9 @@ LTS will be supported for 18 months and then will be in maintenance mode for 12 
 
 **codename**
 
-* Node4: Argon
-* Node6: Boron
-* Node8: Carbon
+- Node4: Argon
+- Node6: Boron
+- Node8: Carbon
 
 <a class="ref-link" href="https://github.com/nodejs/Release" target="_blank">
   https://github.com/nodejs/Release

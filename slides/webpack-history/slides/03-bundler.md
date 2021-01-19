@@ -38,7 +38,7 @@ define(['./foo'], (foo) => foo);
 ```
 
 ```html
-<img src="./foo.png">
+<img src="./foo.png" />
 ```
 
 <a class="ref-link" href="https://webpack.js.org/concepts/modules/">https://webpack.js.org/concepts/modules</a>
@@ -46,7 +46,7 @@ define(['./foo'], (foo) => foo);
 ---
 
 <!-- note
-少し語弊がありそうな図。  
+少し語弊がありそうな図。
 
 webpack_require
 * s: `entry`の ID
@@ -76,7 +76,7 @@ webpack_require
 ---
 
 <!-- note
-Production ビルド時では、引数は Object ではなく Array となり、  
+Production ビルド時では、引数は Object ではなく Array となり、
 moduleID がファイル名ではなく、index の値となります。
 -->
 
@@ -138,7 +138,7 @@ export const d = b;          // const d = _b__WEBPACK_IMPORTED_MODULE_0__[\"b\"]
 ## Processing Dependency Resolution
 
 ```javascript
-(function(modules) {
+(function (modules) {
   var installedModules = {}; // すでに読み込んだモジュールのキャッシュ
 
   function __webpack_require__(moduleId) {
@@ -155,10 +155,10 @@ export const d = b;          // const d = _b__WEBPACK_IMPORTED_MODULE_0__[\"b\"]
   }
   return __webpack_require__((__webpack_require__.s = 0)); // entry pointを実行
 })({
-  0: function(module, exports, __webpack_require__) {
+  0: function (module, exports, __webpack_require__) {
     eval(
       'module.exports = __webpack_require__(/*! ./index.js */"./index.js");\n\n\n//# sourceURL=webpack:///multi_./index.js?'
     );
-  }
+  },
 });
 ```

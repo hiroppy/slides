@@ -8,7 +8,7 @@ console.log(process.env.PATH);
 path.format({
   ext: '.js',
   root: '/',
-  name: 'piyo'
+  name: 'piyo',
 });
 ```
 

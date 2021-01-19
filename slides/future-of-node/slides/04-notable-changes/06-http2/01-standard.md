@@ -6,7 +6,7 @@ const { readFileSync } = require('fs');
 
 const options = {
   key: readFileSync('localhost-privkey.pem'),
-  cert: readFileSync('localhost-cert.pem')
+  cert: readFileSync('localhost-cert.pem'),
 };
 
 //証明書がなくても動くが、ブラウザからはアクセスできない

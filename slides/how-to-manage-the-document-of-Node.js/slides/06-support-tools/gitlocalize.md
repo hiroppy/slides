@@ -13,6 +13,6 @@
 
 <br>
 
-* Sync with repository
-* Awesome diff management
-* Built for community
+- Sync with repository
+- Awesome diff management
+- Built for community

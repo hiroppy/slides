@@ -13,8 +13,8 @@
 /* 1 (sync)           */ (() => console.log('sync'))();
 ```
 
-* Node.js uses `libuv`
-* the Node.js's event loop has 6 phases and 2 queues
+- Node.js uses `libuv`
+- the Node.js's event loop has 6 phases and 2 queues
 
 <br />
 

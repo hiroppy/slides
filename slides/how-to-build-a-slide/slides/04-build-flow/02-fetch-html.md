@@ -12,7 +12,7 @@ const res = {
   slides: context
     .keys()
     .sort() // sort by file name
-    .map((e) => context(e))
+    .map((e) => context(e)),
 };
 ```
 

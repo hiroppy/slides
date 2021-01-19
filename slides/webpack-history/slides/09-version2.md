@@ -43,8 +43,8 @@ module.exports = {
   performance: {
     hints: 'error',
     maxEntrypointSize: 400000, // 250000bytes
-    maxAssetSize: 100000 // 250000bytes
-  }
+    maxAssetSize: 100000, // 250000bytes
+  },
 };
 ```
 

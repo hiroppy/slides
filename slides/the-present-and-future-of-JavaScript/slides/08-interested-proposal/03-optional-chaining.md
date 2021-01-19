@@ -13,9 +13,9 @@ const fooValue = myForm.querySelector('input[name=foo]')?.value;
 const obj = {
   foo: {
     bar: {
-      baz: 42
-    }
-  }
+      baz: 42,
+    },
+  },
 };
 
 obj?.foo?.bar?.baz; // 42

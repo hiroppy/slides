@@ -2,5 +2,5 @@
 
 ## Content
 
-* [What is thread_workers?](#6)
-* [Usage](#10)
+- [What is thread_workers?](#6)
+- [Usage](#10)

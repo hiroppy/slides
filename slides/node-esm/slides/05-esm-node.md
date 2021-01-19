@@ -59,8 +59,8 @@ Node.js spent a long long time to implement ESM...
 
 <br />
 
-* whether the file to be called is written in ESM or not
-* compatible with CJS
+- whether the file to be called is written in ESM or not
+- compatible with CJS
 
 ---
 
@@ -81,12 +81,12 @@ We keep these standards / and implement ESM in Node.js.
 
 <br />
 
-* Spec compliance
-  * always follow the ES spec
-* Browser equivalence
-  * a code that executes in both environments should produce identical results
-* Don’t break CommonJS
-  * cannot cause breaking changes with regards to CommonJS
+- Spec compliance
+  - always follow the ES spec
+- Browser equivalence
+  - a code that executes in both environments should produce identical results
+- Don’t break CommonJS
+  - cannot cause breaking changes with regards to CommonJS
 
 <br />
 
@@ -108,7 +108,7 @@ I would like to introduce some of ESM rules.
 ESM's path conforms to whatwg url.
 See the example.
 As you can see, import syntax accepts URL object.
-Access using a relative path, an absolute path, a package name, and `file` protocol can be performed.  
+Access using a relative path, an absolute path, a package name, and `file` protocol can be performed.
 Currently, protocols support only `file`.
 -->
 
@@ -187,8 +187,8 @@ since explicit file extensions are usually required on the Web.
 
 <br />
 
-* file extensions are mandatory in import statements
-* cannot omit index.js
+- file extensions are mandatory in import statements
+- cannot omit index.js
 
 <br />
 
@@ -209,10 +209,10 @@ $ node --experimental-modules  ./strict/index.js # default is `explicit`
 <!-- note
 In the future, you will not be able to execute anything / other than JavaScript.
 
-CJS supported JSON(`.json`) and native modules(`.node`), but ESM does not.  
+CJS supported JSON(`.json`) and native modules(`.node`), but ESM does not.
 You might use `module.createRequireFromPath()` for these.
 
-However, Node.js has `--experimental-json-modules` flag to load JSON  
+However, Node.js has `--experimental-json-modules` flag to load JSON
 / because there is work in progress / for standardizing this feature / with browsers.
 -->
 
@@ -306,7 +306,7 @@ But, maybe many people don't want to use the `.mjs` extension.😞
 <!-- note
 There is a way / to specify the module type / to package.json.
 
-This solution is already in the Core of Node.js, and probably will not be changed.  
+This solution is already in the Core of Node.js, and probably will not be changed.
 The solution is very simple.
 Each file's module type / depends on the closest parent's package.json.
 
@@ -363,7 +363,7 @@ Since / ESM doesn't have a `module` variable, it is ESM if `module` is undefined
 
 Look at the output results.
 
-At first, `./esm/index.js` is called / and output as ESM. This file depends on package.json / of the root directory.  
+At first, `./esm/index.js` is called / and output as ESM. This file depends on package.json / of the root directory.
 Next, `./esm/cjs/index.js` is called / and output as CJS. This file depends on package.json / which exists in the same hierarchy / and this package.json doesn't have `type` attribute.
 Finally, `./root.js` outputs as ESM / because package.json in the same hierarchy has `type:module`.
 If package.json in the root directory / doesn't have `type:module`, this file can not be executed. Because it is executed as CJS, it can not interpret import syntax.
@@ -445,11 +445,11 @@ These tasks will be improved / before the `--experimental-modules` flag is remov
 
 <br />
 
-* dual CommonJS/ES module packages
-  * [Proposal for dual ESM/CommonJS packages](https://github.com/nodejs/modules/issues/273)
-* easier `require`
-* package path maps
-* automatic entry point module type detection
+- dual CommonJS/ES module packages
+  - [Proposal for dual ESM/CommonJS packages](https://github.com/nodejs/modules/issues/273)
+- easier `require`
+- package path maps
+- automatic entry point module type detection
 
 <br />
 

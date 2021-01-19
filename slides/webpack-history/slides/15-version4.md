@@ -53,16 +53,16 @@ extract-text-webpack-plugin でcssを分けるのは非推奨です。
 
 <br />
 
-* javascript/auto
-  * CJS、AMD、ESM のすべてをサポート
-* javascript/esm
-  * ESM のみをサポートし、`.mjs`のデフォルト
-* javascript/dynamic
-  * CJS と AMD のみをサポート
-* json
-  * json をサポート
-* webassembly/experimental
-  * WebAssembly モジュールのサポート
+- javascript/auto
+  - CJS、AMD、ESM のすべてをサポート
+- javascript/esm
+  - ESM のみをサポートし、`.mjs`のデフォルト
+- javascript/dynamic
+  - CJS と AMD のみをサポート
+- json
+  - json をサポート
+- webassembly/experimental
+  - WebAssembly モジュールのサポート
 
 ---
 
@@ -93,5 +93,5 @@ production
 
 <br />
 
-* デフォルトの`entry`と`output`の追加
-* `development`, `production`, `none`の Mode の追加
+- デフォルトの`entry`と`output`の追加
+- `development`, `production`, `none`の Mode の追加

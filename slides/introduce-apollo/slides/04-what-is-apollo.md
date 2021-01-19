@@ -35,13 +35,13 @@ apolloはjavascriptだけではなく、iOSやAndroidでも利用可能です。
 
 <br />
 
-* Apollo Server
-* Apollo Client
-  * JavaScript
-  * Native Mobile(iOS, Android)
-* Apollo CLI
-* IDE Plugins
-* Chrome DevTools
+- Apollo Server
+- Apollo Client
+  - JavaScript
+  - Native Mobile(iOS, Android)
+- Apollo CLI
+- IDE Plugins
+- Chrome DevTools
 
 ---
 

@@ -1,9 +1,9 @@
 ## review points
 
-* typo
-* platform dependency
-  * windows
-  * linux
-  * osx
-* corner case
-* English correction
+- typo
+- platform dependency
+  - windows
+  - linux
+  - osx
+- corner case
+- English correction

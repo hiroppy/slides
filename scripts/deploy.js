@@ -10,7 +10,7 @@ if (!input) process.exit(1);
 ghpages.publish(
   join(process.cwd(), input, 'dist'),
   {
-    dest: input.split('/').slice(-1)[0]
+    dest: input.split('/').slice(-1)[0],
   },
   (err) => {
     if (err) console.error(err);

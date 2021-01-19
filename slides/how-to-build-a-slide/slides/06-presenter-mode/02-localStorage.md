@@ -9,7 +9,7 @@ window.slide.bespoke.on('activate', (e) => {
     'page',
     JSON.stringify({
       date: Date.now(),
-      page: e.index
+      page: e.index,
     })
   );
 });

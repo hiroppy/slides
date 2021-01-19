@@ -45,7 +45,7 @@ cjsと書かれたもの以外はすべてESMです。
 ---
 
 <!-- note
-左の図のようにチャンクを分ける必要があります。  
+左の図のようにチャンクを分ける必要があります。
 しかし、その中でもさらに同じレイヤーのものがあるため同一にすることが可能です。
 -->
 
@@ -65,24 +65,24 @@ import a from './a';
 })();
 
 // a.js
-import shared from './shared';      //      +----------+         +----------+
-                                    //      |  index   +--------->   lazy   |
-const a = `${shared}: a`;           //      +----+-----+         +-----+----+
-export default a;                   //           |                     |
-                                    //           |                     |
+import shared from './shared'; //      +----------+         +----------+
+//      |  index   +--------->   lazy   |
+const a = `${shared}: a`; //      +----+-----+         +-----+----+
+export default a; //           |                     |
+//           |                     |
 // lazy.js                          //      +----v-----+               |
-import shared from './shared';      //      |    a     |               |
-                                    //      +----+-----+               |
-const res = `${shared}: lazy`;      //           |                     |
-export default res;                 //           |                     |
-                                    //      +----v-----+               |
+import shared from './shared'; //      |    a     |               |
+//      +----+-----+               |
+const res = `${shared}: lazy`; //           |                     |
+export default res; //           |                     |
+//      +----v-----+               |
 // shared.js                        //      |  shared  <---------------+
-import shared2 from './shared2';    //      +----+-----+
-                                    //           |
-export default 'shared';            //           |
-                                    //      +----v-----+
+import shared2 from './shared2'; //      +----+-----+
+//           |
+export default 'shared'; //           |
+//      +----v-----+
 // shared2.js                       //      | shared2  |
-export default 'shared2';           //      +----------+
+export default 'shared2'; //      +----------+
 ```
 
 ---
@@ -130,8 +130,8 @@ module.exports = {
   optimization: {
     usedExports: true,
     concatenateModules: true,
-    occurrenceOrder: true
-  }
+    occurrenceOrder: true,
+  },
 };
 ```
 
@@ -153,7 +153,7 @@ $ webpack --display-optimization-bailout
 ---
 
 <!-- note
-shared.jsを見るとわかるが、webpackがすでにモジュール解決を行った状態で出力します。  
+shared.jsを見るとわかるが、webpackがすでにモジュール解決を行った状態で出力します。
 このように実行回数を減らしています。
 
 -->

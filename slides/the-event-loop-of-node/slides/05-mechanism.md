@@ -14,12 +14,12 @@
 
 The event loop has 6 phases.
 
-* timers
-* pending callbacks
-* idle, prepare
-* poll
-* check
-* close callbacks
+- timers
+- pending callbacks
+- idle, prepare
+- poll
+- check
+- close callbacks
 
 <br />
 
@@ -58,8 +58,8 @@ Waits for the server or I/O response.
 
 <br />
 
-* blocks I/O and calculate polling time
-* processing events in the poll queue
+- blocks I/O and calculate polling time
+- processing events in the poll queue
 
 ---
 

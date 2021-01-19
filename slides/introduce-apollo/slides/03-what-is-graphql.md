@@ -24,7 +24,10 @@ subscriptionはデータの購読
 ```js
 import { makeExecutableSchema } from 'graphql-tools';
 
-const organizations = [{ name: 'nodejs', url: 'u' }, { name: 'facebook', url: 'l' }];
+const organizations = [
+  { name: 'nodejs', url: 'u' },
+  { name: 'facebook', url: 'l' },
+];
 
 const typeDefs = `
   type Organization {
@@ -40,8 +43,8 @@ const typeDefs = `
 const resolvers = {
   Query: {
     organizations: () => organizations,
-    organization: (obj, { name }) => organizations.find((o) => o.name === name)
-  }
+    organization: (obj, { name }) => organizations.find((o) => o.name === name),
+  },
 };
 
 export const schema = makeExecutableSchema({ typeDefs, resolvers });
@@ -62,9 +65,9 @@ export const schema = makeExecutableSchema({ typeDefs, resolvers });
           organizations {
             name
           }
-        }`
+        }`,
       }),
-    }).then(res => res.json());
+    }).then((res) => res.json());
 
     console.log(res.data.organizations);
     // [

@@ -7,7 +7,7 @@ const { createSecureServer, constants } = require('http2');
 const { readFileSync } = require('fs');
 const options = {
   key: readFileSync('localhost-privkey.pem'),
-  cert: readFileSync('localhost-cert.pem')
+  cert: readFileSync('localhost-cert.pem'),
 };
 const server = createSecureServer(options).listen(3000);
 

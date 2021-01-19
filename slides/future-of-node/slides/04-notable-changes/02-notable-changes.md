@@ -1,10 +1,10 @@
 ## Notable Changes of "stability: 1"
 
-* ECMAScript Modules
-* Perf_Hooks
-* promises of File_System
-* Worker_Threads
-* HTTP2
+- ECMAScript Modules
+- Perf_Hooks
+- promises of File_System
+- Worker_Threads
+- HTTP2
 
 <br />
 

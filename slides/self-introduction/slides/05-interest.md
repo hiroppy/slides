@@ -1,6 +1,6 @@
 ## Interest
 
-* 🖥 programming
-* 🛫 travelling
-* ⛰ mountaineering
-* 🎯 darts
+- 🖥 programming
+- 🛫 travelling
+- ⛰ mountaineering
+- 🎯 darts

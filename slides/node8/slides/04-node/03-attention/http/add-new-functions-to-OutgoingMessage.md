@@ -17,7 +17,7 @@ http
     console.log(res.getHeaderNames()); // [ 'x-test-header', 'x-test-header2' ]
     console.log(res.hasHeader('X-TEST-HEADER2')); // true
   })
-  .listen(3000, function() {
+  .listen(3000, function () {
     http.get({ port: this.address().port }, (res) => {});
   });
 ```

@@ -16,7 +16,7 @@ const server = http
     res.end();
     server.close();
   })
-  .listen(3000, function() {
+  .listen(3000, function () {
     const u = `http://localhost:${this.address().port}/foo?bar`;
     http.get(u);
     http.get(url.parse(u));

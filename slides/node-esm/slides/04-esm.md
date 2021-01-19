@@ -36,8 +36,10 @@ And browsers that support ESM / don't execute this script. I think / files into 
 <script nomodule src="fallback.js"></script>
 
 <!-- interpreting browsers that don't support ESM are to the below -->
-<!-- <script type="module" src="esm.js"></script> --> <!-- ignore this line -->
-<script src="fallback.js"></script> <!-- ignore `nomodule` attribute -->
+<!-- <script type="module" src="esm.js"></script> -->
+<!-- ignore this line -->
+<script src="fallback.js"></script>
+<!-- ignore `nomodule` attribute -->
 ```
 
 <a href="https://developers.google.com/web/fundamentals/primers/modules" class="ref-link">Using JavaScript modules on the web</a>
@@ -81,7 +83,8 @@ import { export as alias } from 'module-name';
 import 'module-name';
 
 export { name as name2 };
-export let name1 = '1', name2 = '2';
+export let name1 = '1',
+  name2 = '2';
 export function FunctionName() {}
 export class ClassName {}
 

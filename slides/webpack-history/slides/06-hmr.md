@@ -13,9 +13,9 @@
 
 <br />
 
-* webpack-dev-server
-* webpack-hot-middleware
-* webpack-hot-client
+- webpack-dev-server
+- webpack-hot-middleware
+- webpack-hot-client
 
 ---
 
