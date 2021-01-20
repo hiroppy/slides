@@ -80,3 +80,12 @@ code {
 pre code {
   font-size: inherit;
 }
+
+.executable-code-button {
+  background: var(--color-white);
+}
+
+.executable-code-result {
+  color: var(--color-black);
+  background: var(--color-white);
+}
