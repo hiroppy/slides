@@ -1,11 +1,13 @@
 const base = require('../../.fusumarc');
 
+const basePath = 'foo';
+
 module.exports = {
   meta: {
     ...base.meta,
     title: '',
     description: '',
-    thumbnail: ''
+    url: `${base.meta.url}${basePath}`
   },
   slide: {
     showIndex: true,
@@ -15,5 +17,5 @@ module.exports = {
   },
   extends: {
     css: 'style.css'
-  }
+  },
 };
