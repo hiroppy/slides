@@ -1,1 +1,68 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><!-- <meta name="theme-color" content="#3498db" /> --><meta name="viewport" content="width=device-width,initial-scale=1"><title>A Deep Dive into Module Graph</title><meta property="og:title" content="A Deep Dive into Module Graph"><meta property="og:type" content="article"><meta property="og:url" content="https://slides.hiroppy.me//a-deep-dive-into-module-graph/"><meta property="og:image" content="https://slides.hiroppy.me//a-deep-dive-into-module-graph//thumbnail.png"><meta property="og:site_name" content="hiroppy's slides"><link href="/vendor.9b2dbf1036a098c0d715.css" rel="stylesheet"><link href="/main.04b604e120b08b8433f8.css" rel="stylesheet"></head><body><div id="root"><article id="webslides"><section class="aligncenter title"><h1>A Deep Dive into Module Graph</h1></section><section class="aligncenter"><div class="toc size-70 aligncenter"><ol></ol></div></section><section class="aligncenter"><h1>The End</h1><br><div class="sns-list sns-list-end"><a href="https://hiroppy.me" target="_blank"><i class="fas fa-home"></i></a><a href="https://twitter.com/about_hiroppy" target="_blank"><i class="fab fa-twitter"></i></a><a href="https://github.com/hiroppy" target="_blank"><i class="fab fa-github"></i></a><a href="https://www.facebook.com/abouthiroppy" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/in/hiroppy" target="_blank"><i class="fab fa-linkedin"></i></a></div></section></article></div><script src="/runtime.db033aa8650b485aaaf3.bundle.js"></script><script src="/vendor.9b2dbf1036a098c0d715.bundle.js"></script><script src="/main.04b604e120b08b8433f8.bundle.js"></script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><!-- <meta name="theme-color" content="#3498db" /> --><meta name="viewport" content="width=device-width,initial-scale=1"><title>A Deep Dive into Module Graph</title><meta property="og:title" content="A Deep Dive into Module Graph"><meta property="og:type" content="article"><meta property="og:url" content="https://slides.hiroppy.me/a-deep-dive-into-module-graph"><meta property="og:image" content="https://slides.hiroppy.me/a-deep-dive-into-module-graph/thumbnail.png"><meta property="og:site_name" content="hiroppy's slides"><link href="/a-deep-dive-into-module-graph/vendor.35ab21edbecad0074037.css" rel="stylesheet"><link href="/a-deep-dive-into-module-graph/main.e412a14273b52fc61ec7.css" rel="stylesheet"></head><body><div id="root"><article id="webslides"><section class="aligncenter title"><h1>Module Graph の世界</h1></section><section class="aligncenter section-title"><h2>どのように依存グラフを作るのか?</h2></section><section class="aligncenter"><div class="card-50"><figure><img src="/a-deep-dive-into-module-graph/f1183961d439a4cc0ca1.webp"></figure><div class="flex-content"><div><h3>有向非巡回グラフ (DAG)</h3><br><p>エントリーポイントからのすべてのモジュールの依存を知るには、閉路がない有向グラフ(つまり一方通行で自身に戻らない)であるDAGを利用する。</p><br><p>そして<a href="https://ja.wikipedia.org/wiki/%E9%A0%86%E5%BA%8F%E9%9B%86%E5%90%88">半順序</a>関係とみなすDAGで必ず成り立つ<a href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%9D%E3%83%AD%E3%82%B8%E3%82%AB%E3%83%AB%E3%82%BD%E3%83%BC%E3%83%88">トポロジカルソート</a>を使い、依存関係を構成する。</p><p>トポロジカルソートを使う理由として、グラフが大きくなれば1点からのトラバースが困難になるため</p><br></div></div></div></section><section class="aligncenter"><div class="card-50"><figure><img src="/a-deep-dive-into-module-graph/553d5665a813d39a4894.webp"></figure><div class="flex-content"><div><h3>トポロジカルソート<br>𝑂(|𝑉|+|𝐸|)</h3><br><p>すべてのノードv1, v2に対して、到達可能経路がある場合に必ずv1をv2の前に持ってくるアルゴリズムであり、その2点間の到達可能性の半順序を全順序へ拡張します。</p><br><p>主な実現方法として、深さ優先探索(DFS)と幅優先探索(BFS)のどちらかがあり、webpackではDFSを採用している。</p><br><a href="https://github.com/webpack/webpack/blob/06ae0b381ddb08fac9745667a2d8f3c399473834/lib/MultiCompiler.js#L194">webpackでの実装例</a></div></div></div></section><section class="aligncenter"><pre><code class="language-javascript">const vertices = new Map();
+const visited = new Set();
+const res = [];
+
+vertices.set(&#x27;v&#x27;, [&#x27;a&#x27;]); //      v -&gt; a
+vertices.set(&#x27;a&#x27;, [&#x27;b&#x27;, &#x27;c&#x27;]); // a -&gt; b, a -&gt; c
+vertices.set(&#x27;b&#x27;, [&#x27;d&#x27;]); //      b -&gt; d
+vertices.set(&#x27;c&#x27;, [&#x27;b&#x27;, &#x27;d&#x27;]); // c -&gt; d, c -&gt; d
+vertices.set(&#x27;d&#x27;, []); //         d
+
+function dfs(name, stack = new Set()) {
+  if (visited.has(name)) return;
+
+  visited.add(name);
+  stack.add(name);
+
+  const edges = vertices.get(name);
+
+  for (const edge of edges) {
+    // 再帰スタックに頂点が入っている場合、閉路グラフである
+    if (stack.has(edge)) {
+      console.log(&#x27;Cyclic Graph found.&#x27;);
+      return;
+    }
+    dfs(edge, stack);
+  }
+  stack.delete(name);
+  res.push(name);
+}
+
+for (const [name] of vertices) {
+  dfs(name);
+}
+
+console.log(&#x27;res&#x27;, res.reverse()); // res [ &#x27;v&#x27;, &#x27;a&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;d&#x27; ]
+</code></pre></section><section class="aligncenter section-title"><h2>ランタイムではどのように処理されるのか？</h2></section><section class="aligncenter"><p>ランタイムでは、エントリーポイントから再帰的に走査しモジュールを実行していく。<br><!-- -->サンドボックス化が必要なため、IIFE を使って引数にすべてのモジュールを渡しエントリーポイントから関係のあるコードを実行する。</p><p>詳しくは、<a href="https://blog.hiroppy.me/entry/create-module-bundler-preparation">module bundler の作り方(準備編)</a>を参照。</p></section><section class="aligncenter"><pre><code class="language-javascript">// 例なのでESM等の対応はないが仕組みは一緒
+// IIFEの引数に全てのモジュールが入ったobjectを渡す
+((modules) =&gt; {
+  const usedModules = {}; // キャッシュ
+
+  function require(moduleId) {
+    if (usedModules[moduleId]) {
+      return usedModules[moduleId].exports;
+    }
+
+    // ModuleId(0, 1, ...)を入れ、最低限必要なexportsを定義し初期化
+    const module = (usedModules[moduleId] = { exports: {} });
+
+    // 自身の関数であるrequireを渡すことにより、それぞれのモジュール内でこの関数を実行し再帰走査する
+    // つまり、それぞれのモジュール内のmodule/requireはここで上書きされる
+    modules[moduleId](module, module.exports, require);
+
+    return module.exports;
+  }
+
+  return require(0); // entry pointである0(index.js)から開始
+})({
+  0 /*index.js*/: function (module, exports, require) {
+    const m = require(1);
+    m(&#x27;hello world&#x27;);
+  },
+  1 /* foo.js */: function (module, exports, require) {
+    module.exports = function m(txt) {
+      console.log(&#x27;module&#x27;, txt);
+    };
+  },
+});
+</code></pre></section><section class="aligncenter section-title"><h2>まとめ</h2><br><br><ul><li>モジュールの依存関係はグラフ理論を使い表現できる</li><li>ランタイムでは、走査での再帰処理が走るので深さはパフォーマンスに影響がでる可能性がある<ul><li>そのための Scope Hoisting などのアルゴリズムがある</li></ul></li></ul></section><section class="aligncenter"><h2>参考資料</h2><br><ul><li><a href="http://lpha-z.hatenablog.com/entry/2019/02/03/231500">DAG のトポロジカルソートのうち最適なものを見つけたい</a></li><li><a href="https://github.com/hiroppy/the-sample-of-module-bundler">hiroppy/the-sample-of-module-bundler</a></li><li><a href="https://blog.hiroppy.me/entry/create-module-bundler-preparation">module bundler の作り方(準備編)</a></li></ul></section><section class="aligncenter"><h1>The End</h1><br><div class="sns-list sns-list-end"><a href="https://hiroppy.me" target="_blank"><i class="fas fa-home"></i></a><a href="https://twitter.com/about_hiroppy" target="_blank"><i class="fab fa-twitter"></i></a><a href="https://github.com/hiroppy" target="_blank"><i class="fab fa-github"></i></a><a href="https://www.facebook.com/abouthiroppy" target="_blank"><i class="fab fa-facebook"></i></a><a href="https://www.linkedin.com/in/hiroppy" target="_blank"><i class="fab fa-linkedin"></i></a></div></section></article></div><script src="/a-deep-dive-into-module-graph/runtime.0cf721a672ab5534a87a.bundle.js"></script><script src="/a-deep-dive-into-module-graph/vendor.35ab21edbecad0074037.bundle.js"></script><script src="/a-deep-dive-into-module-graph/main.e412a14273b52fc61ec7.bundle.js"></script></body></html>
