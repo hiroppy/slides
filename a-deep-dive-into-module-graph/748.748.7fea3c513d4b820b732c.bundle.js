@@ -1,0 +1,1 @@
+(self.webpackChunkslides=self.webpackChunkslides||[]).push([[748],{1748:(e,n,r)=>{var o={"./locale":8441,"./locale.js":8441};function s(e){var n=l(e);return r(n)}function l(e){if(!r.o(o,e)){var n=new Error("Cannot find module '"+e+"'");throw n.code="MODULE_NOT_FOUND",n}return o[e]}s.keys=function(){return Object.keys(o)},s.resolve=l,e.exports=s,s.id=1748}}]);
