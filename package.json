@@ -1,9 +1,8 @@
 {
   "name": "slides",
-  "version": "1.0.0",
   "description": "My slides using fusuma",
   "config": {
-    "basePath": "slides/a-deep-dive-into-module-graph"
+    "basePath": "slides/sourcemap-v3"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_basePath",
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/hiroppy/slides#readme",
   "devDependencies": {
-    "fusuma": "^2.0.0-alpha.21",
     "gh-pages": "^3.1.0",
     "husky": "^4.3.8",
     "prettier": "^2.2.1",
@@ -35,6 +33,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
     "fs-extra": "^9.1.0",
+    "fusuma": "^2.8.4",
     "react": "^17.0.1",
     "react-icons": "^4.1.0"
   }
