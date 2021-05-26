@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>slide</title><meta property="og:title" content="slide"><meta property="og:type" content="article"><meta property="og:url" content="https://slides.hiroppy.me/foo"><meta property="og:image" content="https://slides.hiroppy.me/foo/thumbnail.png"><meta property="og:site_name" content="hiroppy's slides"><script defer="defer" src="/foo/runtime.24d5a285101d35e32283.bundle.js"></script><script defer="defer" src="/foo/vendor.c28efd1bd17a7a9d27fd.bundle.js"></script><script defer="defer" src="/foo/main.e36b9ff8d18ba53f8c96.bundle.js"></script><link href="/foo/vendor.c28efd1bd17a7a9d27fd.css" rel="stylesheet"><link href="/foo/main.e36b9ff8d18ba53f8c96.css" rel="stylesheet"><link rel="prefetch" as="script" href="/foo/901.2e57de88c9d88cf44357.bundle.js"><link rel="prefetch" as="script" href="/foo/921.659e01657243862b3203.bundle.js"></head><body><div id="root"><div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events" id="main-slides"><div class="swiper-pagination"></div><div class="swiper-wrapper" id="swiper-wrapper-5d8d8d62a72b35ae" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide swiper-slide-active" data-hash="slide-1" role="group" aria-label="1 / 8" style="width: 1184px;"><div class="slide-internal-box"><h1>Source Maps v3</h1></div></div><div class="swiper-slide swiper-slide-next" data-hash="slide-2" role="group" aria-label="2 / 8" style="width: 1184px;"><div class="slide-internal-box"><p>Node@16 で v3 が安定的となりました 🎉</p><br><pre class="  language-shell"><code class="  language-shell">$ <span class="token assign-left variable">NODE_OPTIONS</span><span class="token operator">=</span>--enable-source-maps node dist/index.js
+</code></pre><br><p>Node.js は生成されたコードが <code>//# sourceMappingURL=xxx.js.map</code> を持っている場合、<br><code>require/import</code>でのロード時に sourcemap をキャッシュします。</p></div></div><div class="swiper-slide" data-hash="slide-3" role="group" aria-label="3 / 8" style="width: 1184px;"><div class="slide-internal-box"><pre class="  language-ts"><code class="  language-ts"><span class="token keyword">class</span> <span class="token class-name">MyError</span> <span class="token keyword">extends</span> <span class="token class-name">Error</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Error<span class="token punctuation">.</span><span class="token function">captureStackTrace</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> MyError<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">MyError</span><span class="token punctuation">(</span><span class="token string">'This line is L:8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre class="  language-shell"><code class="  language-shell"><span class="token comment"># ===== 😭 =====</span>
+$ node dist/index.js
+/dist/index.js:26 <span class="token comment"># 26は生成されたコードの行</span>
+throw new MyError<span class="token punctuation">(</span><span class="token string">'This line is L:8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+^
+
+Error: This line is L:8
+    at Object.<span class="token operator">&lt;</span>anonymous<span class="token operator">&gt;</span> <span class="token punctuation">(</span>/dist/index.js:26:7<span class="token punctuation">)</span>
+
+<span class="token comment"># ===== 👍 =====</span>
+$ <span class="token assign-left variable">NODE_OPTIONS</span><span class="token operator">=</span>--enable-source-maps node dist/index.js
+/src/index.ts:8 <span class="token comment"># 8はtypescriptで書かれたコードの実際の行</span>
+throw new MyError<span class="token punctuation">(</span><span class="token string">'This line is L:8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ^
+
+Error: This line is L:8
+    at Object.<span class="token operator">&lt;</span>anonymous<span class="token operator">&gt;</span> <span class="token punctuation">(</span>/src/index.ts:8:7<span class="token punctuation">)</span>
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-4" role="group" aria-label="4 / 8" style="width: 1184px;"><div class="slide-internal-box"><p><code>*.map</code> ファイルの中身</p><br><pre class="  language-json"><code class="  language-json"><span class="token punctuation">{</span>
+  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">"file"</span><span class="token operator">:</span> <span class="token string">"index.js"</span><span class="token punctuation">,</span>
+  <span class="token property">"sourceRoot"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+  <span class="token property">"sources"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"../src/index.ts"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"names"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"mappings"</span><span class="token operator">:</span> <span class="token string">";;;;;;;;;;;;;;;;AAAA;IAAsB,2BAAK;IACzB,iBAAY,OAAe;QAA3B,YACE,kBAAM,OAAO,CAAC,SAEf;QADC,KAAK,CAAC,iBAAiB,CAAC,KAAI,EAAE,OAAO,CAAC,CAAC;;IACzC,CAAC;IACH,cAAC;AAAD,CAAC,AALD,CAAsB,KAAK,GAK1B;AAED,MAAM,IAAI,OAAO,CAAC,kBAAkB,CAAC,CAAC"</span>
+<span class="token punctuation">}</span>
+</code></pre><p><a href="http://sourcemaps.info/spec.html">spec</a></p></div></div><div class="swiper-slide" data-hash="slide-5" role="group" aria-label="5 / 8" style="width: 1184px;"><div class="slide-internal-box"><h2>BASE64 VLQ CODEC</h2><br><p><code>mappings</code>は Base64 VLQ で圧縮されていて、ソースのトランスパイル前後の位置を保存している。</p><pre class="  language-txt"><code class="  language-txt">16) [0,0,0,0]
+17) [4,0,0,22], [27,0,0,5]
+18) [4,0,1,-25], [17,0,0,12], [7,0,0,15]
+19) [8,0,0,-27], [12,0,1,2], [18,0,0,6], [7,0,0,7], [1,0,0,1], [9,0,2,-15]
+20) [8,0,-1,1], [5,0,0,5], [1,0,0,1], [17,0,0,17], [1,0,0,1], [5,0,0,4], [2,0,0,2], [7,0,0,7], [1,0,0,1], [1,0,0,1]
+22) [4,0,1,-41], [1,0,0,1]
+23) [4,0,1,-3], [14,0,0,1]
+24) [0,0,0,-1], [1,0,0,1], [0,0,-5,-1], [1,0,0,22], [5,0,0,5], [3,0,5,-26]
+25) [0,0,2,-1], [6,0,0,6], [4,0,0,4], [7,0,0,7], [1,0,0,1], [18,0,0,18], [1,0,0,1], [1,0,0,1]
+</code></pre><br><p>読みやすいように変換した形<br>
+<code>([from_position](source_index)=&gt;[to_position])</code></p><pre class="  language-txt"><code class="  language-txt">([0,0](#0)=&gt;[16,0])
+([0,22](#0)=&gt;[17,4]) | ([0,27](#0)=&gt;[17,31])
+([1,-25](#0)=&gt;[18,4]) | ([1,-13](#0)=&gt;[18,21]) | ([1,2](#0)=&gt;[18,28])
+([1,-27](#0)=&gt;[19,8]) | ([2,-25](#0)=&gt;[19,20]) | ([2,-19](#0)=&gt;[19,38]) | ([2,-12](#0)=&gt;[19,45]) | ([2,-11](#0)=&gt;[19,46]) | ([4,-26](#0)=&gt;[19,55])
+([3,1](#0)=&gt;[20,8]) | ([3,6](#0)=&gt;[20,13]) | ([3,7](#0)=&gt;[20,14]) | ([3,24](#0)=&gt;[20,31]) | ([3,25](#0)=&gt;[20,32]) | ([3,29](#0)=&gt;[20,37]) | ([3,31](#0)=&gt;[20,39]) | ([3,38](#0)=&gt;[20,46]) | ([3,39](#0)=&gt;[20,47]) | ([3,40](#0)=&gt;[20,48])
+([4,-41](#0)=&gt;[22,4]) | ([4,-40](#0)=&gt;[22,5])
+([5,-3](#0)=&gt;[23,4]) | ([5,-2](#0)=&gt;[23,18])
+([5,-1](#0)=&gt;[24,0]) | ([5,0](#0)=&gt;[24,1]) | ([0,-1](#0)=&gt;[24,1]) | ([0,21](#0)=&gt;[24,2]) | ([0,26](#0)=&gt;[24,7]) | ([5,0](#0)=&gt;[24,10])
+([7,-1](#0)=&gt;[25,0]) | ([7,5](#0)=&gt;[25,6]) | ([7,9](#0)=&gt;[25,10]) | ([7,16](#0)=&gt;[25,17]) | ([7,17](#0)=&gt;[25,18]) | ([7,35](#0)=&gt;[25,36]) | ([7,36](#0)=&gt;[25,37]) | ([7,37](#0)=&gt;[25,38])
+</code></pre><p><a href="https://www.murzwin.com/base64vlq.html">base64vlq</a></p></div></div><div class="swiper-slide" data-hash="slide-6" role="group" aria-label="6 / 8" style="width: 1184px;"><div class="slide-internal-box"><pre class="  language-ts"><code class="  language-ts"><span class="token comment">// 生成元コード</span>
+<span class="token keyword">class</span> <span class="token class-name">MyError</span> <span class="token keyword">extends</span> <span class="token class-name">Error</span> <span class="token punctuation">{</span> <span class="token comment">// L: 1</span>
+</code></pre><pre class="  language-ts"><code class="  language-ts"><span class="token comment">// 生成元コードの分割されるトークン群, sourcemapsは0スタート</span>
+<span class="token keyword">class</span> <span class="token class-name">MyError</span> <span class="token keyword">extends</span> <span class="token comment">// ([0,0](#0)=&gt;[16,0])</span>
+Error                 <span class="token comment">// ([0,22](#0)=&gt;[17,4])</span>
+ <span class="token punctuation">{</span>                    <span class="token comment">// ([0,27](#0)=&gt;[17,31])</span>
+</code></pre><pre class="  language-js"><code class="  language-js"><span class="token comment">// 生成されたコード</span>
+<span class="token keyword">var</span> MyError <span class="token operator">=</span> <span class="token comment">/** @class */</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_super</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// L:17</span>
+    <span class="token function">__extends</span><span class="token punctuation">(</span>MyError<span class="token punctuation">,</span> _super<span class="token punctuation">)</span><span class="token punctuation">;</span>                  <span class="token comment">// L:18</span>
+</code></pre></div></div><div class="swiper-slide" data-hash="slide-7" role="group" aria-label="7 / 8" style="width: 1184px;"><div class="slide-internal-box"><h2>まとめ</h2><br><ul><li>トランスパイルされたコードを実行するときは、<code>NODE_OPTIONS=--enable-source-maps</code>をつけると<br>デバッグが断然楽になる</li><li>sourcemaps の仕組みは面白い</li></ul></div></div><div class="swiper-slide" data-hash="slide-8" role="group" aria-label="8 / 8" style="width: 1184px;"><div class="slide-internal-box"><h1>The End</h1></div></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div></body></html>
