@@ -49,7 +49,7 @@ Error: This line is L:8
 
 ---
 
-`*.map` ファイルの中身
+## `*.map` ファイルの中身
 
 <br />
 
@@ -66,13 +66,23 @@ Error: This line is L:8
 
 [spec](http://sourcemaps.info/spec.html)
 
+<br />
+
+#### mappings の読み方
+
+<br />
+
+- `;`: 各行のセグメントグループを区切るデリミタ
+- `,`: 各セグメントを区切るデリミタ
+- 各セグメントフィールド: 1, 4,5 のいずれかの長さからなる可変長 base64 の文字列であり <br />6bits の 2 進数に変換し計算すると変換前後の列や行、index の情報が抽出される
+
 ---
 
 ## BASE64 VLQ CODEC
 
 <br />
 
-`mappings`は Base64 VLQ で圧縮されていて、ソースのトランスパイル前後の位置を保存している。
+`mappings`は Base64 VLQ で圧縮されていて、ソースのトランスパイル前後の位置等を保存している。
 
 ```txt
 16) [0,0,0,0]
@@ -113,7 +123,7 @@ class MyError extends Error { // L: 1
 ```
 
 ```ts
-// 生成元コードの分割されるトークン群, sourcemapsは0スタート
+// 生成元コードの分割されるセグメント群, sourcemapsは0スタート
 class MyError extends // ([0,0](#0)=>[16,0])
 Error                 // ([0,22](#0)=>[17,4])
  {                    // ([0,27](#0)=>[17,31])
@@ -131,6 +141,7 @@ var MyError = /** @class */ (function (_super) { // L:17
 
 <br />
 
+- ネイティブでサポートされたことにより、[source-map-support](https://www.npmjs.com/package/source-map-support)を入れる必要がなくなるかも
 - トランスパイルされたコードを実行するときは、`NODE_OPTIONS=--enable-source-maps`をつけると<br />デバッグが断然楽になる
 - sourcemaps の仕組みは面白い
 
