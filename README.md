@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
 
 ### 2021
 
+- [ツールの成長の歴史とこれから求められるもの](https://slides.hiroppy.me/tools-history-and-future/)
+  - [UIT Meetup vol. 13 『知っておきたい Front-end Tooling の今』](https://uit.connpass.com/event/216043/)
 - [sourcemaps v3](https://slides.hiroppy.me/sourcemap-v3)
   - [TechFeed Summit#6 - v16 リリース記念！Node.js の最新動向を語り尽くす！](https://techfeed.connpass.com/event/213218/)
 - [A Deep dive into Module Graph](https://slides.hiroppy.me/a-deep-dive-into-module-graph)
