@@ -1,0 +1,13 @@
+@import '@fusuma/client/assets/style/themes/webpack.css';
+
+.images {
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-left: 12px;
+  }
+}
+
+li > ul {
+  margin: 0;
+}
