@@ -2,7 +2,7 @@
   "name": "slides",
   "description": "My slides using fusuma",
   "config": {
-    "basePath": "slides/tools-history-and-future"
+    "basePath": "slides/cache-strategy-on-mercari-shops"
   },
   "scripts": {
     "pdf": "npm run build && node scripts/pdf.js $npm_package_config_basePath",

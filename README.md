@@ -12,6 +12,8 @@ All slides can be written in Markdown or HTML.
 
 ### 2021
 
+- [Cache Strategy on Mercari Shops](https://slides.hiroppy.me/cache-strategy-on-mercari-shops/)
+  - 08/30: [Node 学園 37 時限目 オンライン](https://nodejs.connpass.com/event/221358/)
 - [ツールの成長の歴史とこれから求められるもの](https://slides.hiroppy.me/tools-history-and-future/)
   - [UIT Meetup vol. 13 『知っておきたい Front-end Tooling の今』](https://uit.connpass.com/event/216043/)
   - [podcast](https://uit-inside.linecorp.com/episode/93)
